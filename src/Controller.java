@@ -43,6 +43,7 @@ public class Controller {
 			}
 			
 			j++;
+			time++;
 			
 			
 			
