@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Random;
 
 public class Controller {
@@ -9,8 +10,10 @@ public class Controller {
 		int j = 1;
 		int meanArrival = 5;
 		int personAt;
-		int destinationFloor;
+		int floorDestination;
 		
+		LinkedList<Person> upList = new LinkedList<>();
+		LinkedList<Person> downList = new LinkedList<>();
 		Elevator [] elevator = new Elevator[3];
 		Floor [] floor = new Floor[11];
 		Person [] person  = new Person[100];
@@ -29,17 +32,25 @@ public class Controller {
 			
 			do {
 			personAt = rand.nextInt(11) + 1;
-			destinationFloor = rand.nextInt() + 1;
-			}while (personAt == destinationFloor);
+			floorDestination = rand.nextInt() + 1;
+			}while (personAt == floorDestination);
 			
-			person[j] = new Person(j,custArrival, personAt, destinationFloor);
+			person[j] = new Person(j,custArrival, personAt, floorDestination);
+			if(person[j].personAt < person[j].floorDestination) {
+				upList.add(person[j]); }
+			else {
+				downList.add(person[j]);
+			}
 			
+			j++;
 			
 			
 			
 		}
 		
-		
-		
 	}
+		
+	
+	
 }
+

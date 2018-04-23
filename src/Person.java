@@ -12,4 +12,5 @@ public class Person extends Controller{
 		this.personAt = personAt;
 		this.floorDestination = floorDestination;
 	}
+	
 }
