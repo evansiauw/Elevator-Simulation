@@ -1,5 +1,5 @@
 
-public class Elevator {
+public class Elevator extends Controller{
 
 	int elevatorNumber;
 	int direction; // -1 for down, 0 for idle, 1 for up
@@ -10,4 +10,7 @@ public class Elevator {
 		direction = 0;
 		currentPosition = 0;	
 	}
+	
+
+	
 }

@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class Floor {
+public class Floor extends Controller{
 
 	LinkedList<Person> UpList = new LinkedList<>();
 	LinkedList<Person> downList = new LinkedList<>();
@@ -9,7 +9,6 @@ public class Floor {
 	public Floor(int floorNumber) {
 		this.floorNumber = floorNumber;
 	}
-	
 	
 	
 }

@@ -1,10 +1,9 @@
-import java.util.Vector;
-
 public class Controller {
 
 	public static void main(String[] args) {
 		
-		double time = 0;
+		int maxRunningTime = 1; // in minute
+		double time = 0; // in second
 		Elevator [] elevator = new Elevator[3];
 		Floor [] floor = new Floor[11];
 		
@@ -15,6 +14,8 @@ public class Controller {
 		for(int i=1; i<= 10; i++) {
 			floor[i]= new Floor(i);
 		}
+		
+		
 		
 		
 	}
