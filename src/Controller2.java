@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -20,7 +21,7 @@ public class Controller2 {
         Person person;
         Random rand = new Random();
 
- 
+        LinkedList<Person> peopleList = new LinkedList<>();
         
         while(time < maxRunningTime) {
             double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
@@ -32,13 +33,26 @@ public class Controller2 {
             }while (personAtFloor == floorDestination);
 //            
             person = new Person(j,custArrival, personAtFloor, floorDestination);
-            
-            if (time == person.arrivalTime){
-                elevator.addPersonToElevator(person);
-                System.out.println("Person "+ person.personNumber +" has entered the elevator");
+            peopleList.add(person);
+            j++;
+            time++;
+        }
+        System.out.println("Before Sorting:");
+        printList(peopleList);
+        Collections.sort(peopleList,new peopleComparator());
+        System.out.println("After Sorting:");
+        printList(peopleList);
+        time=0;
+        j=0;
+        while(time < maxRunningTime) {  
+            System.out.println(peopleList.get(j).arrivalTime);
+            System.out.println(time);
+            if (time == peopleList.get(j).arrivalTime){
+                elevator.addPersonToElevator(peopleList.get(j));
+                System.out.println("Person "+ peopleList.get(j).personNumber +" has entered the elevator");
             }
             
-            if (elevator.currentPosition == person.floorDestination){
+            if (elevator.currentPosition == peopleList.get(j).floorDestination){
                 Person p = elevator.removePersonFromElevator();
                 System.out.println("Person "+ p.personNumber +" has left the elevator");
             }
@@ -52,6 +66,13 @@ public class Controller2 {
             
             j++;
             time++;
+        }
+    }
+
+    private static void printList(LinkedList<Person> peopleList) {
+        for (Person p:peopleList){
+            System.out.println("person " + p.personNumber);
+            System.out.println("arrival time "+p.arrivalTime);
         }
     }
 
