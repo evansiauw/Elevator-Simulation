@@ -12,10 +12,6 @@ public class Floor extends Controller{
 	    downList = new LinkedList<>();
 	}
 	
-	public void whichList() {
-		
-	}
-	
 	public void addPersonToUpList(Person p){
 	    upList.add(p);
 	}
@@ -23,5 +19,15 @@ public class Floor extends Controller{
 	public void addPersonToDownList(Person p){
         downList.add(p);
     }
+	
+	public LinkedList<Person> getUpList(){
+		return upList;
+	}
+	
+	public LinkedList<Person> getDownList(){
+		return downList;
+	}
+	
+
 	
 }

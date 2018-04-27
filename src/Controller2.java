@@ -11,7 +11,7 @@ public class Controller2 {
         int meanArrival = 5;
         int personAtFloor;
         int floorDestination;
-        Floor[] floor = new Floor[10];
+        Floor[] floor = new Floor[11];
         int totalTime = 0;
         
 
