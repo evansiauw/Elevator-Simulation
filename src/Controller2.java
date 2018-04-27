@@ -76,8 +76,14 @@ public class Controller2 {
                 //add to totalTime calculation 
                 totalTime += (peopleList.get(customerCounter).personAtFloor - elevator.currentFloor)*0.2;
                 
-                if (elevator.direction == 1) elevator.addPeopleToElevator(custFloor.upList);
-                else if (elevator.direction == -1) elevator.addPeopleToElevator(custFloor.downList);
+                if (elevator.direction == 1){
+                    elevator.addPeopleToElevator(custFloor.upList);
+                    time += custFloor.upList.size() * 0.1;
+                }
+                else if (elevator.direction == -1){
+                    elevator.addPeopleToElevator(custFloor.downList);
+                    time += custFloor.downList.size() * 0.1;
+                }
                 System.out.println("Person "+ peopleList.get(customerCounter).personNumber +" has entered the elevator");
             }
 
