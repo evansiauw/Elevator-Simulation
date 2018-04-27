@@ -11,7 +11,7 @@ public class Elevator extends Controller{
 	public Elevator(int elevatorNumber) {
 		this.elevatorNumber = elevatorNumber;
 		this.direction = 0;
-		this.currentFloor = 0;
+		this.currentFloor = 1;
 		ElevatorList = new LinkedList<>();
 		// buttonsPressed = new int[10];
 	}
@@ -30,6 +30,10 @@ public class Elevator extends Controller{
 
     public void addPeopleToElevator(LinkedList<Person> upList) {
         ElevatorList.addAll(upList);
+    }
+    
+    public LinkedList<Person> getElevatorList(){
+    		return ElevatorList;
     }
     
     public void goingUp() {
