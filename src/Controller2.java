@@ -4,55 +4,90 @@ import java.util.Random;
 
 public class Controller2 {
     public static void main(String[] args){
-        int maxRunningTime = 60; // a minute
+        //int maxRunningTime = 100; // a minute
         double time = 0; // in second
-        int j = 0;
+        int numberOfCustomers = 100;
+        int customerCounter = 0;
         int meanArrival = 5;
         int personAtFloor;
         int floorDestination;
+        Floor[] floor = new Floor[10];
+        int totalTime = 0;
         
-        LinkedList<Person> upList = new LinkedList<>();
-        LinkedList<Person> downList = new LinkedList<>();
-        
-        
-        LinkedList<Integer> buttonsPressed = new LinkedList<>();
+
         Elevator elevator = new Elevator(1); // elevator 1
+        
+        for(int i=0; i < 10; i++) {
+            floor[i]= new Floor(i);
+        }
 
         Person person;
         Random rand = new Random();
 
         LinkedList<Person> peopleList = new LinkedList<>();
         
-        while(time < maxRunningTime) {
+        while(customerCounter < numberOfCustomers) {
             double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
-            
+            totalTime+=custArrival;
             // generate a new floor the person is currently on and a new destination floor if the previous of the two match
             do {
                 personAtFloor = generateStartingFloor();
                 floorDestination = rand.nextInt(10) + 1;
             }while (personAtFloor == floorDestination);
 //            
-            person = new Person(j,custArrival, personAtFloor, floorDestination);
+            person = new Person(customerCounter,custArrival, personAtFloor, floorDestination);
             peopleList.add(person);
-            j++;
-            time++;
+            customerCounter++;
+            //time++;
         }
         System.out.println("Before Sorting:");
         printList(peopleList);
         Collections.sort(peopleList,new peopleComparator());
         System.out.println("After Sorting:");
         printList(peopleList);
-        time=0;
-        j=0;
-        while(time < maxRunningTime) {  
-            System.out.println(peopleList.get(j).arrivalTime);
-            System.out.println(time);
-            if (time == peopleList.get(j).arrivalTime){
-                elevator.addPersonToElevator(peopleList.get(j));
-                System.out.println("Person "+ peopleList.get(j).personNumber +" has entered the elevator");
+        //time=0;
+        customerCounter=0;
+        while(customerCounter< numberOfCustomers && time < totalTime) {  
+            time+=peopleList.get(customerCounter).arrivalTime;
+            System.out.println("Person "+ peopleList.get(customerCounter).personNumber+ " arrival time: "+peopleList.get(customerCounter).arrivalTime);
+            System.out.println("Starting from floor "+peopleList.get(customerCounter).personAtFloor +" and ending at floor "+peopleList.get(customerCounter).floorDestination);
+            System.out.println("Time is: "+time);
+            
+            //put customer on appropriate floor
+            Floor custFloor = null;
+            if (time >= peopleList.get(customerCounter).arrivalTime) {
+                custFloor = new Floor(peopleList.get(customerCounter).personAtFloor);
+                //determine whether the customer is going up or down
+                if (peopleList.get(customerCounter).personAtFloor < peopleList.get(customerCounter).floorDestination){
+                    custFloor.addPersonToUpList(peopleList.get(customerCounter));
+                }
+                else{
+                    custFloor.addPersonToDownList(peopleList.get(customerCounter));
+                }
+                
+                //bring the elevator to the appropriate floor
+                if (elevator.isElevatorEmpty()){
+                    elevator.currentFloor = peopleList.get(customerCounter).personAtFloor;
+                    if (elevator.currentFloor - peopleList.get(customerCounter).floorDestination < 0) elevator.direction = 1; //direction is up
+                    else elevator.direction = -1; //direction is down
+                }
+                //determine how much time it takes to go from floor to floor
+                time += (peopleList.get(customerCounter).personAtFloor - elevator.currentFloor)*0.2;
+                //add to totalTime calculation 
+                totalTime += (peopleList.get(customerCounter).personAtFloor - elevator.currentFloor)*0.2;
+                
+                if (elevator.direction == 1) elevator.addPeopleToElevator(custFloor.upList);
+                else if (elevator.direction == -1) elevator.addPeopleToElevator(custFloor.downList);
+                System.out.println("Person "+ peopleList.get(customerCounter).personNumber +" has entered the elevator");
+            }
+
+            //whoever is on floor i waiting for an elevator, put them in the elevator
+            if (time == peopleList.get(customerCounter).arrivalTime){
+                elevator.addPersonToElevator(peopleList.get(customerCounter));
+                System.out.println("Person "+ peopleList.get(customerCounter).personNumber +" has entered the elevator");
             }
             
-            if (elevator.currentPosition == peopleList.get(j).floorDestination){
+            if (elevator.currentFloor == peopleList.get(customerCounter).floorDestination){
                 Person p = elevator.removePersonFromElevator();
                 System.out.println("Person "+ p.personNumber +" has left the elevator");
             }
@@ -64,8 +99,8 @@ public class Controller2 {
             // instead of having uplist and downlist, determine which elevator the person will take
             // that is, the elevator that can get to the person the fastest
             
-            j++;
-            time++;
+            customerCounter++;
+
         }
     }
 

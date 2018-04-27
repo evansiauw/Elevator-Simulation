@@ -5,6 +5,7 @@ public class Person extends Controller{
 	int personNumber;
 	int personAtFloor;
 	double arrivalTime;
+	double completedTime;
 	
 	public Person(int personNumber, double arrivalTime, int personAt, int floorDestination){
 		this.personNumber = personNumber;

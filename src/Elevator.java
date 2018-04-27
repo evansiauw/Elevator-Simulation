@@ -4,13 +4,16 @@ public class Elevator extends Controller{
 
 	int elevatorNumber;
 	int direction; // -1 for down, 0 for idle, 1 for up
-	int currentPosition;
-	LinkedList<Person> peopleInElevator = new LinkedList<>();
+	int currentFloor;
+	int[] buttonsPressed; // 0 if not pressed, 1 if pressed
+	LinkedList<Person> peopleInElevator;
 	
 	public Elevator(int elevatorNumber) {
 		this.elevatorNumber = elevatorNumber;
-		direction = 0;
-		currentPosition = 0;	
+		this.direction = 0;
+		this.currentFloor = 0;
+		peopleInElevator = new LinkedList<>();
+		buttonsPressed = new int[10];
 	}
 	
 	public boolean isElevatorEmpty(){
@@ -24,6 +27,10 @@ public class Elevator extends Controller{
 	public Person removePersonFromElevator(){
 	    return peopleInElevator.remove();
 	}
+
+    public void addPeopleToElevator(LinkedList<Person> upList) {
+        peopleInElevator.addAll(upList);
+    }
 	
 
 	
