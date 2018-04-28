@@ -94,12 +94,12 @@ public class Controller {
 
 		if(elevator[1].getDirection() == 1) {		
 			elevator[1].addPeopleToElevator(floor[currentFloor].getUpList()); 
-			System.out.println("Boarding people who's going 'up' to elevator at floor " + currentFloor);
+			System.out.println("Boarding people who's going 'up' to elevator at floor " + elevator[1].getCurrentFloor());
 
 		}
 			else {
 				elevator[1].addPeopleToElevator(floor[currentFloor].getDownList());
-				System.out.println("Boarding people who's going 'down' to elevator at floor " + currentFloor);
+				System.out.println("Boarding people who's going 'down' to elevator at floor " + elevator[1].getCurrentFloor());
 			}
 		time = time + 0.1;
 	}
