@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Controller {
 
-	static int maxRunningTime = 60; // a minute
+	static int maxRunningTime = 30; // a minute
 	static double time = 0; // in second
 	static int personObjectCounter = 1;
 	static int meanArrival = 5;
@@ -34,12 +34,12 @@ public class Controller {
 		elevator[1].directionUp();
 		
 		while(time < maxRunningTime) {
-			System.out.println("current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor());
+			System.out.println("Current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor());
 			creatingPerson();
 			simulatingElevator();
 			System.out.println();
 		}	
-		System.out.println("number of object person created: " + personCounter);
+		System.out.println("Total number of persons created: " + personCounter);
 	}
 	
 	// creating one person object at a time
@@ -59,7 +59,7 @@ public class Controller {
 			floor[personAt].addPersonToDownList(person[personObjectCounter]);
 		}
 		
-		System.out.println("created a person with id: " + person[personObjectCounter].personNumber + " at floor: " + person[personObjectCounter].personAtFloor
+		System.out.println("Created a person with id: " + person[personObjectCounter].personNumber + " at floor: " + person[personObjectCounter].personAtFloor
 				+ " with destination: " + person[personObjectCounter].floorDestination);
 		personObjectCounter++;
 		personCounter++;
@@ -100,25 +100,24 @@ public class Controller {
 			if(!elevator[1].floor[currentFloor].upList.isEmpty()) {
 				elevator[1].addPeopleToElevator(floor[currentFloor].getUpList());
 				time = time + 0.1;
-				System.out.println("Boarding people who's going 'up' to elevator at floor " + elevator[1].getCurrentFloor());}
+				System.out.println("Boarding people whose direction is Up " + elevator[1].getCurrentFloor());}
 			else {
-				System.out.println("Nobody is in the upList, No Boarding");
+				System.out.println("Nobody is going up in this floor, No Boarding");
 			}
 		}
 		else {
 			if(!elevator[1].floor[currentFloor].downList.isEmpty()) {
 				elevator[1].addPeopleToElevator(floor[currentFloor].getDownList()); 
 				time = time + 0.1;
-				System.out.println("Boarding people who's going 'down' to elevator at floor " + elevator[1].getCurrentFloor());}
+				System.out.println("Boarding people whose direction is Down " + elevator[1].getCurrentFloor());}
 			else {
-				System.out.println("Nobody is in the downList, No Boarding");
+				System.out.println("Nobody is going down in this floor, No Boarding");
 			}
 		}
 	}
 	
-	/* THERE MIGHT BE SOME BUGS HERE
 	
-	 if elevator's direction is up: 
+	 /* if elevator's direction is up: 
 			if elevator empty or the opposite direction's list(down list) is empty too.. idling
 			else changing direction.. boarding the current direction's list (down).. move one floor down
 	
@@ -132,10 +131,11 @@ public class Controller {
 			headingDown();
 		}
 		
+		System.out.println("***List of people in the elevator***");
 		Iterator <Person> iter = elevator[1].getElevatorList().iterator();
 		while(iter.hasNext()) {
 			Person element = iter.next();
-			System.out.println("***person id: " + element.personNumber + "  With destination " + element.floorDestination +"***");	
+			System.out.println("person id: " + element.personNumber + "  With destination " + element.floorDestination +"");	
 		}
 	}
 	
