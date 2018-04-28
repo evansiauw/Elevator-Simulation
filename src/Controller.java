@@ -40,6 +40,7 @@ public class Controller {
 		System.out.println("number of object person created: " + personCounter);
 	}
 	
+	// creating one person object at a time
 	public static void creatingPerson() {
 				
 		double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
@@ -63,6 +64,7 @@ public class Controller {
 
 	}
 	
+	// consist of 3 method which will be executed in one while loop cycle
 	public static void simulatingElevator() {
 		
 		int currentFloor = elevator[1].getCurrentFloor();
@@ -72,6 +74,7 @@ public class Controller {
 		nextMove(currentFloor);	
 	}
 	
+	// if elevator not empty, increase time, remove the person who's destination == elevator's current position
 	public static void exit() {
 		
 		if(elevator[1].getElevatorList() != null) {
@@ -86,6 +89,7 @@ public class Controller {
 	  }
 	}
 	
+	// if elevator's direction is up, load people who's going up.. or the other way around
 	public static void boarding (int currentFloor) {
 
 		if(elevator[1].getDirection() == 1) {		
@@ -100,6 +104,13 @@ public class Controller {
 		time = time + 0.1;
 	}
 	
+	/* THERE MIGHT BE SOME BUGS HERE
+	
+	 if elevator's direction is up: 
+			if elevator empty or the opposite direction's list(down list) is empty too.. idling
+			else changing direction.. boarding the current direction's list (down).. move one floor down
+	
+	 else the other way around... */
 	public static void nextMove(int currentFloor) {
 	
 	if(elevator[1].getDirection() == 1) {
@@ -128,6 +139,7 @@ public class Controller {
 		
 	}
 	
+	// if this is the lowest level.. change direction(down to up).. otw..go one floor down
 	public static void headingDown() {
 		if(elevator[1].getCurrentFloor() == 1) {
 			elevator[1].directionUp(); 
@@ -140,6 +152,7 @@ public class Controller {
 			}
 	}
 	
+	// if this is the Top level.. change direction(up to down).. go one floor down
 	public static void headingUp() {
 		if(elevator[1].getCurrentFloor() == 1) {
 			elevator[1].directionUp(); 
@@ -151,7 +164,6 @@ public class Controller {
 				time = time + 0.2;
 			}
 	}
-	
 	
 	
 	
