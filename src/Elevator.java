@@ -36,11 +36,11 @@ public class Elevator extends Controller{
     		return ElevatorList;
     }
     
-    public void goingUp() {
+    public void directionUp() {
     		direction = 1;
     }
     
-    public void goingDown() {
+    public void directionDown() {
     		direction = -1;
     }
     
@@ -54,6 +54,14 @@ public class Elevator extends Controller{
     
     public int getCurrentFloor() {
     		return currentFloor;
+    }
+    
+    public void  decreaseCurrentFloor() {
+    		currentFloor--;
+    }
+    
+    public void increaseCurrentFloor() {
+    		currentFloor++;
     }
    
 	
