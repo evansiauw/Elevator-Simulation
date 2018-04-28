@@ -5,7 +5,6 @@ public class Elevator extends Controller{
 	int elevatorNumber;
 	int direction = 0; // 1 for Up, 0 for idle, -1 for down
 	int currentFloor;
-	// int[] buttonsPressed; // 0 if not pressed, 1 if pressed
 	LinkedList<Person> ElevatorList;
 	
 	public Elevator(int elevatorNumber) {
@@ -13,7 +12,6 @@ public class Elevator extends Controller{
 		this.direction = 0;
 		this.currentFloor = 1;
 		ElevatorList = new LinkedList<>();
-		// buttonsPressed = new int[10];
 	}
 	
 	public boolean isElevatorEmpty(){
