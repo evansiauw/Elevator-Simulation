@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Controller {
 
-	static int maxRunningTime = 10; // a minute
+	static int maxRunningTime = 60; // a minute
 	static double time = 0; // in second
 	static int personObjectCounter = 1;
 	static int meanArrival = 5;
@@ -83,8 +83,9 @@ public class Controller {
 			time = time + 0.1;
 			Iterator<Person> it = elevator[1].getElevatorList().iterator();
 			while(it.hasNext()) {
-				
-				if(it.next().floorDestination == elevator[1].getCurrentFloor()) {
+				Person element= it.next();
+				if(element.floorDestination == elevator[1].getCurrentFloor()) {
+					System.out.println("Person " + element.personNumber + " arrived at destination and exiting");
 					it.remove();
 					}
 			}
@@ -106,7 +107,7 @@ public class Controller {
 		}
 		else {
 			if(!elevator[1].floor[currentFloor].downList.isEmpty()) {
-				elevator[1].addPeopleToElevator(floor[currentFloor].getUpList()); 
+				elevator[1].addPeopleToElevator(floor[currentFloor].getDownList()); 
 				time = time + 0.1;
 				System.out.println("Boarding people who's going 'down' to elevator at floor " + elevator[1].getCurrentFloor());}
 			else {
@@ -134,7 +135,7 @@ public class Controller {
 		Iterator <Person> iter = elevator[1].getElevatorList().iterator();
 		while(iter.hasNext()) {
 			Person element = iter.next();
-			System.out.println("person id: " + element.personNumber + "  With destination " + element.floorDestination);	
+			System.out.println("***person id: " + element.personNumber + "  With destination " + element.floorDestination +"***");	
 		}
 	}
 	
@@ -143,7 +144,6 @@ public class Controller {
 		if(elevator[1].getCurrentFloor() == 1) {
 			elevator[1].directionUp();
 			System.out.println("this is the 'lowest' level, changing direction to 'Up'");
-			boarding(elevator[1].getCurrentFloor());
 
 			}
 		else {
@@ -155,11 +155,9 @@ public class Controller {
 	
 	// if this is the Top level.. change direction(up to down).. go one floor down
 	public static void headingUp() {
-		System.out.println("Current Floor is: " + elevator[1].getCurrentFloor());
 		if(elevator[1].getCurrentFloor() == 10) {
 			elevator[1].directionDown();		
 			System.out.println("this is the 'Top' level, changing direction to 'Down'");
-			boarding(elevator[1].getCurrentFloor());
 			}
 		else {
 				elevator[1].increaseCurrentFloor();

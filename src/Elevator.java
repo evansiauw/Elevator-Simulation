@@ -23,7 +23,6 @@ public class Elevator extends Controller{
 	}
 	
 	public Person removePersonFromElevator(){
-	    System.out.println("Person arrived at floor destination");
 
 	    return ElevatorList.remove();
 
@@ -32,8 +31,6 @@ public class Elevator extends Controller{
     public void addPeopleToElevator(LinkedList<Person> upList) {
     	
         ElevatorList.addAll(upList);
-	    System.out.println("Person goes into the elevator");
-
     }
     
     public LinkedList<Person> getElevatorList(){
