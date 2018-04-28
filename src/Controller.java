@@ -34,7 +34,6 @@ public class Controller {
 			System.out.println("current time is: " + time);
 			creatingPerson();
 			simulatingElevator();
-			time++;
 			System.out.println();
 		}	
 		System.out.println("number of object person created: " + personCounter);
@@ -77,17 +76,16 @@ public class Controller {
 	// if elevator not empty, increase time, remove the person who's destination == elevator's current position
 	public static void exit() {
 		
-		if(elevator[1].getElevatorList() != null) {
+		if(!elevator[1].getElevatorList().isEmpty()) {
 			time = time + 0.1;
 			Iterator<Person> it = elevator[1].getElevatorList().iterator();
 			while(it.hasNext()) {
 				if(it.next().floorDestination == elevator[1].getCurrentFloor()) {
-					elevator[1].getElevatorList().remove(it.next());	
+					elevator[1].getElevatorList().remove(it.next());	}
 			}
-		}
 			System.out.println("People exiting the elevator at floor " + elevator[1].getCurrentFloor());
+		}
 	  }
-	}
 	
 	// if elevator's direction is up, load people who's going up.. or the other way around
 	public static void boarding (int currentFloor) {
@@ -114,7 +112,7 @@ public class Controller {
 	public static void nextMove(int currentFloor) {
 	
 	if(elevator[1].getDirection() == 1) {
-		if (elevator[1].getElevatorList() == null && floor[currentFloor].getDownList() == null) {
+		if (elevator[1].getElevatorList().isEmpty() && floor[currentFloor].getDownList().isEmpty()) {
 			elevator[1].idling();
 			System.out.println("Elevator empty and downlist request is empty... Idling");
 		} else {
@@ -125,7 +123,7 @@ public class Controller {
 		}
 	} else {
 		
-		if (elevator[1].getElevatorList() == null && floor[currentFloor].getUpList() == null) {
+		if (elevator[1].getElevatorList().isEmpty() && floor[currentFloor].getUpList().isEmpty()) {
 			elevator[1].idling();
 			System.out.println("Elevator empty and 'uplist' request is empty... Idling");
 
