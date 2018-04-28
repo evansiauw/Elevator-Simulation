@@ -9,7 +9,7 @@ public class Elevator extends Controller{
 	
 	public Elevator(int elevatorNumber) {
 		this.elevatorNumber = elevatorNumber;
-		this.direction = 0;
+		this.direction = 1;
 		this.currentFloor = 1;
 		ElevatorList = new LinkedList<>();
 	}
@@ -23,11 +23,17 @@ public class Elevator extends Controller{
 	}
 	
 	public Person removePersonFromElevator(){
+	    System.out.println("Person arrived at floor destination");
+
 	    return ElevatorList.remove();
+
 	}
 
     public void addPeopleToElevator(LinkedList<Person> upList) {
+    	
         ElevatorList.addAll(upList);
+	    System.out.println("Person goes into the elevator");
+
     }
     
     public LinkedList<Person> getElevatorList(){
