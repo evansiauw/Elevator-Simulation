@@ -14,4 +14,7 @@ public class Person extends Controller{
 		this.floorDestination = floorDestination;
 	}
 	
+	public double getArrivalTime() {
+		return arrivalTime;
+	}
 }

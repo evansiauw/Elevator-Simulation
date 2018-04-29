@@ -107,7 +107,7 @@ public class Controller {
 				Iterator<Person> it = floor[currentFloor].getUpList().iterator();
 				while(it.hasNext()) {
 					Person element = it.next();
-					System.out.print("Person " + element.personNumber + " ");
+					System.out.print("Person " + element.personNumber + " " );
 				}
 				floor[currentFloor].removeUpList();
 				System.out.println();
@@ -152,7 +152,7 @@ public class Controller {
 		Iterator <Person> iter = elevator[1].getElevatorList().iterator();
 		while(iter.hasNext()) {
 			Person element = iter.next();
-			System.out.println("PersonId: " + element.personNumber + "  Dest " + element.floorDestination +"");	
+			System.out.println("PersonId: " + element.personNumber + "  Dest " + element.floorDestination +"  Arrival Time: "+element.getArrivalTime());	
 		}
 	}
 	
