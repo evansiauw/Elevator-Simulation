@@ -64,6 +64,16 @@ public class Elevator extends Controller{
     public void increaseCurrentFloor() {
     		currentFloor++;
     }
+    
+    public String printDirectionInWord() {
+    		if(getDirection()==1) {
+    			return "UP";
+    		}else if (getDirection()==-1) {
+    			return "DOWN";
+    		} else {
+    			return "IDLING";
+    		}
+    }
    
 	
 }
