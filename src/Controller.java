@@ -98,39 +98,42 @@ public class Controller {
 	
 	// if elevator's direction is up, load people who's going up(if up list, not empty).. or the other way around
 	public static void boarding (int currentFloor) {
-
+		int counter=0;
 		if(elevator[1].getDirection() == 1) {
+			System.out.print("Boarding: ");
 			if(!elevator[1].floor[currentFloor].upList.isEmpty()) {
-				System.out.print("Boarding: ");
-				elevator[1].addPeopleToElevator(floor[currentFloor].getUpList());
-				time = time + 0.1;
-				Iterator<Person> it = floor[currentFloor].getUpList().iterator();
-				while(it.hasNext()) {
-					Person element = it.next();
-					System.out.print("Person " + element.personNumber + " " );
-				}
-				floor[currentFloor].removeUpList();
-				System.out.println();
+				Iterator<Person> it = elevator[1].floor[currentFloor].upList.iterator();
+			while(it.hasNext()) {
+				Person element= it.next();
+				if(element.arrivalTime <= time) {
+					System.out.print("Person " + element.personNumber + " ");
+					elevator[1].addPersonToElevator(element);
+					it.remove();
+					counter++;
+					}
 			}
-			else {
-				System.out.println("Boarding: None");
+			if(counter>0) {System.out.println(); time = time + 0.1;}
 			}
+			if(counter==0) { System.out.print("None\n"); }
 		}
 		else {
-			if(!elevator[1].floor[currentFloor].downList.isEmpty()) {
+			if(elevator[1].getDirection() == 1) {
 				System.out.print("Boarding: ");
-				elevator[1].addPeopleToElevator(floor[currentFloor].getDownList()); 
-				time = time + 0.1;
-				Iterator<Person> it = floor[currentFloor].getDownList().iterator();
+				if(!elevator[1].floor[currentFloor].upList.isEmpty()) {
+					Iterator<Person> it = elevator[1].floor[currentFloor].downList.iterator();
 				while(it.hasNext()) {
-					Person element = it.next();
-					System.out.print("Person " + element.personNumber + " ");
+					Person element= it.next();
+					if(element.arrivalTime <= time) {
+						System.out.print("Person " + element.personNumber + " ");
+						elevator[1].addPersonToElevator(element);
+						it.remove();
+						counter++;
+						}
 				}
-				floor[currentFloor].removeDownList();
-				System.out.println();
-			}
-			else {
-				System.out.println("Boarding: None");
+				if(counter>0) {System.out.println(); time = time + 0.1;}
+				time = time + 0.1;
+				}
+				if(counter==0) { System.out.print("None\n"); }
 			}
 		}
 	}
@@ -152,7 +155,7 @@ public class Controller {
 		Iterator <Person> iter = elevator[1].getElevatorList().iterator();
 		while(iter.hasNext()) {
 			Person element = iter.next();
-			System.out.println("PersonId: " + element.personNumber + "  Dest " + element.floorDestination +"  Arrival Time: "+element.getArrivalTime());	
+			System.out.println("PersonId: " + element.personNumber + "  Dest: " + element.floorDestination +"  ArrivalTime: "+ df.format(element.getArrivalTime()));	
 		}
 	}
 	
