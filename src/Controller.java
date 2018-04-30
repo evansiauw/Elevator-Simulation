@@ -57,7 +57,7 @@ public class Controller {
 		if(person[personObjectCounter].personAtFloor < person[personObjectCounter].floorDestination) {
 			floor[personAt].addPersonToUpList(person[personObjectCounter]); }
 		else {
-			floor[personAt].addPersonToDownList(person[personObjectCounter]);
+			floor[personAt].addPersonToDownList(person[personObjectCounter]); 
 		}
 		
 		System.out.println("Created: PersonId: " + person[personObjectCounter].personNumber + " AtFloor: " + person[personObjectCounter].personAtFloor
