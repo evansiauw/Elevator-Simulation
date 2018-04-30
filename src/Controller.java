@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -23,7 +26,16 @@ public class Controller {
 	private static DecimalFormat df = new DecimalFormat(".#");
 
 	public static void main(String[] args) {
-	
+
+        // puts all System.outs into a txt file
+        PrintStream out;
+        try {
+            out = new PrintStream(new FileOutputStream("output.txt"));
+            System.setOut(out);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 		
 		for(int i=1; i <= numOfElevator; i++) {
 			elevator[i] = new Elevator(i); }
