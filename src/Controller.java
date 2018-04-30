@@ -48,7 +48,7 @@ public class Controller {
 		double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
 		
 		do {
-		personAt = rand.nextInt(10) + 1;
+		personAt = generateStartingFloor(); // new method
 		floorDestination = rand.nextInt(10) + 1;
 		}while (personAt == floorDestination);
 		
@@ -182,6 +182,24 @@ public class Controller {
 				time = time + 0.2;
 			}
 	}
+	
+	// generate which floor the person is going to start on (1/2 the time, this will be the first floor)
+    // the other half of the time will be the other 9 
+    private static int generateStartingFloor() {
+        int floorNumber = 1;
+        Random random = new Random();
+        
+        // the random number determines whether the person will start at the first floor or the other 9 floors
+        // 0 -> first floor, 1 -> floors 2-10
+        int randomNumber = random.nextInt(2); 
+        if (randomNumber == 0){
+            floorNumber = 1;
+        }
+        else{
+            floorNumber = random.nextInt(9) + 2;
+        }
+        return floorNumber;
+    }
 	
 	
 	
