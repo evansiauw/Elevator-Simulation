@@ -41,14 +41,19 @@ public class Controller {
             e.printStackTrace();
         }
 		
+        //assign the number of elevators
 		for(int i=1; i <= numOfElevator; i++) {
-			elevator[i] = new Elevator(i); }
+			elevator[i] = new Elevator(i); 
+		}
 		
+		//assign the number of floors
 		for(int i=1; i <= numOfFloor; i++) {
-			floor[i]= new Floor(i); }
+			floor[i]= new Floor(i); 
+		}
 		
-		elevator[1].directionUp();
+		elevator[1].directionUp(); // set the elevator direction to go up
 		
+		//does elevator simulation for a specified number of people
 		while(personObjectCounter < numOfPerson) {
 			System.out.println("Current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor() + 
 					" Direction: " + elevator[1].printDirectionInWord());
@@ -56,7 +61,7 @@ public class Controller {
 			simulatingElevator();
 			System.out.println();
 		}	
-		System.out.println("Total number of persons created: " + personCounter);
+		System.out.println("Total number of persons created: " + personCounter+1);
 		computeAverageWaitingTime();
 	}
 	
@@ -70,17 +75,20 @@ public class Controller {
 
     // creating one person object at a time
 	public static void creatingPerson() {
-				
+		
+	    //exponential distribution for interarrival time
 		double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
 		
+		//generate the persons starting floor and the floor destination randomly and make sure the generated number are not the same
 		do {
-		personAt = generateStartingFloor(); // new method
-		floorDestination = rand.nextInt(10) + 1;
-		}while (personAt == floorDestination);
+    		personAt = generateStartingFloor(); // new method
+    		floorDestination = rand.nextInt(10) + 1;
+		} while (personAt == floorDestination);
 		
-		person[personObjectCounter] = new Person(personObjectCounter,custArrival, personAt, floorDestination);
-		person[personObjectCounter].arrivalTime = time;
-		System.out.println("Arrival Time: " + person[personObjectCounter].arrivalTime);
+		person[personObjectCounter] = new Person(personObjectCounter,custArrival, personAt, floorDestination); // create new person object
+		person[personObjectCounter].arrivalTime = time; // set the arrival time of the customer
+		
+		//determine whether the person is going up or down
 		if(person[personObjectCounter].personAtFloor < person[personObjectCounter].floorDestination) {
 			floor[personAt].addPersonToUpList(person[personObjectCounter]); }
 		else {
@@ -115,7 +123,6 @@ public class Controller {
 				if(element.floorDestination == elevator[1].getCurrentFloor()) {
 					System.out.print("Person " + element.personNumber + " ");
 					element.completedTime = time;
-			        System.out.println("Completed Time: " + element.completedTime);
 			        waitingTimesForEachPerson.add(element.getWaitingTime());
 					it.remove();
 					counter++;
