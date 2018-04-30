@@ -18,7 +18,7 @@ public class Controller {
 	static int totalWaitTime = 0;
 	static int numOfElevator = 1;
 	static int numOfFloor = 10;
-	static int numOfPerson = 1000;
+	static int numOfPerson = 100;
 	static Random rand = new Random();
 	static Elevator [] elevator = new Elevator[numOfElevator+1];
 	static Floor [] floor = new Floor[numOfFloor+1];
@@ -45,7 +45,7 @@ public class Controller {
 		
 		elevator[1].directionUp();
 		
-		while(time < maxRunningTime) {
+		while(personObjectCounter < numOfPerson) {
 			System.out.println("Current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor() + 
 					" Direction: " + elevator[1].printDirectionInWord());
 			creatingPerson();
