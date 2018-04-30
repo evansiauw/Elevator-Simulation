@@ -117,7 +117,6 @@ public class Controller {
 			if(counter==0) { System.out.print("None\n"); }
 		}
 		else {
-			if(elevator[1].getDirection() == 1) {
 				System.out.print("Boarding: ");
 				if(!elevator[1].floor[currentFloor].upList.isEmpty()) {
 					Iterator<Person> it = elevator[1].floor[currentFloor].downList.iterator();
@@ -131,12 +130,10 @@ public class Controller {
 						}
 				}
 				if(counter>0) {System.out.println(); time = time + 0.1;}
-				time = time + 0.1;
 				}
 				if(counter==0) { System.out.print("None\n"); }
 			}
 		}
-	}
 	
 	 /* if elevator's direction is up: 
 			if elevator empty or the opposite direction's list(down list) is empty too.. idling
