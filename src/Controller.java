@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
@@ -19,11 +20,14 @@ public class Controller {
 	static int numOfElevator = 1;
 	static int numOfFloor = 10;
 	static int numOfPerson = 100;
+	static double arrivalTimeSum = 0;
+	static double averageWaitingTime = 0;
 	static Random rand = new Random();
 	static Elevator [] elevator = new Elevator[numOfElevator+1];
 	static Floor [] floor = new Floor[numOfFloor+1];
 	static Person [] person  = new Person[numOfPerson+1];
 	private static DecimalFormat df = new DecimalFormat(".#");
+	static ArrayList<Double> waitingTimesForEachPerson = new ArrayList<>();
 
 	public static void main(String[] args) {
 
@@ -53,9 +57,18 @@ public class Controller {
 			System.out.println();
 		}	
 		System.out.println("Total number of persons created: " + personCounter);
+		computeAverageWaitingTime();
 	}
 	
-	// creating one person object at a time
+	private static void computeAverageWaitingTime() {
+	    for (Double i : waitingTimesForEachPerson){
+            arrivalTimeSum += i;
+        }
+        averageWaitingTime = arrivalTimeSum / numOfPerson;
+        System.out.println("Average Waiting Time: "+ df.format(averageWaitingTime)); 
+    }
+
+    // creating one person object at a time
 	public static void creatingPerson() {
 				
 		double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
@@ -66,6 +79,8 @@ public class Controller {
 		}while (personAt == floorDestination);
 		
 		person[personObjectCounter] = new Person(personObjectCounter,custArrival, personAt, floorDestination);
+		person[personObjectCounter].arrivalTime = time;
+		System.out.println("Arrival Time: " + person[personObjectCounter].arrivalTime);
 		if(person[personObjectCounter].personAtFloor < person[personObjectCounter].floorDestination) {
 			floor[personAt].addPersonToUpList(person[personObjectCounter]); }
 		else {
@@ -99,6 +114,9 @@ public class Controller {
 				Person element= it.next();
 				if(element.floorDestination == elevator[1].getCurrentFloor()) {
 					System.out.print("Person " + element.personNumber + " ");
+					element.completedTime = time;
+			        System.out.println("Completed Time: " + element.completedTime);
+			        waitingTimesForEachPerson.add(element.getWaitingTime());
 					it.remove();
 					counter++;
 					}

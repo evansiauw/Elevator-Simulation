@@ -17,4 +17,8 @@ public class Person extends Controller{
 	public double getArrivalTime() {
 		return arrivalTime;
 	}
+	
+	public double getWaitingTime(){
+	    return completedTime - arrivalTime;
+	}
 }
