@@ -24,6 +24,7 @@ public class Controller {
 
 	public static void main(String[] args) {
 	
+		
 		for(int i=1; i <= numOfElevator; i++) {
 			elevator[i] = new Elevator(i); }
 		
@@ -93,7 +94,6 @@ public class Controller {
 			if(counter>0) {System.out.println();}
 		}
 		if(counter==0) { System.out.print("None\n"); }
-
 	  }
 	
 	// if elevator's direction is up, load people who's going up(if up list, not empty).. or the other way around
