@@ -113,8 +113,6 @@ public class Controller {
 				Person element= it.next();
 				if(element.floorDestination == elevator[1].getCurrentFloor()) {
 					System.out.print("Person " + element.personNumber + " ");
-					element.completedTime = time;
-			        System.out.println("Completed Time: " + element.completedTime);
 			        waitingTimesForEachPerson.add(element.getWaitingTime());
 					it.remove();
 					counter++;
