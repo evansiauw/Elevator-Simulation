@@ -80,7 +80,6 @@ public class Controller {
 		
 		Person newPerson= new Person(personObjectCounter,custArrival, personAt, floorDestination);
 		newPerson.arrivalTime = time;
-		System.out.println("Arrival Time: " + newPerson.arrivalTime);
 		if(newPerson.personAtFloor < newPerson.floorDestination) {
 			floor[personAt].addPersonToUpList(newPerson); }
 		else {
