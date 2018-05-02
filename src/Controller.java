@@ -5,11 +5,18 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
-
+/*
+ * Elevator Simulation Part 1
+ * 
+ * Joshua Goldstein, Iwan Siauw, Orlando Calle
+ * 
+ * This class controls the main simulation of the elevator. It determines when to pick up passengers from floors,
+ * when to drop off passengers at floors, when the elevator goes up/down, and it also puts people on their respective floors. At the end of the simulation, average wait time will be computed.
+ * The final output of the simulation can be found in the output.txt file.
+ */
 public class Controller {
 
-	static int maxRunningTime = 60; // a minute
-	static double time = 0; // in second
+	static double time = 0; 
 	static int personObjectCounter = 0;
 	static int meanArrival = 5;
 	static int personAt;
@@ -18,7 +25,7 @@ public class Controller {
 	static int totalWaitTime = 0;
 	static int numOfElevator = 1;
 	static int numOfFloor = 10;
-	static int numOfPerson = 100;
+	static int numOfPerson = 100000;
 	static double arrivalTimeSum = 0;
 	static double averageWaitingTime = 0;
 	static Random rand = new Random();
@@ -93,10 +100,8 @@ public class Controller {
 			floor[personAt].addPersonToDownList(newPerson); 
 		}
 		
-		System.out.println("Created: PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
-				+ " Dest: " + newPerson.floorDestination);
-		System.out.println("Arrival time: "+df.format(newPerson.arrivalTime));
-
+		System.out.println("Created: PersonId: " + newPerson.personNumber + " At Floor: " + newPerson.personAtFloor
+				+ " Dest: " + newPerson.floorDestination +" Arrival time: "+df.format(newPerson.arrivalTime));
 	}
 	
 	/*
