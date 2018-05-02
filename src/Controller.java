@@ -4,14 +4,13 @@ import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Random;
 
 public class Controller {
 
 	static int maxRunningTime = 60; // a minute
 	static double time = 0; // in second
-	static int personObjectCounter = 1;
+	static int personObjectCounter = 0;
 	static int meanArrival = 5;
 	static int personAt;
 	static int floorDestination;
@@ -41,14 +40,17 @@ public class Controller {
             e.printStackTrace();
         }
 		
+        //assigns the number of elevators
 		for(int i=1; i <= numOfElevator; i++) {
 			elevator[i] = new Elevator(i); }
 		
+		//assigns the number of floors
 		for(int i=1; i <= numOfFloor; i++) {
 			floor[i]= new Floor(i); }
 		
-		elevator[1].directionUp();
+		elevator[1].directionUp();//sets elevator direction to 'up'
 		
+		//loop goes until all persons were created
 		while(personObjectCounter < numOfPerson) {
 			System.out.println("Current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor() + 
 					" Direction: " + elevator[1].printDirectionInWord());
@@ -56,10 +58,13 @@ public class Controller {
 			simulatingElevator();
 			System.out.println();
 		}	
-		System.out.println("Total number of persons created: " + personCounter);
+		System.out.println("Total number of persons created: " + personObjectCounter);
 		computeAverageWaitingTime();
 	}
 	
+	/*Computes average waiting time by taking the sum of each people's waiting time 
+	 * and taking an average.
+	 */
 	private static void computeAverageWaitingTime() {
 	    for (Double i : waitingTimesForEachPerson){
             arrivalTimeSum += i;
@@ -68,18 +73,20 @@ public class Controller {
         System.out.println("Average Waiting Time: "+ df.format(averageWaitingTime)); 
     }
 
-    // creating one person object at a time
+    /*
+     * creates one person object at a time with an arrival time 
+     */
 	public static void creatingPerson() {
 				
 		double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
 		
 		do {
-		personAt = generateStartingFloor(); // new method
-		floorDestination = rand.nextInt(10) + 1;
+    		personAt = generateStartingFloor();
+    		floorDestination = rand.nextInt(10) + 1;
 		}while (personAt == floorDestination);
 		
-		Person newPerson= new Person(personObjectCounter,custArrival, personAt, floorDestination);
-		newPerson.arrivalTime = time;
+		Person newPerson= new Person(++personObjectCounter,custArrival, personAt, floorDestination);
+		newPerson.arrivalTime = custArrival;
 		if(newPerson.personAtFloor < newPerson.floorDestination) {
 			floor[personAt].addPersonToUpList(newPerson); }
 		else {
@@ -88,12 +95,13 @@ public class Controller {
 		
 		System.out.println("Created: PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
 				+ " Dest: " + newPerson.floorDestination);
-		personObjectCounter++;
-		personCounter++;
+		System.out.println("Arrival time: "+df.format(newPerson.arrivalTime));
 
 	}
 	
-	// consist of 3 method which will be executed in one while loop cycle
+	/*
+	 * consist of 3 method which will be executed in one while loop cycle
+	 */
 	public static void simulatingElevator() {
 		
 		int currentFloor = elevator[1].getCurrentFloor();
@@ -103,9 +111,11 @@ public class Controller {
 		nextMove(currentFloor);	
 	}
 	
-	// if elevator not empty, increase time, remove the person who's destination == elevator's current position
+	/*
+	 * if elevator not empty, increase time, remove the person who's destination == elevator's current position
+	 */
 	public static void exit() {
-		int counter=0;
+		int counter=0; //counts the number of people ready to leave the elevator
 		System.out.print("Exit: ");
 		if(!elevator[1].getElevatorList().isEmpty()) {
 			Iterator<Person> it = elevator[1].getElevatorList().iterator();
@@ -113,6 +123,7 @@ public class Controller {
 				Person element= it.next();
 				if(element.floorDestination == elevator[1].getCurrentFloor()) {
 					System.out.print("Person " + element.personNumber + " ");
+					element.completedTime = time;
 			        waitingTimesForEachPerson.add(element.getWaitingTime());
 					it.remove();
 					counter++;
@@ -123,12 +134,14 @@ public class Controller {
 		if(counter==0) { System.out.print("None\n"); }
 	  }
 	
-	// if elevator's direction is up, load people who's going up(if up list, not empty).. or the other way around
+	/*
+	 * if elevator's direction is up, load people who's going up(if up list, not empty).. or the other way around
+	 */
 	public static void boarding (int currentFloor) {
-		int counter=0;
+		int counter=0; //counts the number of people ready to get on the elevator
 		if(elevator[1].getDirection() == 1) {
 			System.out.print("Boarding: ");
-			if(!elevator[1].floor[currentFloor].upList.isEmpty()) {
+			if(!Controller.floor[currentFloor].upList.isEmpty()) {
 				Iterator<Person> it = elevator[1].floor[currentFloor].upList.iterator();
 			while(it.hasNext()) {
 				Person element= it.next();
@@ -144,23 +157,23 @@ public class Controller {
 			if(counter==0) { System.out.print("None\n"); }
 		}
 		else {
-				System.out.print("Boarding: ");
-				if(!elevator[1].floor[currentFloor].upList.isEmpty()) {
-					Iterator<Person> it = elevator[1].floor[currentFloor].downList.iterator();
-				while(it.hasNext()) {
-					Person element= it.next();
-					if(element.arrivalTime <= time) {
-						System.out.print("Person " + element.personNumber + " ");
-						elevator[1].addPersonToElevator(element);
-						it.remove();
-						counter++;
-						}
+			System.out.print("Boarding: ");
+			if(!Controller.floor[currentFloor].upList.isEmpty()) {
+				Iterator<Person> it = Controller.floor[currentFloor].downList.iterator();
+			while(it.hasNext()) {
+				Person element= it.next();
+				if(element.arrivalTime <= time) {
+					System.out.print("Person " + element.personNumber + " ");
+					elevator[1].addPersonToElevator(element);
+					it.remove();
+					counter++;
 				}
-				if(counter>0) {System.out.println(); time = time + 0.1;}
-				}
-				if(counter==0) { System.out.print("None\n"); }
 			}
+			if(counter>0) {System.out.println(); time = time + 0.1;}
+			}
+			if(counter==0) { System.out.print("None\n"); }
 		}
+	}
 	
 	 /* if elevator's direction is up: 
 			if elevator empty or the opposite direction's list(down list) is empty too.. idling
@@ -183,19 +196,22 @@ public class Controller {
 		}
 	}
 	
-	// if this is the lowest level.. change direction(down to up).. otw..go one floor down
+	/*
+	 * if this is the lowest level.. change direction(down to up).. otherwise..go one floor down
+	 */
 	public static void headingDown() {
 		if(elevator[1].getCurrentFloor() == 1) {
 			elevator[1].directionUp();
-
-			}
+		}
 		else {
-				elevator[1].decreaseCurrentFloor();
-				time = time + 0.2;
-			}
+			elevator[1].decreaseCurrentFloor();
+			time = time + 0.2;
+		}
 	}
 	
-	// if this is the Top level.. change direction(up to down).. go one floor down
+	/*
+	 * if this is the Top level.. change direction(up to down).. go one floor down
+	 */
 	public static void headingUp() {
 		if(elevator[1].getCurrentFloor() == 10) {
 			elevator[1].directionDown();		
@@ -207,8 +223,10 @@ public class Controller {
 			}
 	}
 	
-	// generate which floor the person is going to start on (1/2 the time, this will be the first floor)
-    // the other half of the time will be the other 9 
+	/*
+	 * generate which floor the person is going to start on (1/2 the time, this will be the first floor,
+	 * the other half of the time will be the other 9) 
+	 */
     private static int generateStartingFloor() {
         int floorNumber = 1;
         Random random = new Random();
@@ -224,8 +242,5 @@ public class Controller {
         }
         return floorNumber;
     }
-	
-	
-	
-	
+
 }
