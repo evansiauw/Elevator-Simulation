@@ -4,19 +4,13 @@ import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.PriorityQueue;
 import java.util.Random;
-/*
- * Elevator Simulation Part 1
- * 
- * Joshua Goldstein, Iwan Siauw, Orlando Calle
- * 
- * This class controls the main simulation of the elevator. It determines when to pick up passengers from floors,
- * when to drop off passengers at floors, when the elevator goes up/down, and it also puts people on their respective floors. At the end of the simulation, average wait time will be computed.
- * The final output of the simulation can be found in the output.txt file.
- */
+
 public class Controller {
 
-	static double time = 0; 
+	static int maxRunningTime = 60; // a minute
+	static double time = 0; // in second
 	static int personObjectCounter = 0;
 	static int meanArrival = 5;
 	static int personAt;
@@ -34,6 +28,9 @@ public class Controller {
 	static Person [] person  = new Person[numOfPerson+1];
 	private static DecimalFormat df = new DecimalFormat(".#");
 	static ArrayList<Double> waitingTimesForEachPerson = new ArrayList<>();
+	static PriorityQueue <Person> minHeap = new PriorityQueue<Person>();
+	
+	
 
 	public static void main(String[] args) {
 
@@ -95,17 +92,18 @@ public class Controller {
 		Person newPerson= new Person(++personObjectCounter,custArrival, personAt, floorDestination);
 		newPerson.arrivalTime = custArrival;
 		
-		// assign this person to the floor according where this person is initially at
-		// if that person destination is higher, we assign this person to UpList
-		// or the other way around
+		minHeap.add(newPerson);
+		
 		if(newPerson.personAtFloor < newPerson.floorDestination) {
 			floor[personAt].addPersonToUpList(newPerson); }
 		else {
 			floor[personAt].addPersonToDownList(newPerson); 
 		}
 		
-		System.out.println("Created: PersonId: " + newPerson.personNumber + " At Floor: " + newPerson.personAtFloor
-				+ " Dest: " + newPerson.floorDestination +" Arrival time: "+df.format(newPerson.arrivalTime));
+		System.out.println("Created: PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
+				+ " Dest: " + newPerson.floorDestination);
+		System.out.println("Arrival time: "+df.format(newPerson.arrivalTime));
+
 	}
 	
 	/*

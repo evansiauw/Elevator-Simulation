@@ -1,4 +1,4 @@
-public class Person extends Controller{
+public class Person extends Controller implements Comparable <Person>{
 
 	int floorDestination;
 	int personNumber;
@@ -22,5 +22,19 @@ public class Person extends Controller{
 	 */
 	public double getWaitingTime(){
 	    return completedTime - arrivalTime;
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		
+		if (this.arrivalTime < o.arrivalTime) {
+			return -1;
+		} if (this.arrivalTime == o.arrivalTime) {
+			return 0;		
+		}else {
+			return 1;
+		}
+		
+	
 	}
 }
