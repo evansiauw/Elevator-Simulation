@@ -25,7 +25,7 @@ public class Controller {
 	static int totalWaitTime = 0;
 	static int numOfElevator = 1;
 	static int numOfFloor = 10;
-	static int numOfPerson = 100000;
+	static int numOfPerson = 100;
 	static double arrivalTimeSum = 0;
 	static double averageWaitingTime = 0;
 	static Random rand = new Random();
@@ -94,6 +94,10 @@ public class Controller {
 		
 		Person newPerson= new Person(++personObjectCounter,custArrival, personAt, floorDestination);
 		newPerson.arrivalTime = custArrival;
+		
+		// assign this person to the floor according where this person is initially at
+		// if that person destination is higher, we assign this person to UpList
+		// or the other way around
 		if(newPerson.personAtFloor < newPerson.floorDestination) {
 			floor[personAt].addPersonToUpList(newPerson); }
 		else {
