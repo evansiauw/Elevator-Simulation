@@ -28,10 +28,16 @@ public class Floor extends Controller{
 		return downList;
 	}
 	
+	/*
+	 * clears the uplist
+	 */
 	public void removeUpList() {
 		upList.clear();
 	}
 	
+	/*
+	 * clears the downlist
+	 */
 	public void removeDownList() {
 		downList.clear();
 	}

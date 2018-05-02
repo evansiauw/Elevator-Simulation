@@ -1,4 +1,3 @@
-
 public class Person extends Controller{
 
 	int floorDestination;
@@ -18,6 +17,9 @@ public class Person extends Controller{
 		return arrivalTime;
 	}
 	
+	/*
+	 * Calculation for waiting time
+	 */
 	public double getWaitingTime(){
 	    return completedTime - arrivalTime;
 	}
