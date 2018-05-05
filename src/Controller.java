@@ -9,7 +9,6 @@ import java.util.Random;
 
 public class Controller {
 
-	static int maxRunningTime = 60; // a minute
 	static double time = 0; // in second
 	static int personObjectCounter = 0;
 	static int meanArrival = 5;
@@ -17,7 +16,7 @@ public class Controller {
 	static int floorDestination;
 	static int personCounter = 0;
 	static int totalWaitTime = 0;
-	static int numOfElevator = 1;
+	static int numOfElevator = 5;
 	static int numOfFloor = 10;
 	static int numOfPerson = 100;
 	static double arrivalTimeSum = 0;
@@ -25,15 +24,26 @@ public class Controller {
 	static Random rand = new Random();
 	static Elevator [] elevator = new Elevator[numOfElevator+1];
 	static Floor [] floor = new Floor[numOfFloor+1];
-	static Person [] person  = new Person[numOfPerson+1];
-	private static DecimalFormat df = new DecimalFormat(".#");
+	static DecimalFormat df = new DecimalFormat(".#");
 	static ArrayList<Double> waitingTimesForEachPerson = new ArrayList<>();
-	static PriorityQueue <Person> minHeap = new PriorityQueue<Person>();
+	static PriorityQueue <Person> futureEventList = new PriorityQueue<Person>();
 	
-	
-
 	public static void main(String[] args) {
 
+		
+		/*Person a = new Person(1,10,3,10);
+		Person b = new Person(2,9,5,1);
+		Person c = new Person(3,8,1,2);
+		
+		minHeap.add(a);
+		minHeap.add(b);
+		minHeap.add(c);
+		
+		while(!minHeap.isEmpty()) {
+			Person i = minHeap.poll();
+			System.out.println(i.arrivalTime);
+		} */
+		
         // puts all System.outs into a txt file
         PrintStream out;
         try {
@@ -46,14 +56,12 @@ public class Controller {
 		
         //assigns the number of elevators
 		for(int i=1; i <= numOfElevator; i++) {
-			elevator[i] = new Elevator(i); }
+			elevator[i] = new Elevator(i,(2*i)-1); }
 		
 		//assigns the number of floors
 		for(int i=1; i <= numOfFloor; i++) {
 			floor[i]= new Floor(i); }
-		
-		elevator[1].directionUp();//sets elevator direction to 'up'
-		
+				
 		//loop goes until all persons were created
 		while(personObjectCounter < numOfPerson) {
 			System.out.println("Current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor() + 
@@ -90,19 +98,18 @@ public class Controller {
 		}while (personAt == floorDestination);
 		
 		Person newPerson= new Person(++personObjectCounter,custArrival, personAt, floorDestination);
-		newPerson.arrivalTime = custArrival;
+		futureEventList.add(newPerson);
 		
-		minHeap.add(newPerson);
-		
-		if(newPerson.personAtFloor < newPerson.floorDestination) {
+		//newPerson.arrivalTime = custArrival;
+				
+		/*if(newPerson.personAtFloor < newPerson.floorDestination) {
 			floor[personAt].addPersonToUpList(newPerson); }
 		else {
 			floor[personAt].addPersonToDownList(newPerson); 
-		}
+		} */
 		
 		System.out.println("Created: PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
-				+ " Dest: " + newPerson.floorDestination);
-		System.out.println("Arrival time: "+df.format(newPerson.arrivalTime));
+				+ " Dest: " + newPerson.floorDestination + " ArrTime: "+ df.format(newPerson.arrivalTime));
 
 	}
 	

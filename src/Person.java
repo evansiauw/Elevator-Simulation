@@ -3,7 +3,7 @@ public class Person extends Controller implements Comparable <Person>{
 	int floorDestination;
 	int personNumber;
 	int personAtFloor;
-	double arrivalTime;
+	Double arrivalTime;
 	double completedTime;
 	
 	public Person(int personNumber, double arrivalTime, int personAt, int floorDestination){
@@ -25,16 +25,9 @@ public class Person extends Controller implements Comparable <Person>{
 	}
 
 	@Override
-	public int compareTo(Person o) {
+	public int compareTo(Person other) {
 		
-		if (this.arrivalTime < o.arrivalTime) {
-			return -1;
-		} if (this.arrivalTime == o.arrivalTime) {
-			return 0;		
-		}else {
-			return 1;
-		}
-		
-	
+		return this.arrivalTime.compareTo(other.arrivalTime);
+
 	}
 }

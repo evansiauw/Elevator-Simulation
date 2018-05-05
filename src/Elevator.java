@@ -7,10 +7,9 @@ public class Elevator extends Controller{
 	int currentFloor;
 	LinkedList<Person> ElevatorList;
 	
-	public Elevator(int elevatorNumber) {
+	public Elevator(int elevatorNumber, int currentFloor) {
 		this.elevatorNumber = elevatorNumber;
-		this.direction = 1;
-		this.currentFloor = 1;
+		this.currentFloor = currentFloor;
 		ElevatorList = new LinkedList<>();
 	}
 	
