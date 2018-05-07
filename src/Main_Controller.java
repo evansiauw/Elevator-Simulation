@@ -102,9 +102,7 @@ public class Main_Controller {
                 if (i == 1) {
                     currDistance = distance;
                 } else if (distance <= currDistance
-                           && (futureEventList.peek().getPersonDirection() == elevator[i].direction
-                               || elevator[i].direction == 0)
-                          ){
+                           && elevator[i].getDirection() == 0){
                     currDistance = distance;
                     closestElevator = i;
                 }
@@ -157,7 +155,7 @@ public class Main_Controller {
             Iterator<Person> it = elevator[i].getElevatorList().iterator();
             while (it.hasNext()) {
                 Person element = it.next();
-                System.out.println("PersonId: " + element.personNumber + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
+                System.out.println("PersonId: " + element.personNumber + " AtFloor: " + element.personAtFloor + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
             }
         }
 
@@ -166,9 +164,12 @@ public class Main_Controller {
     public static void headingDown(int i) {
 
             if (elevator[i].getCurrentFloor() == 1) {
-               // System.out.println("this is the 'Lowest' level, changing direction to 'Up'");
-                elevator[i].setDirection(0);
-                elevator[i].getElevatorList().clear();
+                if(elevator[i].getElevatorList().isEmpty()){
+                    elevator[i].setDirection(0);
+                } else {
+                    elevator[i].setDirection(1);
+                    elevator[i].increaseCurrentFloor();
+                }
             } else {
                 elevator[i].decreaseCurrentFloor();
             }
@@ -178,8 +179,12 @@ public class Main_Controller {
     public static void headingUp(int i) {
 
             if (elevator[i].getCurrentFloor() == 10) {
-                elevator[i].setDirection(0);
-                elevator[i].getElevatorList().clear();
+                if(elevator[i].getElevatorList().isEmpty()){
+                    elevator[i].setDirection(0);
+                } else {
+                    elevator[i].setDirection(-1);
+                    elevator[i].decreaseCurrentFloor();
+                }
                // System.out.println("this is the 'Top' level, changing direction to 'Down'");
             } else {
                 elevator[i].increaseCurrentFloor();
