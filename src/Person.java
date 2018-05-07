@@ -12,7 +12,9 @@ public class Person extends Controller implements Comparable <Person>{
 		this.personAtFloor = personAt;
 		this.floorDestination = floorDestination;
 	}
-	
+
+	public int getPersonAtFloor(){ return personAtFloor; }
+
 	public double getArrivalTime() {
 		return arrivalTime;
 	}

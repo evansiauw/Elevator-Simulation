@@ -1,46 +1,20 @@
 import java.util.LinkedList;
 
 public class Floor extends Controller{
-	
+
 	int floorNumber;
-	LinkedList<Person> upList;
-    LinkedList<Person> downList;
+	LinkedList <Person> passengerList;
 	
 	public Floor(int floorNumber) {
 		this.floorNumber = floorNumber;
-		upList = new LinkedList<>();
-	    downList = new LinkedList<>();
+		passengerList = new LinkedList<>();
 	}
 	
-	public void addPersonToUpList(Person p){
-	    upList.add(p);
-	}
-	
-	public void addPersonToDownList(Person p){
-        downList.add(p);
-    }
-	
-	public LinkedList<Person> getUpList(){
-		return upList;
-	}
-	
-	public LinkedList<Person> getDownList(){
-		return downList;
-	}
-	
-	/*
-	 * clears the uplist
-	 */
-	public void removeUpList() {
-		upList.clear();
-	}
-	
-	/*
-	 * clears the downlist
-	 */
-	public void removeDownList() {
-		downList.clear();
+	public void setPassengerList(Person p){
+	    passengerList.add(p);
 	}
 
+	public LinkedList<Person> getPassengerList(){ return passengerList; }
 	
+
 }

@@ -36,17 +36,11 @@ public class Elevator extends Controller{
 
 	}
 
-	/*
-	 * adds a list of people into the elevator
-	 */
-    public void addPeopleToElevator(LinkedList<Person> upList) {
-        ElevatorList.addAll(upList);
-    }
-    
+
     public LinkedList<Person> getElevatorList(){
     	return ElevatorList;
     }
-    
+
     /*
      * sets direction of the elevator to up
      */

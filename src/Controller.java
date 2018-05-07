@@ -2,10 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.PriorityQueue;
-import java.util.Random;
+import java.util.*;
 
 public class Controller {
 
@@ -30,32 +27,18 @@ public class Controller {
 	
 	public static void main(String[] args) {
 
-		
-		/*Person a = new Person(1,10,3,10);
-		Person b = new Person(2,9,5,1);
-		Person c = new Person(3,8,1,2);
-		
-		minHeap.add(a);
-		minHeap.add(b);
-		minHeap.add(c);
-		
-		while(!minHeap.isEmpty()) {
-			Person i = minHeap.poll();
-			System.out.println(i.arrivalTime);
-		} */
-		
         // puts all System.outs into a txt file
-        PrintStream out;
+       /* PrintStream out;
         try {
             out = new PrintStream(new FileOutputStream("output.txt"));
             System.setOut(out);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
-		
+        }*/
+
         //assigns the number of elevators
-		for(int i=1; i <= numOfElevator; i++) {
+		/*for(int i=1; i <= numOfElevator; i++) {
 			elevator[i] = new Elevator(i,(2*i)-1); }
 		
 		//assigns the number of floors
@@ -64,12 +47,13 @@ public class Controller {
 				
 		//loop goes until all persons were created
 		while(personObjectCounter < numOfPerson) {
-			System.out.println("Current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor() + 
-					" Direction: " + elevator[1].printDirectionInWord());
+			//System.out.println("Current time is: " + df.format(time) + "  Current Floor: " + elevator[1].getCurrentFloor() +
+			//		" Direction: " + elevator[1].printDirectionInWord());
 			creatingPerson();
 			simulatingElevator();
 			System.out.println();
-		}	
+		}
+
 		System.out.println("Total number of persons created: " + personObjectCounter);
 		computeAverageWaitingTime();
 	}
@@ -77,7 +61,7 @@ public class Controller {
 	/*Computes average waiting time by taking the sum of each people's waiting time 
 	 * and taking an average.
 	 */
-	private static void computeAverageWaitingTime() {
+	/*private static void computeAverageWaitingTime() {
 	    for (Double i : waitingTimesForEachPerson){
             arrivalTimeSum += i;
         }
@@ -88,7 +72,7 @@ public class Controller {
     /*
      * creates one person object at a time with an arrival time 
      */
-	public static void creatingPerson() {
+	/*public static void creatingPerson() {
 				
 		double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
 		
@@ -99,15 +83,9 @@ public class Controller {
 		
 		Person newPerson= new Person(++personObjectCounter,custArrival, personAt, floorDestination);
 		futureEventList.add(newPerson);
-		
+
 		//newPerson.arrivalTime = custArrival;
-				
-		/*if(newPerson.personAtFloor < newPerson.floorDestination) {
-			floor[personAt].addPersonToUpList(newPerson); }
-		else {
-			floor[personAt].addPersonToDownList(newPerson); 
-		} */
-		
+
 		System.out.println("Created: PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
 				+ " Dest: " + newPerson.floorDestination + " ArrTime: "+ df.format(newPerson.arrivalTime));
 
@@ -116,7 +94,7 @@ public class Controller {
 	/*
 	 * consist of 3 method which will be executed in one while loop cycle
 	 */
-	public static void simulatingElevator() {
+	/*public static void simulatingElevator() {
 		
 		int currentFloor = elevator[1].getCurrentFloor();
 
@@ -128,7 +106,7 @@ public class Controller {
 	/*
 	 * if elevator not empty, increase time, remove the person who's destination == elevator's current position
 	 */
-	public static void exit() {
+	/*public static void exit() {
 		int counter=0; //counts the number of people ready to leave the elevator
 		System.out.print("Exit: ");
 		if(!elevator[1].getElevatorList().isEmpty()) {
@@ -151,7 +129,7 @@ public class Controller {
 	/*
 	 * if elevator's direction is up, load people who's going up(if up list, not empty).. or the other way around
 	 */
-	public static void boarding (int currentFloor) {
+	/*public static void boarding (int currentFloor) {
 		int counter=0; //counts the number of people ready to get on the elevator
 		if(elevator[1].getDirection() == 1) {
 			System.out.print("Boarding: ");
@@ -193,7 +171,7 @@ public class Controller {
 			if elevator empty or the opposite direction's list(down list) is empty too.. idling
 			else changing direction.. boarding the current direction's list (down).. move one floor down
 	 else the other way around... */
-	public static void nextMove(int currentFloor) {
+	/*public static void nextMove(int currentFloor) {
 	
 		if(elevator[1].getDirection() == 1) {
 			headingUp();
@@ -213,7 +191,7 @@ public class Controller {
 	/*
 	 * if this is the lowest level.. change direction(down to up).. otherwise..go one floor down
 	 */
-	public static void headingDown() {
+	/*public static void headingDown() {
 		if(elevator[1].getCurrentFloor() == 1) {
 			elevator[1].directionUp();
 		}
@@ -226,7 +204,7 @@ public class Controller {
 	/*
 	 * if this is the Top level.. change direction(up to down).. go one floor down
 	 */
-	public static void headingUp() {
+	/*public static void headingUp() {
 		if(elevator[1].getCurrentFloor() == 10) {
 			elevator[1].directionDown();		
 			System.out.println("this is the 'Top' level, changing direction to 'Down'");
@@ -241,7 +219,7 @@ public class Controller {
 	 * generate which floor the person is going to start on (1/2 the time, this will be the first floor,
 	 * the other half of the time will be the other 9) 
 	 */
-    private static int generateStartingFloor() {
+    /*private static int generateStartingFloor() {
         int floorNumber = 1;
         Random random = new Random();
         
@@ -255,6 +233,7 @@ public class Controller {
             floorNumber = random.nextInt(9) + 2;
         }
         return floorNumber;
-    }
+    }*/
 
+    }
 }
