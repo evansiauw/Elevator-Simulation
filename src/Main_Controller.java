@@ -14,7 +14,7 @@ public class Main_Controller {
     static int totalWaitTime = 0;
     static int numOfElevator = 5;
     static int numOfFloor = 10;
-    static int numOfPerson = 20;
+    static int numOfPerson = 50;
     static double arrivalTimeSum = 0;
     static double averageWaitingTime = 0;
     static Random rand = new Random();
@@ -163,7 +163,6 @@ public class Main_Controller {
                 elevator[i].directionUp();
             } else {
                 elevator[i].decreaseCurrentFloor();
-                time = time + 0.2;
             }
 
     }
@@ -175,7 +174,6 @@ public class Main_Controller {
                // System.out.println("this is the 'Top' level, changing direction to 'Down'");
             } else {
                 elevator[i].increaseCurrentFloor();
-                time = time + 0.2;
             }
 
     }
