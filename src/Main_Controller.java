@@ -73,10 +73,10 @@ public class Main_Controller {
         System.out.println("Time: " + df.format(time) +  " PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
                 + " Dest: " + newPerson.floorDestination + " ArrTime: "+ df.format(newPerson.arrivalTime));
 
-    	System.out.println("Future events list: ");
+    	/*System.out.println("Future events list: ");
         for(Person p: futureEventList) {
         	System.out.println("Person "+ p.personNumber + " arrival time: "+df.format(p.getArrivalTime()));
-        }
+        }*/
     }
 
     public static void boarding(){
