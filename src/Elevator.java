@@ -1,16 +1,16 @@
-import java.util.LinkedList;
+import java.util.PriorityQueue;
 
-public class Elevator extends Controller{
+public class Elevator extends Controller implements Comparable <Person>{
 
 	int elevatorNumber;
 	int direction = 0; // 1 for Up, 0 for idle, -1 for down
 	int currentFloor;
-	LinkedList<Person> ElevatorList;
+	public PriorityQueue<Person> ElevatorList;
 	
 	public Elevator(int elevatorNumber, int currentFloor) {
 		this.elevatorNumber = elevatorNumber;
 		this.currentFloor = currentFloor;
-		ElevatorList = new LinkedList<>();
+		ElevatorList = new PriorityQueue<>();
 	}
 	
 	/*
@@ -36,8 +36,7 @@ public class Elevator extends Controller{
 
 	}
 
-
-    public LinkedList<Person> getElevatorList(){
+    public PriorityQueue<Person> getElevatorList(){
     	return ElevatorList;
     }
 
@@ -96,4 +95,11 @@ public class Elevator extends Controller{
     			return "IDLING";
     		}
     }
+
+	@Override
+	public int compareTo(Person other) {
+
+		return ElevatorList.peek().arrivalTime.compareTo(other.arrivalTime);
+
+	}
 }

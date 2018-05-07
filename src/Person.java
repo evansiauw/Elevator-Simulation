@@ -5,6 +5,7 @@ public class Person extends Controller implements Comparable <Person>{
 	int personAtFloor;
 	Double arrivalTime;
 	double completedTime;
+	int direction; // 1 for up and -1 for down
 	
 	public Person(int personNumber, double arrivalTime, int personAt, int floorDestination){
 		this.personNumber = personNumber;
@@ -12,6 +13,17 @@ public class Person extends Controller implements Comparable <Person>{
 		this.personAtFloor = personAt;
 		this.floorDestination = floorDestination;
 	}
+
+	public int getPersonDirection(){
+
+		if (personAtFloor < floorDestination){
+			direction = 1;
+		} else {
+			direction = -1;
+		}
+		return direction;
+	}
+
 
 	public int getPersonAtFloor(){ return personAtFloor; }
 

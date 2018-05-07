@@ -14,7 +14,7 @@ public class Main_Controller {
     static int totalWaitTime = 0;
     static int numOfElevator = 5;
     static int numOfFloor = 10;
-    static int numOfPerson = 50;
+    static int numOfPerson = 20;
     static double arrivalTimeSum = 0;
     static double averageWaitingTime = 0;
     static Random rand = new Random();
@@ -25,7 +25,6 @@ public class Main_Controller {
     static PriorityQueue<Person> futureEventList = new PriorityQueue<>();
 
     public static void main(String[] args) {
-
 
         for(int i=1; i <= numOfElevator; i++) {
             elevator[i] = new Elevator(i,(2*i)-1); }
@@ -44,9 +43,9 @@ public class Main_Controller {
 
         creatingPerson();
         boarding();
-        //exit();
+        exit();
         System.out.println();
-        //nextMove(currentFloor);
+        nextMove();
     }
 
     public static void creatingPerson() {
@@ -61,7 +60,7 @@ public class Main_Controller {
         Person newPerson= new Person(++personCounter,custArrival, personAt, floorDestination);
         futureEventList.add(newPerson);
 
-        System.out.println("Time: " + df.format(time) +  " PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
+        System.out.println("***Time: " + df.format(time) +  " PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
                 + " Dest: " + newPerson.floorDestination + " ArrTime: "+ df.format(newPerson.arrivalTime));
 
     }
@@ -88,7 +87,10 @@ public class Main_Controller {
                 distance = Math.abs(custFloor - elevator[i].getCurrentFloor());
                 if (i == 1) {
                     currDistance = distance;
-                } else if (distance <= currDistance) {
+                } else if (distance <= currDistance
+                           && (futureEventList.peek().getPersonDirection() == elevator[i].direction
+                               || elevator[i].direction == 0)
+                          ){
                     currDistance = distance;
                     closestElevator = i;
                 }
@@ -101,46 +103,36 @@ public class Main_Controller {
 
         for (int i = 1; i <= 5; i++) {
             int counter = 0;
-            System.out.print("Elevator " + i + " Exit: ");
-
             if (!elevator[i].getElevatorList().isEmpty()) {
                 Iterator<Person> it = elevator[i].getElevatorList().iterator();
                 while (it.hasNext()) {
                     Person element = it.next();
                     if (element.floorDestination == elevator[i].getCurrentFloor()) {
+                        counter++;
+                        if(counter == 1){ System.out.print("Elevator " + i + " Exit: "); }
                         System.out.print("Person " + element.personNumber + " ");
                         element.completedTime = time;
                         waitingTimesForEachPerson.add(element.getWaitingTime());
                         it.remove();
-                        counter++;
                     }
                 }
                 if (counter > 0) {
                     System.out.println();
                 }
             }
-            if (counter == 0) {
-                System.out.print("None\n");
-            }
         }
     }
 
+    public static void nextMove() {
 
+        for(int i=1; i<=5; i++) {
 
-    public static void nextMove(int currentFloor) {
-
-        if(elevator[1].getDirection() == 1) {
-            headingUp();
-        }
-        else {
-            headingDown();
-        }
-
-        System.out.println("***List of people in the elevator***");
-        Iterator <Person> iter = elevator[1].getElevatorList().iterator();
-        while(iter.hasNext()) {
-            Person element = iter.next();
-            System.out.println("PersonId: " + element.personNumber + "  Dest: " + element.floorDestination +"  ArrivalTime: "+ df.format(element.getArrivalTime()));
+            /*System.out.println("***List of people in the elevator " + i);
+            Iterator<Person> it = elevator[i].getElevatorList().iterator();
+            while (it.hasNext()) {
+                Person element = it.next();
+                System.out.println("PersonId: " + element.personNumber + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
+            }*/
         }
     }
 
