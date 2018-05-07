@@ -52,7 +52,7 @@ public class Main_Controller {
                     + " Direction " + elevator[i].printDirectionInWord());
         }
 
-        System.out.println("*****************************************************************");
+        System.out.println("******************************************************************");
 
     }
 
