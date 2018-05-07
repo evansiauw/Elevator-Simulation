@@ -152,6 +152,7 @@ public class Main_Controller {
                 headingDown(i);
             }
 
+
             System.out.println("*List of people in the elevator " + i);
             Iterator<Person> it = elevator[i].getElevatorList().iterator();
             while (it.hasNext()) {
@@ -166,7 +167,8 @@ public class Main_Controller {
 
             if (elevator[i].getCurrentFloor() == 1) {
                // System.out.println("this is the 'Lowest' level, changing direction to 'Up'");
-                elevator[i].directionUp();
+                elevator[i].setDirection(0);
+                elevator[i].getElevatorList().clear();
             } else {
                 elevator[i].decreaseCurrentFloor();
             }
@@ -176,7 +178,8 @@ public class Main_Controller {
     public static void headingUp(int i) {
 
             if (elevator[i].getCurrentFloor() == 10) {
-                elevator[i].directionDown();
+                elevator[i].setDirection(0);
+                elevator[i].getElevatorList().clear();
                // System.out.println("this is the 'Top' level, changing direction to 'Down'");
             } else {
                 elevator[i].increaseCurrentFloor();
