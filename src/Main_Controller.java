@@ -34,18 +34,26 @@ public class Main_Controller {
 
         while(personCounter < numOfPerson) {
             simulatingElevator();
-            time += 0.4;
         }
         System.out.println("Total number of persons created: " + personCounter);
     }
 
     public static void simulatingElevator() {
 
+
         creatingPerson();
         boarding();
         exit();
-        System.out.println();
         nextMove();
+        System.out.println();
+        time +=0.2;
+        for(int i=1; i<=5; i++){
+            System.out.println("Elevator " + i + " at floor " + elevator[i].getCurrentFloor()
+                    + " Direction " + elevator[i].printDirectionInWord());
+        }
+
+        System.out.println("*****************************************************************");
+
     }
 
     public static void creatingPerson() {
@@ -60,7 +68,8 @@ public class Main_Controller {
         Person newPerson= new Person(++personCounter,custArrival, personAt, floorDestination);
         futureEventList.add(newPerson);
 
-        System.out.println("***Time: " + df.format(time) +  " PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
+        System.out.println("*****************************************************************");
+        System.out.println("Time: " + df.format(time) +  " PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
                 + " Dest: " + newPerson.floorDestination + " ArrTime: "+ df.format(newPerson.arrivalTime));
 
     }
@@ -69,7 +78,7 @@ public class Main_Controller {
 
         while(!futureEventList.isEmpty() && futureEventList.peek().getArrivalTime() <= time){
             int index = calculatingDistance();
-            System.out.print("Boarding person " + futureEventList.peek().personNumber);
+            System.out.print("*Boarding person " + futureEventList.peek().personNumber);
             elevator[index].addPersonToElevator(futureEventList.poll());
             System.out.println(" to Elevator " + index);
         }
@@ -127,34 +136,48 @@ public class Main_Controller {
 
         for(int i=1; i<=5; i++) {
 
-            /*System.out.println("***List of people in the elevator " + i);
+            if (elevator[i].isElevatorEmpty()){
+                elevator[i].setDirection(0);
+            } else if(elevator[i].getElevatorList().peek().getPersonDirection() == 1){
+                elevator[i].setDirection(elevator[i].getElevatorList().peek().getPersonDirection());
+                headingUp(i);
+            } else {
+                elevator[i].setDirection(elevator[i].getElevatorList().peek().getPersonDirection());
+                headingDown(i);
+            }
+
+            System.out.println("*List of people in the elevator " + i);
             Iterator<Person> it = elevator[i].getElevatorList().iterator();
             while (it.hasNext()) {
                 Person element = it.next();
                 System.out.println("PersonId: " + element.personNumber + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
-            }*/
+            }
         }
+
     }
 
-    public static void headingDown() {
-        if(elevator[1].getCurrentFloor() == 1) {
-            elevator[1].directionUp();
-        }
-        else {
-            elevator[1].decreaseCurrentFloor();
-            time = time + 0.2;
-        }
+    public static void headingDown(int i) {
+
+            if (elevator[i].getCurrentFloor() == 1) {
+               // System.out.println("this is the 'Lowest' level, changing direction to 'Up'");
+                elevator[i].directionUp();
+            } else {
+                elevator[i].decreaseCurrentFloor();
+                time = time + 0.2;
+            }
+
     }
 
-    public static void headingUp() {
-        if(elevator[1].getCurrentFloor() == 10) {
-            elevator[1].directionDown();
-            System.out.println("this is the 'Top' level, changing direction to 'Down'");
-        }
-        else {
-            elevator[1].increaseCurrentFloor();
-            time = time + 0.2;
-        }
+    public static void headingUp(int i) {
+
+            if (elevator[i].getCurrentFloor() == 10) {
+                elevator[i].directionDown();
+               // System.out.println("this is the 'Top' level, changing direction to 'Down'");
+            } else {
+                elevator[i].increaseCurrentFloor();
+                time = time + 0.2;
+            }
+
     }
 
     private static int generateStartingFloor() {

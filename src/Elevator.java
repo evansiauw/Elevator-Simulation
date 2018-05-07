@@ -64,7 +64,12 @@ public class Elevator extends Controller implements Comparable <Person>{
     public int getDirection() {
     		return direction;
     }
-    
+
+    public void setDirection(int direction) {
+        this.direction = direction;
+    }
+
+
     public int getCurrentFloor() {
     		return currentFloor;
     }
