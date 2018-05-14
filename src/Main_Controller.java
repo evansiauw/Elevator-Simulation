@@ -88,6 +88,7 @@ public class Main_Controller {
                     elevator[index].addPersonToElevator(futureEventList.poll());
                     System.out.println(" to Elevator " + index);
                     elevator[index].setElevatorAvailability(false);
+                    time += .1;
                 } else {
 
                     if (elevator[index].getCurrentFloor() < futureEventList.peek().getPersonAtFloor()) {
@@ -142,6 +143,7 @@ public class Main_Controller {
                         counter++;
                         if(counter == 1){ System.out.print("Elevator " + i + " Exit: "); }
                         System.out.print("Person " + element.personNumber + " ");
+                        time+=.1;
                         element.completedTime = time;
                         waitingTimesForEachPerson.add(element.getWaitingTime());
                         it.remove();
