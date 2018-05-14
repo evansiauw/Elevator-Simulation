@@ -131,6 +131,7 @@ public class Main_Controller {
 
     public static void exit() {
 
+
         for (int i = 1; i <= 5; i++) {
             int counter = 0;
             if (!elevator[i].getElevatorList().isEmpty()) {
