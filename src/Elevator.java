@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
-public class Elevator extends Controller{
+public class Elevator extends Controller {
 
 	int elevatorNumber;
 	int direction = 0; // 1 for Up, 0 for idle, -1 for down
