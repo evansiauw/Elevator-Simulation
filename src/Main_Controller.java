@@ -42,17 +42,15 @@ public class Main_Controller {
     public static void simulatingElevator() {
 
         creatingPerson();
+        for(int i=1; i<=5; i++){
+            System.out.println("Elevator " + i + " at floor " + elevator[i].getCurrentFloor()
+                    + " Direction " + elevator[i].printDirectionInWord());
+        }
         boarding();
         exit();
         nextMove();
         System.out.println();
         time +=0.2;
-        for(int i=1; i<=5; i++){
-            System.out.println("Elevator " + i + " at floor " + elevator[i].getCurrentFloor()
-                    + " Direction " + elevator[i].printDirectionInWord());
-        }
-
-        System.out.println("******************************************************************");
 
     }
 
@@ -85,13 +83,11 @@ public class Main_Controller {
 
             int index = calculatingDistance();
 
-            if (index == 0) {
-                break;
-            } else {
                 if (elevator[index].getCurrentFloor() == futureEventList.peek().getPersonAtFloor()) {
                     System.out.print("*Boarding person " + futureEventList.peek().personNumber);
                     elevator[index].addPersonToElevator(futureEventList.poll());
                     System.out.println(" to Elevator " + index);
+                    elevator[index].setElevatorAvailability(false);
                 } else {
 
                     if (elevator[index].getCurrentFloor() < futureEventList.peek().getPersonAtFloor()) {
@@ -101,10 +97,11 @@ public class Main_Controller {
                         elevator[index].decreaseCurrentFloor();
                         elevator[index].setDirection(-1);
                     }
+                    break;
                 }
             }
         }
-        }
+
 
 
     public static int calculatingDistance(){
@@ -119,13 +116,15 @@ public class Main_Controller {
                 distance = Math.abs(custFloor - elevator[i].getCurrentFloor());
                 if (i == 1) {
                     currDistance = distance;
+                    closestElevator = i;
                 } else if (distance <= currDistance
-                           && elevator[i].getDirection() == 0){
+                           && elevator[i].isElevatorAvailable()){
                     currDistance = distance;
                     closestElevator = i;
                 }
         }
-        System.out.println(closestElevator);
+        System.out.println("the next person: " + futureEventList.peek().personNumber);
+        System.out.println("closestElevator is:" + closestElevator);
         return closestElevator;
     }
 

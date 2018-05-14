@@ -6,6 +6,7 @@ public class Elevator extends Controller {
 	int elevatorNumber;
 	int direction = 0; // 1 for Up, 0 for idle, -1 for down
 	int currentFloor;
+	boolean isAvailable = true;
 	public LinkedList<Person> ElevatorList;
 	
 	public Elevator(int elevatorNumber, int currentFloor) {
@@ -17,10 +18,17 @@ public class Elevator extends Controller {
 	/*
 	 * checks if the elevator is empty
 	 */
-	public boolean isElevatorEmpty(){
-	    return ElevatorList.isEmpty();
+	public boolean isElevatorAvailable(){
+	    return isAvailable;
 	}
-	
+
+	public boolean isElevatorEmpty(){
+		return ElevatorList.isEmpty();
+	}
+
+	public void setElevatorAvailability(boolean bool){
+		isAvailable = bool;
+	}
 	/*
 	 * adds a person to the elevator
 	 */
