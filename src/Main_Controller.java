@@ -13,7 +13,7 @@ public class Main_Controller {
     static int personAt;
     static int floorDestination;
     static int totalWaitTime = 0;
-    static int numOfElevator = 25;
+    static int numOfElevator = 5;
     static int numOfFloor = 10;
     static int numOfPerson = 100;
     static double arrivalTimeSum = 0;
@@ -42,7 +42,7 @@ public class Main_Controller {
     public static void simulatingElevator() {
 
         creatingPerson();
-        for(int i=1; i<=5; i++){
+        for(int i=1; i<=numOfElevator; i++){
             System.out.println("Elevator " + i + " at floor " + elevator[i].getCurrentFloor()
                     + " Direction " + elevator[i].printDirectionInWord());
         }
@@ -112,7 +112,7 @@ public class Main_Controller {
         int distance;
         int currDistance = 0;
 
-        for (int i=1; i<=5; i++){
+        for (int i=1; i<=numOfElevator; i++){
 
                 distance = Math.abs(custFloor - elevator[i].getCurrentFloor());
                 if (i == 1) {
@@ -133,7 +133,7 @@ public class Main_Controller {
     public static void exit() {
 
 
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= numOfElevator; i++) {
             int counter = 0;
             if (!elevator[i].getElevatorList().isEmpty()) {
                 Iterator<Person> it = elevator[i].getElevatorList().iterator();
@@ -159,7 +159,7 @@ public class Main_Controller {
 
     public static void nextMove() {
 
-        for(int i=1; i<=5; i++) {
+        for(int i=1; i<=numOfElevator; i++) {
 
             if (elevator[i].isElevatorEmpty()){
                 elevator[i].setDirection(0);
