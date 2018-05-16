@@ -21,7 +21,7 @@ public class Main_Controller {
     static Random rand = new Random();
     static Elevator[] elevator = new Elevator[numOfElevator + 1];
     static Floor[] floor = new Floor[numOfFloor + 1];
-    static DecimalFormat df = new DecimalFormat(".##");
+    static DecimalFormat df = new DecimalFormat("0.##");
     static double sumOfWaitingTimes = 0.0;
     static double sumOfTimeFloorToFloor = 0.0;
     static ArrayList<Person> personList = new ArrayList<>(); //keeps a record of all the people created
