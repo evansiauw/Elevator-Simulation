@@ -5,6 +5,8 @@ public class Person extends Controller implements Comparable <Person>{
 	int personAtFloor;
 	Double arrivalTime;
 	double completedTime;
+	double timePersonGoesInElevator;
+	double timeFloorToFloor; // time it takes for a person to go from floor i to floor j
 	int direction; // 1 for up and -1 for down
 	
 	public Person(int personNumber, double arrivalTime, int personAt, int floorDestination){
@@ -35,7 +37,7 @@ public class Person extends Controller implements Comparable <Person>{
 	 * Calculation for waiting time
 	 */
 	public double getWaitingTime(){
-	    return completedTime - arrivalTime;
+	    return timePersonGoesInElevator - arrivalTime;
 	}
 
 	@Override
@@ -44,4 +46,13 @@ public class Person extends Controller implements Comparable <Person>{
 		return this.arrivalTime.compareTo(other.arrivalTime);
 
 	}
+	
+	public void setTimePersonGoesInElevator(double time) {
+		timePersonGoesInElevator = time;
+	}
+	
+	public double getTimeFloorToFloor() {
+		return completedTime-arrivalTime;
+	}
+
 }
