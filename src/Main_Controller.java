@@ -12,7 +12,6 @@ public class Main_Controller {
     static int meanArrival = 5;
     static int personAt;
     static int floorDestination;
-    static int closestElevator = 0;
     static int totalWaitTime = 0;
     static int numOfElevator = 5;
     static int numOfFloor = 10;
@@ -54,7 +53,7 @@ public class Main_Controller {
         exit();
         nextMove();
         System.out.println();
-        time +=2.0;
+        time +=0.2;
 
     }
 
@@ -83,11 +82,8 @@ public class Main_Controller {
 
             int index = calculatingDistance();
 
-            while (index == 0) {
-                closestElevator--;
-                if(elevator[closestElevator].isElevatorAvailable()){
-                    index = closestElevator;
-                }
+            if(index == 0){
+                break;
             }
 
                 if (elevator[index].getCurrentFloor() == futureEventList.peek().getPersonAtFloor()) {
@@ -118,6 +114,7 @@ public class Main_Controller {
     public static int calculatingDistance(){
 
         int custFloor = futureEventList.peek().getPersonAtFloor();
+        int closestElevator = 5;
         int distance;
         int currDistance = 10;
 
@@ -130,7 +127,6 @@ public class Main_Controller {
                 closestElevator = i;
                 }
             }
-
 
         System.out.print("[Request] Person: " + futureEventList.peek().personNumber);
         System.out.println(" ClosestElevator is:" + closestElevator);
