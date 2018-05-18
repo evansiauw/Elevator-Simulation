@@ -1,6 +1,5 @@
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Random;
@@ -27,6 +26,8 @@ public class Main_Controller {
     static ArrayList<Double> waitingTimeList = new ArrayList<>(); //keeps a record of all waiting times
     static ArrayList<Double> timeFloorToFloorList = new ArrayList<>(); //keeps a record of all floor to floor times
     static PriorityQueue<Person> futureEventList = new PriorityQueue<>();
+    static PriorityQueue<Elevator> closestDistance = new PriorityQueue<>();
+
 
     public static void main(String[] args) {
 
@@ -53,7 +54,7 @@ public class Main_Controller {
         exit();
         nextMove();
         System.out.println();
-        time +=0.2;
+        time +=2;
 
     }
 
@@ -80,11 +81,7 @@ public class Main_Controller {
 
         while(!futureEventList.isEmpty() && futureEventList.peek().getArrivalTime() <= time) {
 
-            int index = calculatingDistance();
-
-            if(index == 0){
-                break;
-            }
+            int index = calculatingDistance() + 1;
 
                 if (elevator[index].getCurrentFloor() == futureEventList.peek().getPersonAtFloor()) {
                     System.out.print("[Boarding] Person: " + futureEventList.peek().personNumber);
@@ -110,23 +107,23 @@ public class Main_Controller {
         }
 
 
-
     public static int calculatingDistance(){
 
         int custFloor = futureEventList.peek().getPersonAtFloor();
-        int closestElevator = 5;
+        int closestElevator;
         int distance;
-        int currDistance = 10;
 
         for (int i=1; i<=numOfElevator; i++) {
 
-            distance = Math.abs(custFloor - elevator[i].getCurrentFloor());
+            if (elevator[i].isElevatorAvailable()) {
 
-            if (distance <= currDistance && elevator[i].isElevatorAvailable()) {
-                currDistance = distance;
-                closestElevator = i;
-                }
+                distance = Math.abs(custFloor - elevator[i].getCurrentFloor());
+                elevator[i].setElevatorDistance(distance);
+                closestDistance.add(elevator[i]);
             }
+
+        }
+            closestElevator = closestDistance.peek().elevatorNumber;
 
         System.out.print("[Request] Person: " + futureEventList.peek().personNumber);
         System.out.println(" ClosestElevator is:" + closestElevator);

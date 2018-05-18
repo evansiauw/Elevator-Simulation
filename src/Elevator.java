@@ -1,11 +1,12 @@
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
-public class Elevator extends Controller {
+public class Elevator extends Controller implements Comparable<Elevator> {
 
 	int elevatorNumber;
 	int direction = 0; // 1 for Up, 0 for idle, -1 for down
 	int currentFloor;
+	Integer distance;
 	boolean isAvailable = true;
 	public LinkedList<Person> ElevatorList;
 	
@@ -13,12 +14,15 @@ public class Elevator extends Controller {
 		this.elevatorNumber = elevatorNumber;
 		this.currentFloor = currentFloor;
 		ElevatorList = new LinkedList<>();
+		distance = 0;
 	}
 	
 	/*
 	 * checks if the elevator is empty
 	 */
 	public boolean isElevatorAvailable(){ return isAvailable; }
+
+	public void setElevatorDistance(int distance) { this.distance = distance; }
 
 	public boolean isElevatorEmpty(){
 		return ElevatorList.isEmpty();
@@ -108,10 +112,10 @@ public class Elevator extends Controller {
     		}
     }
 
-	/*@Override
-	public int compareTo(Person other) {
+    @Override
+    public int compareTo(Elevator other) {
 
-		return ElevatorList.peek().floorDestination.compareTo(other.floorDestination);
+        return this.distance.compareTo(other.distance);
 
-	}*/
+    }
 }
