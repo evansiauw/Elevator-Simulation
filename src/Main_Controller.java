@@ -40,11 +40,8 @@ public class Main_Controller {
         while(personCounter < numOfPerson) {
             simulatingElevator();
         }
-        System.out.println("Total number of persons created: " + personCounter);
-        System.out.print("Average time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
-        System.out.println(", Standard deviation: "+ df.format(Math.sqrt(getVarianceFloorToFloor(sumOfTimeFloorToFloor / numOfPerson))));
-        System.out.print("Average waiting time from floor i to j: "+ df.format(sumOfWaitingTimes / numOfPerson));
-        System.out.println(", Standard deviation: "+df.format(Math.sqrt(getVarianceAvgWaitingTime(sumOfWaitingTimes / numOfPerson))));
+
+        printStatistic();
     }
 
     public static void simulatingElevator() {
@@ -248,6 +245,14 @@ public class Main_Controller {
         for(Double d: timeFloorToFloorList)
             temp += (d-mean)*(d-mean);
         return temp/numOfPerson;
+    }
+
+    public static void printStatistic(){
+        System.out.println("Total number of persons created: " + personCounter);
+        System.out.print("Average time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
+        System.out.println(", Standard deviation: "+ df.format(Math.sqrt(getVarianceFloorToFloor(sumOfTimeFloorToFloor / numOfPerson))));
+        System.out.print("Average waiting time from floor i to j: "+ df.format(sumOfWaitingTimes / numOfPerson));
+        System.out.println(", Standard deviation: "+df.format(Math.sqrt(getVarianceAvgWaitingTime(sumOfWaitingTimes / numOfPerson))));
     }
 
 
