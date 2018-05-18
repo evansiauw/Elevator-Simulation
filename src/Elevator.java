@@ -18,9 +18,7 @@ public class Elevator extends Controller {
 	/*
 	 * checks if the elevator is empty
 	 */
-	public boolean isElevatorAvailable(){
-	    return isAvailable;
-	}
+	public boolean isElevatorAvailable(){ return isAvailable; }
 
 	public boolean isElevatorEmpty(){
 		return ElevatorList.isEmpty();
