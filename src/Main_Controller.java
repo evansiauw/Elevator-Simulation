@@ -129,11 +129,13 @@ public class Main_Controller {
 
         if(!closestDistance.isEmpty()) {
             closestElevator = closestDistance.peek().elevatorNumber;
+            closestDistance.clear();
+            System.out.print("[Request] Person: " + futureEventList.peek().personNumber);
+            System.out.println(" ClosestElevator is:" + closestElevator);
         }
-        closestDistance.clear();
-
-        System.out.print("[Request] Person: " + futureEventList.peek().personNumber);
-        System.out.println(" ClosestElevator is:" + closestElevator);
+        else {
+            System.out.println("[Request] Person: " + futureEventList.peek().personNumber + " is Waiting");
+        }
         return closestElevator;
     }
 
@@ -258,7 +260,7 @@ public class Main_Controller {
 
     public static void printStatistic(){
         System.out.println("Total number of persons created: " + personCounter);
-        System.out.print("Average time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
+        System.out.print("\nAverage time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
         System.out.println(", Standard deviation: "+ df.format(Math.sqrt(getVarianceFloorToFloor(sumOfTimeFloorToFloor / numOfPerson))));
         System.out.print("Average waiting time from floor i to j: "+ df.format(sumOfWaitingTimes / numOfPerson));
         System.out.println(", Standard deviation: "+df.format(Math.sqrt(getVarianceAvgWaitingTime(sumOfWaitingTimes / numOfPerson))));
