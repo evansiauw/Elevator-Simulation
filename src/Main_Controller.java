@@ -24,7 +24,8 @@ public class Main_Controller {
     static DecimalFormat df = new DecimalFormat("0.##");
     static double sumOfWaitingTimes = 0.0;
     static double sumOfTimeFloorToFloor = 0.0;
-    static ArrayList<Person> personList = new ArrayList<>(); //keeps a record of all the people created
+    static ArrayList<Double> waitingTimeList = new ArrayList<>(); //keeps a record of all waiting times
+    static ArrayList<Double> timeFloorToFloorList = new ArrayList<>(); //keeps a record of all floor to floor times
     static PriorityQueue<Person> futureEventList = new PriorityQueue<>();
 
     public static void main(String[] args) {
@@ -40,9 +41,9 @@ public class Main_Controller {
         }
         System.out.println("Total number of persons created: " + personCounter);
         System.out.print("Average time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
-        System.out.println(", Standard deviation: "+ Math.sqrt(getVarianceFloorToFloor(sumOfTimeFloorToFloor / numOfPerson)));
+        System.out.println(", Standard deviation: "+ df.format(Math.sqrt(getVarianceFloorToFloor(sumOfTimeFloorToFloor / numOfPerson))));
         System.out.print("Average waiting time from floor i to j: "+ df.format(sumOfWaitingTimes / numOfPerson));
-        System.out.println(", Standard deviation: "+Math.sqrt(getVarianceAvgWaitingTime(sumOfWaitingTimes / numOfPerson)));
+        System.out.println(", Standard deviation: "+df.format(Math.sqrt(getVarianceAvgWaitingTime(sumOfWaitingTimes / numOfPerson))));
     }
 
     public static void simulatingElevator() {
@@ -89,6 +90,7 @@ public class Main_Controller {
                     System.out.print("*Boarding person " + futureEventList.peek().personNumber);
                     futureEventList.peek().setTimePersonGoesInElevator(time);
                     sumOfWaitingTimes += futureEventList.peek().getWaitingTime();
+                    waitingTimeList.add(futureEventList.peek().getWaitingTime());
                     elevator[index].addPersonToElevator(futureEventList.poll());
                     System.out.println(" to Elevator " + index);
                     elevator[index].setElevatorAvailability(false);
@@ -150,6 +152,7 @@ public class Main_Controller {
                         time+=.1;
                         element.completedTime = time;
                         sumOfTimeFloorToFloor += element.getTimeFloorToFloor();
+                        timeFloorToFloorList.add(element.getTimeFloorToFloor());
                         it.remove();
                     }
                 }
@@ -234,17 +237,17 @@ public class Main_Controller {
         return floorNumber;
     }
 
-    private static double getVarianceFloorToFloor(double mean) {
+    private static double getVarianceAvgWaitingTime(double mean) {
         double temp = 0;
-        for(Person p : personList)
-            temp += (p.getTimeFloorToFloor()-mean)*(p.getTimeFloorToFloor()-mean);
+        for(Double d: waitingTimeList)
+            temp += (d-mean)*(d-mean);
         return temp/numOfPerson;
     }
     
-    private static double getVarianceAvgWaitingTime(double mean) {
-        double temp = 0;
-        for(Person p : personList)
-            temp += (p.getWaitingTime()-mean)*(p.getWaitingTime()-mean);
+    private static double getVarianceFloorToFloor(double mean) {
+    	double temp = 0;
+        for(Double d: timeFloorToFloorList)
+            temp += (d-mean)*(d-mean);
         return temp/numOfPerson;
     }
 
