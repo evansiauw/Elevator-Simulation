@@ -186,8 +186,14 @@ public class Main_Controller {
                 headingDown(i);
             }
 
+            if(!elevator[i].isElevatorEmpty()) {
+                System.out.println(" Elevator " + i + " at floor " + elevator[i].getElevatorList().peek().getPersonAtFloor()
+                        + " Direction " + elevator[i].printDirectionInWord());
+            }
+            else {
                 System.out.println(" Elevator " + i + " at floor " + elevator[i].getCurrentFloor()
                         + " Direction " + elevator[i].printDirectionInWord());
+            }
                 Iterator<Person> it = elevator[i].getElevatorList().iterator();
                 while (it.hasNext()) {
                     Person element = it.next();
