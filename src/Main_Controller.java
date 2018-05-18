@@ -54,7 +54,7 @@ public class Main_Controller {
         exit();
         nextMove();
         System.out.println();
-        time +=2;
+        time +=0.2;
 
     }
 
@@ -81,7 +81,7 @@ public class Main_Controller {
 
         while(!futureEventList.isEmpty() && futureEventList.peek().getArrivalTime() <= time) {
 
-            int index = calculatingDistance() + 1;
+            int index = calculatingDistance();
 
                 if (elevator[index].getCurrentFloor() == futureEventList.peek().getPersonAtFloor()) {
                     System.out.print("[Boarding] Person: " + futureEventList.peek().personNumber);
@@ -124,6 +124,7 @@ public class Main_Controller {
 
         }
             closestElevator = closestDistance.peek().elevatorNumber;
+        closestDistance.clear();
 
         System.out.print("[Request] Person: " + futureEventList.peek().personNumber);
         System.out.println(" ClosestElevator is:" + closestElevator);
@@ -151,6 +152,8 @@ public class Main_Controller {
                         it.remove();
                     }
                 }
+
+
                 if (counter > 0) {
 
                     System.out.println();
@@ -166,6 +169,7 @@ public class Main_Controller {
 
             if (elevator[i].isElevatorEmpty()){
                 elevator[i].setDirection(0);
+                elevator[i].setElevatorAvailability(true);
             } else if(elevator[i].getElevatorList().peek().getPersonDirection() == 1){
                 elevator[i].setDirection(elevator[i].getElevatorList().peek().getPersonDirection());
                 headingUp(i);

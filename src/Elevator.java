@@ -108,7 +108,7 @@ public class Elevator extends Controller implements Comparable<Elevator> {
     		}else if (getDirection()==-1) {
     			return "DOWN";
     		} else {
-    			return "IDLING";
+    			return "IDLE";
     		}
     }
 
