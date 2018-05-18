@@ -78,7 +78,12 @@ public class Main_Controller {
 
         while(!futureEventList.isEmpty() && futureEventList.peek().getArrivalTime() <= time) {
 
+
             int index = calculatingDistance();
+
+            if(index == 0){
+                break;
+            }
 
                 if (elevator[index].getCurrentFloor() == futureEventList.peek().getPersonAtFloor()) {
                     System.out.print("[Boarding] Person: " + futureEventList.peek().personNumber);
@@ -100,6 +105,7 @@ public class Main_Controller {
                     }
                     break;
                 }
+
             }
         }
 
@@ -107,7 +113,7 @@ public class Main_Controller {
     public static int calculatingDistance(){
 
         int custFloor = futureEventList.peek().getPersonAtFloor();
-        int closestElevator;
+        int closestElevator= 0;
         int distance;
 
         for (int i=1; i<=numOfElevator; i++) {
@@ -120,7 +126,10 @@ public class Main_Controller {
             }
 
         }
+
+        if(!closestDistance.isEmpty()) {
             closestElevator = closestDistance.peek().elevatorNumber;
+        }
         closestDistance.clear();
 
         System.out.print("[Request] Person: " + futureEventList.peek().personNumber);
