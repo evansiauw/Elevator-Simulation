@@ -175,6 +175,10 @@ public class Main_Controller {
 
         for(int i=1; i<=numOfElevator; i++) {
 
+
+            System.out.print(" Elevator " + i + " at floor " + elevator[i].getCurrentFloor());
+
+
             if (elevator[i].isElevatorEmpty()){
                 elevator[i].setDirection(0);
                 elevator[i].setElevatorAvailability(true);
@@ -186,19 +190,14 @@ public class Main_Controller {
                 headingDown(i);
             }
 
-            if(!elevator[i].isElevatorEmpty()) {
-                System.out.println(" Elevator " + i + " at floor " + elevator[i].getElevatorList().peek().getPersonAtFloor()
-                        + " Direction " + elevator[i].printDirectionInWord());
+            System.out.println( " Direction " + elevator[i].printDirectionInWord());
+            Iterator<Person> it = elevator[i].getElevatorList().iterator();
+            while (it.hasNext()) {
+                Person element = it.next();
+                System.out.println("    PersonId: " + element.personNumber + " AtFloor: " + element.personAtFloor + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
             }
-            else {
-                System.out.println(" Elevator " + i + " at floor " + elevator[i].getCurrentFloor()
-                        + " Direction " + elevator[i].printDirectionInWord());
-            }
-                Iterator<Person> it = elevator[i].getElevatorList().iterator();
-                while (it.hasNext()) {
-                    Person element = it.next();
-                    System.out.println("    PersonId: " + element.personNumber + " AtFloor: " + element.personAtFloor + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
-                }
+
+
         }
 
     }
