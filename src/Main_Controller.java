@@ -28,7 +28,6 @@ public class Main_Controller {
     static PriorityQueue<Person> futureEventList = new PriorityQueue<>();
     static PriorityQueue<Elevator> closestDistance = new PriorityQueue<>();
 
-
     public static void main(String[] args) {
 
         for(int i=1; i <= numOfElevator; i++) {
@@ -183,9 +182,9 @@ public class Main_Controller {
             while (it.hasNext()) {
                 Person element = it.next();
                 System.out.println("    PersonId: " + element.personNumber + " AtFloor: " + element.personAtFloor + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
-                System.out.println();
             }
         }
+        System.out.println();
     }
 
     public static void headingDown(int i) {
@@ -250,7 +249,7 @@ public class Main_Controller {
 
     public static void printStats(){
         System.out.println("Total number of persons created: " + personCounter);
-        System.out.print("\nAverage time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
+        System.out.print("Average time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
         System.out.println(", Standard deviation: "+ df.format(Math.sqrt(getVarianceFloorToFloor(sumOfTimeFloorToFloor / numOfPerson))));
         System.out.print("Average waiting time from floor i to j: "+ df.format(sumOfWaitingTimes / numOfPerson));
         System.out.println(", Standard deviation: "+df.format(Math.sqrt(getVarianceAvgWaitingTime(sumOfWaitingTimes / numOfPerson))));
