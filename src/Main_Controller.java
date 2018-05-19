@@ -41,7 +41,7 @@ public class Main_Controller {
             simulatingElevator();
         }
 
-        printStatistic();
+        printStats();
     }
 
     public static void simulatingElevator() {
@@ -50,7 +50,6 @@ public class Main_Controller {
         boarding();
         exit();
         nextMove();
-        System.out.println();
         time +=0.2;
 
     }
@@ -75,37 +74,32 @@ public class Main_Controller {
 
     public static void boarding(){
 
-
         while(!futureEventList.isEmpty() && futureEventList.peek().getArrivalTime() <= time) {
-
 
             int index = calculatingDistance();
 
-            if(index == 0){
+            if(index == 0){ break; }
+
+            if (elevator[index].getCurrentFloor() == futureEventList.peek().getPersonAtFloor()) {
+                System.out.print("[Boarding] Person: " + futureEventList.peek().personNumber);
+                futureEventList.peek().setTimePersonGoesInElevator(time);
+                sumOfWaitingTimes += futureEventList.peek().getWaitingTime();
+                waitingTimeList.add(futureEventList.peek().getWaitingTime());
+                elevator[index].addPersonToElevator(futureEventList.poll());
+                System.out.println(" to Elevator " + index);
+                elevator[index].setElevatorAvailability(false);
+                time += .1;
+            } else {
+
+                if (elevator[index].getCurrentFloor() < futureEventList.peek().getPersonAtFloor()) {
+                    elevator[index].increaseCurrentFloor();
+                    elevator[index].setDirection(1);
+                } else {
+                    elevator[index].decreaseCurrentFloor();
+                    elevator[index].setDirection(-1);
+                }
                 break;
             }
-
-                if (elevator[index].getCurrentFloor() == futureEventList.peek().getPersonAtFloor()) {
-                    System.out.print("[Boarding] Person: " + futureEventList.peek().personNumber);
-                    futureEventList.peek().setTimePersonGoesInElevator(time);
-                    sumOfWaitingTimes += futureEventList.peek().getWaitingTime();
-                    waitingTimeList.add(futureEventList.peek().getWaitingTime());
-                    elevator[index].addPersonToElevator(futureEventList.poll());
-                    System.out.println(" to Elevator " + index);
-                    elevator[index].setElevatorAvailability(false);
-                    time += .1;
-                } else {
-
-                    if (elevator[index].getCurrentFloor() < futureEventList.peek().getPersonAtFloor()) {
-                        elevator[index].increaseCurrentFloor();
-                        elevator[index].setDirection(1);
-                    } else {
-                        elevator[index].decreaseCurrentFloor();
-                        elevator[index].setDirection(-1);
-                    }
-                    break;
-                }
-
             }
         }
 
@@ -117,14 +111,11 @@ public class Main_Controller {
         int distance;
 
         for (int i=1; i<=numOfElevator; i++) {
-
             if (elevator[i].isElevatorAvailable()) {
-
                 distance = Math.abs(custFloor - elevator[i].getCurrentFloor());
                 elevator[i].setElevatorDistance(distance);
                 closestDistance.add(elevator[i]);
             }
-
         }
 
         if(!closestDistance.isEmpty()) {
@@ -163,7 +154,6 @@ public class Main_Controller {
 
 
                 if (counter > 0) {
-
                     System.out.println();
                 }
             }
@@ -175,9 +165,7 @@ public class Main_Controller {
 
         for(int i=1; i<=numOfElevator; i++) {
 
-
             System.out.print(" Elevator " + i + " at floor " + elevator[i].getCurrentFloor());
-
 
             if (elevator[i].isElevatorEmpty()){
                 elevator[i].setDirection(0);
@@ -195,11 +183,9 @@ public class Main_Controller {
             while (it.hasNext()) {
                 Person element = it.next();
                 System.out.println("    PersonId: " + element.personNumber + " AtFloor: " + element.personAtFloor + "  Dest: " + element.floorDestination + "  ArrivalTime: " + df.format(element.getArrivalTime()));
+                System.out.println();
             }
-
-
         }
-
     }
 
     public static void headingDown(int i) {
@@ -214,7 +200,6 @@ public class Main_Controller {
             } else {
                 elevator[i].decreaseCurrentFloor();
             }
-
     }
 
     public static void headingUp(int i) {
@@ -263,7 +248,7 @@ public class Main_Controller {
         return temp/numOfPerson;
     }
 
-    public static void printStatistic(){
+    public static void printStats(){
         System.out.println("Total number of persons created: " + personCounter);
         System.out.print("\nAverage time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));
         System.out.println(", Standard deviation: "+ df.format(Math.sqrt(getVarianceFloorToFloor(sumOfTimeFloorToFloor / numOfPerson))));
