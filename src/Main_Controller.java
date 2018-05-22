@@ -28,12 +28,9 @@ public class Main_Controller {
     static int meanArrival = 5;
     static int personAt;
     static int floorDestination;
-    static int totalWaitTime = 0;
     static int numOfElevator = 5;
     static int numOfFloor = 10;
     static int numOfPerson = 100;
-    static double arrivalTimeSum = 0;
-    static double averageWaitingTime = 0;
     static Random rand = new Random();
     static Elevator[] elevator = new Elevator[numOfElevator + 1];
     static Floor[] floor = new Floor[numOfFloor + 1];
@@ -47,19 +44,23 @@ public class Main_Controller {
 
     public static void main(String[] args) {
 
+        // Creating elevator objects
         for(int i=1; i <= numOfElevator; i++) {
             elevator[i] = new Elevator(i,(2*i)-1); }
 
+        // Creating floor objects
         for(int i=1; i <= numOfFloor; i++) {
             floor[i]= new Floor(i); }
 
         // each event of the elevator is simulated based on the number of people defined in the simulation
         while(personCounter < numOfPerson) {
+
             simulatingElevator();
         }
 
         printStats();
     }
+
 
     /* this method performs the simulation of the elevator */
     public static void simulatingElevator() {
@@ -77,13 +78,16 @@ public class Main_Controller {
      */
     public static void creatingPerson() {
 
+        // formula to get customer arrival
         double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
 
+        // person's current floor cannot be the same as the person destination
         do {
             personAt = generateStartingFloor();
             floorDestination = rand.nextInt(10) + 1;
         }while (personAt == floorDestination);
 
+        // Creates person object
         Person newPerson= new Person(++personCounter,custArrival, personAt, floorDestination);
         futureEventList.add(newPerson);
 
@@ -94,7 +98,8 @@ public class Main_Controller {
     }
 
     /* 
-     * Determines which people in the future events list should board the elevator. This depends on whether there are people in the future events list that have an arrival time <= current time.
+     * Determines which people in the future events list should board the elevator.
+     * This depends on whether there are people in the future events list that have an arrival time <= current time.
      * The future events list is a priority queue where arrival time is the priority.
      */
     public static void boarding(){
@@ -129,7 +134,9 @@ public class Main_Controller {
         }
 
 
-    /* This method performs the calculation as to which elevator should be assigned to the person. The person will be assigned the closest elevator. */
+    /* This method performs the calculation as to which elevator should be assigned to the person.
+     *The person will be assigned the closest elevator.
+     */
     public static int calculatingDistance(){
 
         int custFloor = futureEventList.peek().getPersonAtFloor();
