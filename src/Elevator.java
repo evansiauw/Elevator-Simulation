@@ -4,7 +4,8 @@ import java.util.PriorityQueue;
 /*
  * Joshua Goldstein, Iwan Siauw, Orlando Calle
  * 
- * This class defines the elevator object with elevator number, direction, current floor, distance (used to compare distances between elevators)
+ * This class defines the elevator object with elevator number, direction, current floor, distance (used to compare distances between elevators),
+ * availability, and a list of people in the elevator.
  */
 public class Elevator extends Controller implements Comparable<Elevator> {
 
