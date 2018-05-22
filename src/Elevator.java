@@ -1,6 +1,11 @@
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 
+/*
+ * Joshua Goldstein, Iwan Siauw, Orlando Calle
+ * 
+ * This class defines the elevator object with elevator number, direction, current floor, distance (used to compare distances between elevators)
+ */
 public class Elevator extends Controller implements Comparable<Elevator> {
 
 	int elevatorNumber;

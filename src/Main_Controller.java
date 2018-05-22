@@ -4,6 +4,23 @@ import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.Random;
 
+/*
+Elevator Simulation
+
+Joshua Goldstein, Iwan Siauw, Orlando Calle
+
+Description:
+The five elevators are initially distributed evenly throughout the 10 floors. In other words, elevator 1 will start on the 1st floor, elevator 2 will start on the 3rd floor, elevator 3 will start on the 5th floor, 
+elevator 4 will start on the 7th floor, and elevator 5 will start on the 9th floor. 
+
+The simulatingElevator() method will perform the simulation based on the number of people that are defined. This method does the following:
+1. Create the person and add that person to the future events list. The future events list is a priority queue where arrival time is the priority.
+2. Determine who is going to board the elevator
+3. Determine who is going to exit the elevators by comparing if the person’s destination with the elevator’s floor matches.
+4. Determine what direction the elevator will go
+
+*/
+
 public class Main_Controller {
 
     static double time = 0; // in second
@@ -36,6 +53,7 @@ public class Main_Controller {
         for(int i=1; i <= numOfFloor; i++) {
             floor[i]= new Floor(i); }
 
+        // each event of the elevator is simulated based on the number of people defined in the simulation
         while(personCounter < numOfPerson) {
             simulatingElevator();
         }
@@ -43,6 +61,7 @@ public class Main_Controller {
         printStats();
     }
 
+    /* this method performs the simulation of the elevator */
     public static void simulatingElevator() {
 
         creatingPerson();
@@ -53,6 +72,9 @@ public class Main_Controller {
 
     }
 
+    /*
+     * Creates one person object at a time with an arrival time. The person will also be added to the future events list.
+     */
     public static void creatingPerson() {
 
         double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
@@ -66,11 +88,15 @@ public class Main_Controller {
         futureEventList.add(newPerson);
 
         System.out.println("*****************************************************************");
-        System.out.println("[" + df.format(time) +  "] PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
+        System.out.println("[Time: " + df.format(time) +  "] PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
                 + " Dest: " + newPerson.floorDestination + " ArrTime: "+ df.format(newPerson.arrivalTime));
 
     }
 
+    /* 
+     * Determines which people in the future events list should board the elevator. This depends on whether there are people in the future events list that have an arrival time <= current time.
+     * The future events list is a priority queue where arrival time is the priority.
+     */
     public static void boarding(){
 
         while(!futureEventList.isEmpty() && futureEventList.peek().getArrivalTime() <= time) {
@@ -103,6 +129,7 @@ public class Main_Controller {
         }
 
 
+    /* This method performs the calculation as to which elevator should be assigned to the person. The person will be assigned the closest elevator. */
     public static int calculatingDistance(){
 
         int custFloor = futureEventList.peek().getPersonAtFloor();
@@ -129,9 +156,10 @@ public class Main_Controller {
         return closestElevator;
     }
 
-
+    /*
+     * Determines whether there is anyone that has reached their destination.
+     */
     public static void exit() {
-
 
         for (int i = 1; i <= numOfElevator; i++) {
             int counter = 0;
@@ -159,7 +187,7 @@ public class Main_Controller {
         }
     }
 
-
+    /* determines the next move of the elevator (UP, DOWN, or IDLE)*/
 	public static void nextMove() {
 
         for(int i=1; i<=numOfElevator; i++) {
@@ -187,36 +215,51 @@ public class Main_Controller {
         System.out.println();
     }
 
+    /*Determines what the elevator should do if the current direction of the elevator is DOWN.*/
     public static void headingDown(int i) {
 
+    	    // if the 1st floor is reached
             if (elevator[i].getCurrentFloor() == 1) {
+            	//if the elevator is empty, set it to the IDLE state
                 if(elevator[i].getElevatorList().isEmpty()){
                     elevator[i].setDirection(0);
-                } else {
+                } 
+                //otherwise, make the elevator go UP
+                else {
                     elevator[i].setDirection(1);
                     elevator[i].increaseCurrentFloor();
                 }
-            } else {
+            }
+            // otherwise decrease the current floor (this is what normally happens)
+            else {
                 elevator[i].decreaseCurrentFloor();
             }
     }
 
+    /*Determines what the elevator should do if the current direction of the elevator is UP.*/
     public static void headingUp(int i) {
 
+    		// if the 10th floor is reached
             if (elevator[i].getCurrentFloor() == 10) {
+            	//if the elevator is empty, set it to the IDLE state
                 if(elevator[i].getElevatorList().isEmpty()){
                     elevator[i].setDirection(0);
-                } else {
+                } 
+                //otherwise, make the elevator go DOWN
+                else {
                     elevator[i].setDirection(-1);
                     elevator[i].decreaseCurrentFloor();
                 }
                // System.out.println("this is the 'Top' level, changing direction to 'Down'");
-            } else {
+            } 
+            // otherwise increase the current floor (this is what normally happens)
+            else {
                 elevator[i].increaseCurrentFloor();
             }
 
     }
 
+    /*generates the floor that the person will start on*/
     private static int generateStartingFloor() {
         int floorNumber = 1;
         Random random = new Random();
@@ -233,6 +276,7 @@ public class Main_Controller {
         return floorNumber;
     }
 
+    /*Calculates variance for avg waiting time. This is used to calculate standard deviation which is SQRT(VAR(X))*/
     private static double getVarianceAvgWaitingTime(double mean) {
         double temp = 0;
         for(Double d: waitingTimeList)
@@ -240,6 +284,7 @@ public class Main_Controller {
         return temp/numOfPerson;
     }
     
+    /*Calculates variance for avg amount of time it takes to go from floor to floor. This is used to calculate standard deviation which is SQRT(VAR(X))*/
     private static double getVarianceFloorToFloor(double mean) {
     	double temp = 0;
         for(Double d: timeFloorToFloorList)
@@ -247,6 +292,7 @@ public class Main_Controller {
         return temp/numOfPerson;
     }
 
+    /*Method for printing all the stats related to the elevator simulation*/
     public static void printStats(){
         System.out.println("Total number of persons created: " + personCounter);
         System.out.print("Average time it takes to go from floor i to j: " + df.format(sumOfTimeFloorToFloor / numOfPerson));

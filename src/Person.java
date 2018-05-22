@@ -1,3 +1,10 @@
+/*
+ * Joshua Goldstein, Iwan Siauw, Orlando Calle
+ * 
+ * This class defines the person object with floor destination, the person number, what the current floor the person is at,
+ * the arrival time, the completed time, the time that the person enters the elevator, the time it takes for a person to go from floor i to floor j,
+ * and the direction that the person is going.
+ */
 public class Person extends Controller implements Comparable <Person>{
 
 	int floorDestination;
