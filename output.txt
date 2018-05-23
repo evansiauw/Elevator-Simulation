@@ -1,507 +1,863 @@
-Created: PersonId: 1 AtFloor: 1 Dest: 7 ArrTime: 1.1
+Current time is: 0  Current Floor: 1 Direction: UP
+Created: PersonId: 1 At Floor: 1 Dest: 4 Arrival time: 4.52
+Exit: None
+Boarding: Person 1 
+***List of people in the elevator***
+PersonId: 1  Dest: 4  ArrivalTime: 4.52
+
+Current time is: 4.82  Current Floor: 2 Direction: UP
+Created: PersonId: 2 At Floor: 1 Dest: 7 Arrival time: 3.39
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 1  Dest: 4  ArrivalTime: 4.52
+
+Current time is: 8.4  Current Floor: 3 Direction: UP
+Created: PersonId: 3 At Floor: 1 Dest: 9 Arrival time: 1.72
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 1  Dest: 4  ArrivalTime: 4.52
+
+Current time is: 10.32  Current Floor: 4 Direction: UP
+Created: PersonId: 4 At Floor: 1 Dest: 7 Arrival time: 5.39
+Exit: Person 1 
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 15.71  Current Floor: 5 Direction: UP
+Created: PersonId: 5 At Floor: 2 Dest: 10 Arrival time: 22.08
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 2 AtFloor: 6 Dest: 7 ArrTime: 1.1
+Current time is: 37.79  Current Floor: 6 Direction: UP
+Created: PersonId: 6 At Floor: 1 Dest: 4 Arrival time: 2.38
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 3 AtFloor: 1 Dest: 8 ArrTime: 1.7
+Current time is: 40.18  Current Floor: 7 Direction: UP
+Created: PersonId: 7 At Floor: 4 Dest: 1 Arrival time: 4.68
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 4 AtFloor: 1 Dest: 6 ArrTime: 6.5
+Current time is: 44.86  Current Floor: 8 Direction: UP
+Created: PersonId: 8 At Floor: 2 Dest: 4 Arrival time: 4.38
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 5 AtFloor: 1 Dest: 7 ArrTime: .4
+Current time is: 49.23  Current Floor: 9 Direction: UP
+Created: PersonId: 9 At Floor: 1 Dest: 9 Arrival time: 6.57
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 6 AtFloor: 5 Dest: 2 ArrTime: 10.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 7 AtFloor: 5 Dest: 9 ArrTime: 1.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 8 AtFloor: 3 Dest: 7 ArrTime: 7.4
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 9 AtFloor: 1 Dest: 4 ArrTime: 2.0
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 10 AtFloor: 1 Dest: 3 ArrTime: .6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 11 AtFloor: 6 Dest: 5 ArrTime: 3.0
-Exit: None
-Boarding: None
-this is the 'Top' level, changing direction to 'Down'
-***List of people in the elevator***
-
-Created: PersonId: 12 AtFloor: 10 Dest: 1 ArrTime: .8
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 13 AtFloor: 1 Dest: 3 ArrTime: .5
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 14 AtFloor: 1 Dest: 2 ArrTime: 3.5
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 15 AtFloor: 8 Dest: 3 ArrTime: 9.8
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 16 AtFloor: 8 Dest: 1 ArrTime: 6.3
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 17 AtFloor: 5 Dest: 1 ArrTime: 4.6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 18 AtFloor: 1 Dest: 2 ArrTime: 8.3
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 19 AtFloor: 1 Dest: 5 ArrTime: 6.6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 20 AtFloor: 1 Dest: 8 ArrTime: 4.9
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 21 AtFloor: 2 Dest: 7 ArrTime: 2.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 22 AtFloor: 1 Dest: 5 ArrTime: 2.6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 23 AtFloor: 1 Dest: 10 ArrTime: 2.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 24 AtFloor: 1 Dest: 10 ArrTime: 18.7
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 25 AtFloor: 1 Dest: 9 ArrTime: 1.3
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 26 AtFloor: 9 Dest: 5 ArrTime: 1.3
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 27 AtFloor: 1 Dest: 10 ArrTime: .7
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 28 AtFloor: 10 Dest: 5 ArrTime: 5.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 29 AtFloor: 1 Dest: 4 ArrTime: 7.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 30 AtFloor: 1 Dest: 9 ArrTime: 2.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 31 AtFloor: 1 Dest: 2 ArrTime: 6.0
+Current time is: 55.8  Current Floor: 10 Direction: UP
+Created: PersonId: 10 At Floor: 1 Dest: 2 Arrival time: 8.4
 Exit: None
 Boarding: None
 this is the 'Top' level, changing direction to 'Down'
 ***List of people in the elevator***
 
-Created: PersonId: 32 AtFloor: 9 Dest: 6 ArrTime: .9
+Current time is: 64.2  Current Floor: 10 Direction: DOWN
+Created: PersonId: 11 At Floor: 8 Dest: 5 Arrival time: 1.52
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 33 AtFloor: 1 Dest: 6 ArrTime: .7
+Current time is: 65.72  Current Floor: 9 Direction: DOWN
+Created: PersonId: 12 At Floor: 1 Dest: 9 Arrival time: 4.61
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 34 AtFloor: 1 Dest: 4 ArrTime: 6.7
+Current time is: 70.33  Current Floor: 8 Direction: DOWN
+Created: PersonId: 13 At Floor: 8 Dest: 4 Arrival time: 3.15
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 35 AtFloor: 6 Dest: 7 ArrTime: 1.5
+Current time is: 73.48  Current Floor: 7 Direction: DOWN
+Created: PersonId: 14 At Floor: 1 Dest: 4 Arrival time: 15.32
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 36 AtFloor: 1 Dest: 7 ArrTime: 5.1
+Current time is: 88.8  Current Floor: 6 Direction: DOWN
+Created: PersonId: 15 At Floor: 10 Dest: 4 Arrival time: 10.6
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 37 AtFloor: 1 Dest: 8 ArrTime: .2
+Current time is: 99.39  Current Floor: 5 Direction: DOWN
+Created: PersonId: 16 At Floor: 1 Dest: 4 Arrival time: 6.03
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 38 AtFloor: 1 Dest: 10 ArrTime: .8
+Current time is: 105.43  Current Floor: 4 Direction: DOWN
+Created: PersonId: 17 At Floor: 1 Dest: 10 Arrival time: 3.76
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 39 AtFloor: 7 Dest: 3 ArrTime: .3
+Current time is: 109.19  Current Floor: 3 Direction: DOWN
+Created: PersonId: 18 At Floor: 7 Dest: 8 Arrival time: 0.27
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 40 AtFloor: 5 Dest: 4 ArrTime: 2.6
+Current time is: 109.45  Current Floor: 2 Direction: DOWN
+Created: PersonId: 19 At Floor: 1 Dest: 9 Arrival time: 2.19
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 41 AtFloor: 1 Dest: 10 ArrTime: 8.3
+Current time is: 111.64  Current Floor: 1 Direction: DOWN
+Created: PersonId: 20 At Floor: 2 Dest: 4 Arrival time: 3.69
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 42 AtFloor: 1 Dest: 10 ArrTime: 3.4
+Current time is: 115.33  Current Floor: 1 Direction: UP
+Created: PersonId: 21 At Floor: 1 Dest: 8 Arrival time: 3.43
+Exit: None
+Boarding: Person 2 Person 3 Person 4 Person 6 Person 9 Person 10 Person 12 Person 14 Person 16 Person 17 Person 19 Person 21 
+***List of people in the elevator***
+PersonId: 2  Dest: 7  ArrivalTime: 3.39
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 4  Dest: 7  ArrivalTime: 5.39
+PersonId: 6  Dest: 4  ArrivalTime: 2.38
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 10  Dest: 2  ArrivalTime: 8.4
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 14  Dest: 4  ArrivalTime: 15.32
+PersonId: 16  Dest: 4  ArrivalTime: 6.03
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 21  Dest: 8  ArrivalTime: 3.43
+
+Current time is: 119.07  Current Floor: 2 Direction: UP
+Created: PersonId: 22 At Floor: 9 Dest: 8 Arrival time: 17.83
+Exit: Person 10 
+Boarding: Person 5 Person 8 Person 20 
+***List of people in the elevator***
+PersonId: 2  Dest: 7  ArrivalTime: 3.39
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 4  Dest: 7  ArrivalTime: 5.39
+PersonId: 6  Dest: 4  ArrivalTime: 2.38
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 14  Dest: 4  ArrivalTime: 15.32
+PersonId: 16  Dest: 4  ArrivalTime: 6.03
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 21  Dest: 8  ArrivalTime: 3.43
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+PersonId: 8  Dest: 4  ArrivalTime: 4.38
+PersonId: 20  Dest: 4  ArrivalTime: 3.69
+
+Current time is: 137.2  Current Floor: 3 Direction: UP
+Created: PersonId: 23 At Floor: 1 Dest: 9 Arrival time: 12.97
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 2  Dest: 7  ArrivalTime: 3.39
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 4  Dest: 7  ArrivalTime: 5.39
+PersonId: 6  Dest: 4  ArrivalTime: 2.38
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 14  Dest: 4  ArrivalTime: 15.32
+PersonId: 16  Dest: 4  ArrivalTime: 6.03
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 21  Dest: 8  ArrivalTime: 3.43
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+PersonId: 8  Dest: 4  ArrivalTime: 4.38
+PersonId: 20  Dest: 4  ArrivalTime: 3.69
+
+Current time is: 150.36  Current Floor: 4 Direction: UP
+Created: PersonId: 24 At Floor: 4 Dest: 9 Arrival time: 0.46
+Exit: Person 6 Person 14 Person 16 Person 8 Person 20 
+Boarding: Person 24 
+***List of people in the elevator***
+PersonId: 2  Dest: 7  ArrivalTime: 3.39
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 4  Dest: 7  ArrivalTime: 5.39
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 21  Dest: 8  ArrivalTime: 3.43
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+PersonId: 24  Dest: 9  ArrivalTime: 0.46
+
+Current time is: 151.12  Current Floor: 5 Direction: UP
+Created: PersonId: 25 At Floor: 1 Dest: 8 Arrival time: 2.33
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 2  Dest: 7  ArrivalTime: 3.39
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 4  Dest: 7  ArrivalTime: 5.39
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 21  Dest: 8  ArrivalTime: 3.43
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+PersonId: 24  Dest: 9  ArrivalTime: 0.46
+
+Current time is: 153.65  Current Floor: 6 Direction: UP
+Created: PersonId: 26 At Floor: 1 Dest: 10 Arrival time: 2.18
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 2  Dest: 7  ArrivalTime: 3.39
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 4  Dest: 7  ArrivalTime: 5.39
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 21  Dest: 8  ArrivalTime: 3.43
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+PersonId: 24  Dest: 9  ArrivalTime: 0.46
+
+Current time is: 156.02  Current Floor: 7 Direction: UP
+Created: PersonId: 27 At Floor: 10 Dest: 3 Arrival time: 2.65
+Exit: Person 2 Person 4 
+Boarding: Person 18 
+***List of people in the elevator***
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 21  Dest: 8  ArrivalTime: 3.43
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+PersonId: 24  Dest: 9  ArrivalTime: 0.46
+PersonId: 18  Dest: 8  ArrivalTime: 0.27
+
+Current time is: 158.97  Current Floor: 8 Direction: UP
+Created: PersonId: 28 At Floor: 1 Dest: 9 Arrival time: 0.06
+Exit: Person 21 Person 18 
+Boarding: None
+***List of people in the elevator***
+PersonId: 3  Dest: 9  ArrivalTime: 1.72
+PersonId: 9  Dest: 9  ArrivalTime: 6.57
+PersonId: 12  Dest: 9  ArrivalTime: 4.61
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 19  Dest: 9  ArrivalTime: 2.19
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+PersonId: 24  Dest: 9  ArrivalTime: 0.46
+
+Current time is: 159.24  Current Floor: 9 Direction: UP
+Created: PersonId: 29 At Floor: 5 Dest: 9 Arrival time: 0.53
+Exit: Person 3 Person 9 Person 12 Person 19 Person 24 
+Boarding: None
+***List of people in the elevator***
+PersonId: 17  Dest: 10  ArrivalTime: 3.76
+PersonId: 5  Dest: 10  ArrivalTime: 22.08
+
+Current time is: 159.97  Current Floor: 10 Direction: UP
+Created: PersonId: 30 At Floor: 2 Dest: 3 Arrival time: 0.3
+Exit: Person 17 Person 5 
+Boarding: None
+this is the 'Top' level, changing direction to 'Down'
+***List of people in the elevator***
+
+Current time is: 160.27  Current Floor: 10 Direction: DOWN
+Created: PersonId: 31 At Floor: 1 Dest: 10 Arrival time: 2.26
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 43 AtFloor: 1 Dest: 4 ArrTime: 10.1
+Current time is: 162.53  Current Floor: 9 Direction: DOWN
+Created: PersonId: 32 At Floor: 4 Dest: 2 Arrival time: 7.1
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 44 AtFloor: 3 Dest: 6 ArrTime: 7.8
+Current time is: 169.63  Current Floor: 8 Direction: DOWN
+Created: PersonId: 33 At Floor: 7 Dest: 6 Arrival time: 1.43
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 45 AtFloor: 10 Dest: 3 ArrTime: 2.8
+Current time is: 171.06  Current Floor: 7 Direction: DOWN
+Created: PersonId: 34 At Floor: 10 Dest: 9 Arrival time: 8.95
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 46 AtFloor: 1 Dest: 7 ArrTime: .8
+Current time is: 180.01  Current Floor: 6 Direction: DOWN
+Created: PersonId: 35 At Floor: 1 Dest: 5 Arrival time: 5.6
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 47 AtFloor: 6 Dest: 9 ArrTime: 4.5
+Current time is: 185.61  Current Floor: 5 Direction: DOWN
+Created: PersonId: 36 At Floor: 4 Dest: 5 Arrival time: 0.69
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 48 AtFloor: 9 Dest: 4 ArrTime: 3.3
+Current time is: 186.3  Current Floor: 4 Direction: DOWN
+Created: PersonId: 37 At Floor: 4 Dest: 5 Arrival time: 2.04
+Exit: None
+Boarding: Person 7 Person 32 
+***List of people in the elevator***
+PersonId: 7  Dest: 1  ArrivalTime: 4.68
+PersonId: 32  Dest: 2  ArrivalTime: 7.1
+
+Current time is: 188.64  Current Floor: 3 Direction: DOWN
+Created: PersonId: 38 At Floor: 1 Dest: 3 Arrival time: 4.77
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 7  Dest: 1  ArrivalTime: 4.68
+PersonId: 32  Dest: 2  ArrivalTime: 7.1
+
+Current time is: 193.61  Current Floor: 2 Direction: DOWN
+Created: PersonId: 39 At Floor: 1 Dest: 4 Arrival time: 3.96
+Exit: Person 32 
+Boarding: None
+***List of people in the elevator***
+PersonId: 7  Dest: 1  ArrivalTime: 4.68
+
+Current time is: 197.77  Current Floor: 1 Direction: DOWN
+Created: PersonId: 40 At Floor: 10 Dest: 1 Arrival time: 1.51
+Exit: Person 7 
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 199.28  Current Floor: 1 Direction: UP
+Created: PersonId: 41 At Floor: 1 Dest: 2 Arrival time: 6.44
+Exit: None
+Boarding: Person 23 Person 25 Person 26 Person 28 Person 31 Person 35 Person 38 Person 39 Person 41 
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 25  Dest: 8  ArrivalTime: 2.33
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 35  Dest: 5  ArrivalTime: 5.6
+PersonId: 38  Dest: 3  ArrivalTime: 4.77
+PersonId: 39  Dest: 4  ArrivalTime: 3.96
+PersonId: 41  Dest: 2  ArrivalTime: 6.44
+
+Current time is: 206.02  Current Floor: 2 Direction: UP
+Created: PersonId: 42 At Floor: 7 Dest: 4 Arrival time: 9.9
+Exit: Person 41 
+Boarding: Person 30 
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 25  Dest: 8  ArrivalTime: 2.33
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 35  Dest: 5  ArrivalTime: 5.6
+PersonId: 38  Dest: 3  ArrivalTime: 4.77
+PersonId: 39  Dest: 4  ArrivalTime: 3.96
+PersonId: 30  Dest: 3  ArrivalTime: 0.3
+
+Current time is: 216.22  Current Floor: 3 Direction: UP
+Created: PersonId: 43 At Floor: 6 Dest: 8 Arrival time: 9.29
+Exit: Person 38 Person 30 
+Boarding: None
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 25  Dest: 8  ArrivalTime: 2.33
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 35  Dest: 5  ArrivalTime: 5.6
+PersonId: 39  Dest: 4  ArrivalTime: 3.96
+
+Current time is: 225.71  Current Floor: 4 Direction: UP
+Created: PersonId: 44 At Floor: 3 Dest: 8 Arrival time: 16.11
+Exit: Person 39 
+Boarding: Person 36 Person 37 
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 25  Dest: 8  ArrivalTime: 2.33
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 35  Dest: 5  ArrivalTime: 5.6
+PersonId: 36  Dest: 5  ArrivalTime: 0.69
+PersonId: 37  Dest: 5  ArrivalTime: 2.04
+
+Current time is: 242.12  Current Floor: 5 Direction: UP
+Created: PersonId: 45 At Floor: 6 Dest: 7 Arrival time: 8.3
+Exit: Person 35 Person 36 Person 37 
+Boarding: Person 29 
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 25  Dest: 8  ArrivalTime: 2.33
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 29  Dest: 9  ArrivalTime: 0.53
+
+Current time is: 250.72  Current Floor: 6 Direction: UP
+Created: PersonId: 46 At Floor: 7 Dest: 5 Arrival time: 5.28
+Exit: None
+Boarding: Person 43 Person 45 
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 25  Dest: 8  ArrivalTime: 2.33
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 29  Dest: 9  ArrivalTime: 0.53
+PersonId: 43  Dest: 8  ArrivalTime: 9.29
+PersonId: 45  Dest: 7  ArrivalTime: 8.3
+
+Current time is: 256.29  Current Floor: 7 Direction: UP
+Created: PersonId: 47 At Floor: 1 Dest: 9 Arrival time: 2.32
+Exit: Person 45 
+Boarding: None
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 25  Dest: 8  ArrivalTime: 2.33
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 29  Dest: 9  ArrivalTime: 0.53
+PersonId: 43  Dest: 8  ArrivalTime: 9.29
+
+Current time is: 258.82  Current Floor: 8 Direction: UP
+Created: PersonId: 48 At Floor: 1 Dest: 8 Arrival time: 3.15
+Exit: Person 25 Person 43 
+Boarding: None
+***List of people in the elevator***
+PersonId: 23  Dest: 9  ArrivalTime: 12.97
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 28  Dest: 9  ArrivalTime: 0.06
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+PersonId: 29  Dest: 9  ArrivalTime: 0.53
+
+Current time is: 262.17  Current Floor: 9 Direction: UP
+Created: PersonId: 49 At Floor: 6 Dest: 8 Arrival time: 9.54
+Exit: Person 23 Person 28 Person 29 
+Boarding: None
+***List of people in the elevator***
+PersonId: 26  Dest: 10  ArrivalTime: 2.18
+PersonId: 31  Dest: 10  ArrivalTime: 2.26
+
+Current time is: 271.91  Current Floor: 10 Direction: UP
+Created: PersonId: 50 At Floor: 1 Dest: 4 Arrival time: 4.26
+Exit: Person 26 Person 31 
+Boarding: None
+this is the 'Top' level, changing direction to 'Down'
+***List of people in the elevator***
+
+Current time is: 276.17  Current Floor: 10 Direction: DOWN
+Created: PersonId: 51 At Floor: 1 Dest: 8 Arrival time: 1.86
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 49 AtFloor: 1 Dest: 6 ArrTime: 4.9
+Current time is: 278.03  Current Floor: 9 Direction: DOWN
+Created: PersonId: 52 At Floor: 10 Dest: 4 Arrival time: 0.31
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 50 AtFloor: 1 Dest: 9 ArrTime: 3.3
+Current time is: 278.34  Current Floor: 8 Direction: DOWN
+Created: PersonId: 53 At Floor: 4 Dest: 8 Arrival time: 0.54
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 51 AtFloor: 6 Dest: 8 ArrTime: 6.8
+Current time is: 278.88  Current Floor: 7 Direction: DOWN
+Created: PersonId: 54 At Floor: 1 Dest: 10 Arrival time: 4.86
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 283.74  Current Floor: 6 Direction: DOWN
+Created: PersonId: 55 At Floor: 1 Dest: 9 Arrival time: 4.61
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 288.35  Current Floor: 5 Direction: DOWN
+Created: PersonId: 56 At Floor: 9 Dest: 3 Arrival time: 3.1
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 291.44  Current Floor: 4 Direction: DOWN
+Created: PersonId: 57 At Floor: 5 Dest: 4 Arrival time: 4.06
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 295.51  Current Floor: 3 Direction: DOWN
+Created: PersonId: 58 At Floor: 8 Dest: 3 Arrival time: 0.9
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 296.4  Current Floor: 2 Direction: DOWN
+Created: PersonId: 59 At Floor: 1 Dest: 4 Arrival time: 22.96
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 319.36  Current Floor: 1 Direction: DOWN
+Created: PersonId: 60 At Floor: 1 Dest: 4 Arrival time: 2.87
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 322.23  Current Floor: 1 Direction: UP
+Created: PersonId: 61 At Floor: 1 Dest: 9 Arrival time: 0.13
+Exit: None
+Boarding: Person 47 Person 48 Person 50 Person 51 Person 54 Person 55 Person 59 Person 60 Person 61 
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 48  Dest: 8  ArrivalTime: 3.15
+PersonId: 50  Dest: 4  ArrivalTime: 4.26
+PersonId: 51  Dest: 8  ArrivalTime: 1.86
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 59  Dest: 4  ArrivalTime: 22.96
+PersonId: 60  Dest: 4  ArrivalTime: 2.87
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+
+Current time is: 322.66  Current Floor: 2 Direction: UP
+Created: PersonId: 62 At Floor: 1 Dest: 5 Arrival time: 0.72
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 48  Dest: 8  ArrivalTime: 3.15
+PersonId: 50  Dest: 4  ArrivalTime: 4.26
+PersonId: 51  Dest: 8  ArrivalTime: 1.86
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 59  Dest: 4  ArrivalTime: 22.96
+PersonId: 60  Dest: 4  ArrivalTime: 2.87
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+
+Current time is: 323.58  Current Floor: 3 Direction: UP
+Created: PersonId: 63 At Floor: 4 Dest: 8 Arrival time: 0.73
+Exit: None
+Boarding: Person 44 
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 48  Dest: 8  ArrivalTime: 3.15
+PersonId: 50  Dest: 4  ArrivalTime: 4.26
+PersonId: 51  Dest: 8  ArrivalTime: 1.86
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 59  Dest: 4  ArrivalTime: 22.96
+PersonId: 60  Dest: 4  ArrivalTime: 2.87
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+PersonId: 44  Dest: 8  ArrivalTime: 16.11
+
+Current time is: 324.62  Current Floor: 4 Direction: UP
+Created: PersonId: 64 At Floor: 8 Dest: 7 Arrival time: 2.12
+Exit: Person 50 Person 59 Person 60 
+Boarding: Person 53 Person 63 
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 48  Dest: 8  ArrivalTime: 3.15
+PersonId: 51  Dest: 8  ArrivalTime: 1.86
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+PersonId: 44  Dest: 8  ArrivalTime: 16.11
+PersonId: 53  Dest: 8  ArrivalTime: 0.54
+PersonId: 63  Dest: 8  ArrivalTime: 0.73
+
+Current time is: 327.03  Current Floor: 5 Direction: UP
+Created: PersonId: 65 At Floor: 1 Dest: 6 Arrival time: 1.12
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 48  Dest: 8  ArrivalTime: 3.15
+PersonId: 51  Dest: 8  ArrivalTime: 1.86
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+PersonId: 44  Dest: 8  ArrivalTime: 16.11
+PersonId: 53  Dest: 8  ArrivalTime: 0.54
+PersonId: 63  Dest: 8  ArrivalTime: 0.73
+
+Current time is: 328.35  Current Floor: 6 Direction: UP
+Created: PersonId: 66 At Floor: 9 Dest: 2 Arrival time: 2.31
+Exit: None
+Boarding: Person 49 
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 48  Dest: 8  ArrivalTime: 3.15
+PersonId: 51  Dest: 8  ArrivalTime: 1.86
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+PersonId: 44  Dest: 8  ArrivalTime: 16.11
+PersonId: 53  Dest: 8  ArrivalTime: 0.54
+PersonId: 63  Dest: 8  ArrivalTime: 0.73
+PersonId: 49  Dest: 8  ArrivalTime: 9.54
+
+Current time is: 330.96  Current Floor: 7 Direction: UP
+Created: PersonId: 67 At Floor: 7 Dest: 2 Arrival time: 10.98
+Exit: None
+Boarding: None
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 48  Dest: 8  ArrivalTime: 3.15
+PersonId: 51  Dest: 8  ArrivalTime: 1.86
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+PersonId: 44  Dest: 8  ArrivalTime: 16.11
+PersonId: 53  Dest: 8  ArrivalTime: 0.54
+PersonId: 63  Dest: 8  ArrivalTime: 0.73
+PersonId: 49  Dest: 8  ArrivalTime: 9.54
+
+Current time is: 342.14  Current Floor: 8 Direction: UP
+Created: PersonId: 68 At Floor: 4 Dest: 5 Arrival time: 2.18
+Exit: Person 48 Person 51 Person 44 Person 53 Person 63 Person 49 
+Boarding: None
+***List of people in the elevator***
+PersonId: 47  Dest: 9  ArrivalTime: 2.32
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+PersonId: 55  Dest: 9  ArrivalTime: 4.61
+PersonId: 61  Dest: 9  ArrivalTime: 0.13
+
+Current time is: 344.53  Current Floor: 9 Direction: UP
+Created: PersonId: 69 At Floor: 1 Dest: 3 Arrival time: 0.56
+Exit: Person 47 Person 55 Person 61 
+Boarding: None
+***List of people in the elevator***
+PersonId: 54  Dest: 10  ArrivalTime: 4.86
+
+Current time is: 345.29  Current Floor: 10 Direction: UP
+Created: PersonId: 70 At Floor: 3 Dest: 6 Arrival time: 3.27
+Exit: Person 54 
+Boarding: None
+this is the 'Top' level, changing direction to 'Down'
+***List of people in the elevator***
+
+Current time is: 348.56  Current Floor: 10 Direction: DOWN
+Created: PersonId: 71 At Floor: 7 Dest: 4 Arrival time: 0.99
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 349.55  Current Floor: 9 Direction: DOWN
+Created: PersonId: 72 At Floor: 1 Dest: 7 Arrival time: 6.28
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 355.83  Current Floor: 8 Direction: DOWN
+Created: PersonId: 73 At Floor: 9 Dest: 6 Arrival time: 2.1
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 357.92  Current Floor: 7 Direction: DOWN
+Created: PersonId: 74 At Floor: 10 Dest: 1 Arrival time: 2.8
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 360.73  Current Floor: 6 Direction: DOWN
+Created: PersonId: 75 At Floor: 6 Dest: 1 Arrival time: 1.73
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 362.46  Current Floor: 5 Direction: DOWN
+Created: PersonId: 76 At Floor: 1 Dest: 2 Arrival time: 6.75
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 369.21  Current Floor: 4 Direction: DOWN
+Created: PersonId: 77 At Floor: 9 Dest: 8 Arrival time: 0.52
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 369.74  Current Floor: 3 Direction: DOWN
+Created: PersonId: 78 At Floor: 10 Dest: 6 Arrival time: 2.63
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 372.36  Current Floor: 2 Direction: DOWN
+Created: PersonId: 79 At Floor: 5 Dest: 7 Arrival time: 5.22
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 377.59  Current Floor: 1 Direction: DOWN
+Created: PersonId: 80 At Floor: 9 Dest: 3 Arrival time: 4.22
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 381.8  Current Floor: 1 Direction: UP
+Created: PersonId: 81 At Floor: 1 Dest: 4 Arrival time: 9.08
+Exit: None
+Boarding: Person 62 Person 65 Person 69 Person 72 Person 76 Person 81 
+***List of people in the elevator***
+PersonId: 62  Dest: 5  ArrivalTime: 0.72
+PersonId: 65  Dest: 6  ArrivalTime: 1.12
+PersonId: 69  Dest: 3  ArrivalTime: 0.56
+PersonId: 72  Dest: 7  ArrivalTime: 6.28
+PersonId: 76  Dest: 2  ArrivalTime: 6.75
+PersonId: 81  Dest: 4  ArrivalTime: 9.08
+
+Current time is: 391.18  Current Floor: 2 Direction: UP
+Created: PersonId: 82 At Floor: 1 Dest: 2 Arrival time: 1.05
+Exit: Person 76 
+Boarding: None
+***List of people in the elevator***
+PersonId: 62  Dest: 5  ArrivalTime: 0.72
+PersonId: 65  Dest: 6  ArrivalTime: 1.12
+PersonId: 69  Dest: 3  ArrivalTime: 0.56
+PersonId: 72  Dest: 7  ArrivalTime: 6.28
+PersonId: 81  Dest: 4  ArrivalTime: 9.08
+
+Current time is: 392.43  Current Floor: 3 Direction: UP
+Created: PersonId: 83 At Floor: 9 Dest: 2 Arrival time: 2.05
+Exit: Person 69 
+Boarding: Person 70 
+***List of people in the elevator***
+PersonId: 62  Dest: 5  ArrivalTime: 0.72
+PersonId: 65  Dest: 6  ArrivalTime: 1.12
+PersonId: 72  Dest: 7  ArrivalTime: 6.28
+PersonId: 81  Dest: 4  ArrivalTime: 9.08
+PersonId: 70  Dest: 6  ArrivalTime: 3.27
+
+Current time is: 394.78  Current Floor: 4 Direction: UP
+Created: PersonId: 84 At Floor: 8 Dest: 4 Arrival time: 14.13
+Exit: Person 81 
+Boarding: Person 68 
+***List of people in the elevator***
+PersonId: 62  Dest: 5  ArrivalTime: 0.72
+PersonId: 65  Dest: 6  ArrivalTime: 1.12
+PersonId: 72  Dest: 7  ArrivalTime: 6.28
+PersonId: 70  Dest: 6  ArrivalTime: 3.27
+PersonId: 68  Dest: 5  ArrivalTime: 2.18
+
+Current time is: 409.21  Current Floor: 5 Direction: UP
+Created: PersonId: 85 At Floor: 1 Dest: 9 Arrival time: 1.76
+Exit: Person 62 Person 68 
+Boarding: Person 79 
+***List of people in the elevator***
+PersonId: 65  Dest: 6  ArrivalTime: 1.12
+PersonId: 72  Dest: 7  ArrivalTime: 6.28
+PersonId: 70  Dest: 6  ArrivalTime: 3.27
+PersonId: 79  Dest: 7  ArrivalTime: 5.22
+
+Current time is: 411.27  Current Floor: 6 Direction: UP
+Created: PersonId: 86 At Floor: 5 Dest: 6 Arrival time: 3.17
+Exit: Person 65 Person 70 
+Boarding: None
+***List of people in the elevator***
+PersonId: 72  Dest: 7  ArrivalTime: 6.28
+PersonId: 79  Dest: 7  ArrivalTime: 5.22
+
+Current time is: 414.64  Current Floor: 7 Direction: UP
+Created: PersonId: 87 At Floor: 4 Dest: 8 Arrival time: 0.39
+Exit: Person 72 Person 79 
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 415.04  Current Floor: 8 Direction: UP
+Created: PersonId: 88 At Floor: 1 Dest: 7 Arrival time: 7.86
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 422.9  Current Floor: 9 Direction: UP
+Created: PersonId: 89 At Floor: 7 Dest: 4 Arrival time: 2.22
+Exit: None
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 425.12  Current Floor: 10 Direction: UP
+Created: PersonId: 90 At Floor: 1 Dest: 2 Arrival time: 6.18
 Exit: None
 Boarding: None
 this is the 'Top' level, changing direction to 'Down'
 ***List of people in the elevator***
 
-Created: PersonId: 52 AtFloor: 6 Dest: 5 ArrTime: 2.5
+Current time is: 431.3  Current Floor: 10 Direction: DOWN
+Created: PersonId: 91 At Floor: 1 Dest: 6 Arrival time: 0.44
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 53 AtFloor: 10 Dest: 9 ArrTime: 1.5
+Current time is: 431.74  Current Floor: 9 Direction: DOWN
+Created: PersonId: 92 At Floor: 2 Dest: 8 Arrival time: 8.3
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 54 AtFloor: 2 Dest: 3 ArrTime: 10.0
+Current time is: 440.04  Current Floor: 8 Direction: DOWN
+Created: PersonId: 93 At Floor: 1 Dest: 8 Arrival time: 3.76
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 55 AtFloor: 1 Dest: 5 ArrTime: .5
+Current time is: 443.81  Current Floor: 7 Direction: DOWN
+Created: PersonId: 94 At Floor: 1 Dest: 7 Arrival time: 4.56
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 56 AtFloor: 1 Dest: 3 ArrTime: 3.9
+Current time is: 448.37  Current Floor: 6 Direction: DOWN
+Created: PersonId: 95 At Floor: 10 Dest: 2 Arrival time: 3.13
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 57 AtFloor: 6 Dest: 8 ArrTime: 2.7
+Current time is: 451.49  Current Floor: 5 Direction: DOWN
+Created: PersonId: 96 At Floor: 1 Dest: 5 Arrival time: 2.54
+Exit: None
+Boarding: Person 57 
+***List of people in the elevator***
+PersonId: 57  Dest: 4  ArrivalTime: 4.06
+
+Current time is: 454.33  Current Floor: 4 Direction: DOWN
+Created: PersonId: 97 At Floor: 2 Dest: 3 Arrival time: 0.96
+Exit: Person 57 
+Boarding: None
+***List of people in the elevator***
+
+Current time is: 455.29  Current Floor: 3 Direction: DOWN
+Created: PersonId: 98 At Floor: 1 Dest: 3 Arrival time: 5.35
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 58 AtFloor: 1 Dest: 8 ArrTime: 6.2
+Current time is: 460.64  Current Floor: 2 Direction: DOWN
+Created: PersonId: 99 At Floor: 1 Dest: 10 Arrival time: 9.21
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
-Created: PersonId: 59 AtFloor: 7 Dest: 4 ArrTime: 7.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 60 AtFloor: 1 Dest: 7 ArrTime: 16.0
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 61 AtFloor: 1 Dest: 6 ArrTime: 2.0
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 62 AtFloor: 4 Dest: 10 ArrTime: 1.8
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 63 AtFloor: 1 Dest: 5 ArrTime: 4.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 64 AtFloor: 1 Dest: 5 ArrTime: 3.8
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 65 AtFloor: 1 Dest: 10 ArrTime: 2.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 66 AtFloor: 1 Dest: 8 ArrTime: 4.6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 67 AtFloor: 10 Dest: 8 ArrTime: 1.0
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 68 AtFloor: 1 Dest: 7 ArrTime: 6.0
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 69 AtFloor: 1 Dest: 9 ArrTime: 7.6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 70 AtFloor: 1 Dest: 4 ArrTime: 1.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 71 AtFloor: 9 Dest: 6 ArrTime: 6.3
-Exit: None
-Boarding: None
-this is the 'Top' level, changing direction to 'Down'
-***List of people in the elevator***
-
-Created: PersonId: 72 AtFloor: 2 Dest: 8 ArrTime: 13.9
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 73 AtFloor: 1 Dest: 7 ArrTime: 2.7
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 74 AtFloor: 3 Dest: 9 ArrTime: 4.3
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 75 AtFloor: 1 Dest: 7 ArrTime: 2.9
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 76 AtFloor: 1 Dest: 5 ArrTime: 1.5
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 77 AtFloor: 2 Dest: 10 ArrTime: .2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 78 AtFloor: 2 Dest: 4 ArrTime: 2.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 79 AtFloor: 1 Dest: 10 ArrTime: 3.0
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 80 AtFloor: 1 Dest: 2 ArrTime: .2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 81 AtFloor: 3 Dest: 4 ArrTime: 2.6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 82 AtFloor: 1 Dest: 7 ArrTime: 4.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 83 AtFloor: 1 Dest: 7 ArrTime: .5
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 84 AtFloor: 5 Dest: 6 ArrTime: 2.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 85 AtFloor: 6 Dest: 4 ArrTime: 9.7
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 86 AtFloor: 1 Dest: 5 ArrTime: 3.0
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 87 AtFloor: 4 Dest: 9 ArrTime: 7.6
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 88 AtFloor: 1 Dest: 10 ArrTime: 13.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 89 AtFloor: 2 Dest: 7 ArrTime: .3
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 90 AtFloor: 6 Dest: 1 ArrTime: 8.9
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 91 AtFloor: 1 Dest: 3 ArrTime: 6.4
-Exit: None
-Boarding: None
-this is the 'Top' level, changing direction to 'Down'
-***List of people in the elevator***
-
-Created: PersonId: 92 AtFloor: 1 Dest: 2 ArrTime: 2.4
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 93 AtFloor: 4 Dest: 1 ArrTime: 7.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 94 AtFloor: 3 Dest: 9 ArrTime: .2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 95 AtFloor: 1 Dest: 4 ArrTime: 3.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 96 AtFloor: 5 Dest: 1 ArrTime: 3.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 97 AtFloor: 7 Dest: 10 ArrTime: 14.7
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 98 AtFloor: 1 Dest: 7 ArrTime: 5.2
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 99 AtFloor: 1 Dest: 3 ArrTime: 3.1
-Exit: None
-Boarding: None
-***List of people in the elevator***
-
-Created: PersonId: 100 AtFloor: 1 Dest: 3 ArrTime: 1.8
+Current time is: 469.84  Current Floor: 1 Direction: DOWN
+Created: PersonId: 100 At Floor: 2 Dest: 4 Arrival time: 3.2
 Exit: None
 Boarding: None
 ***List of people in the elevator***
 
 Total number of persons created: 100
-Average Waiting Time: .0
+Average Waiting Time: 151.45
