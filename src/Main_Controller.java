@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,6 +34,7 @@ public class Main_Controller {
     static int numOfElevator = 5;
     static int numOfFloor = 10;
     static int numOfPerson = 100;
+    static double custArrival;
     static Random rand = new Random();
     static Elevator[] elevator = new Elevator[numOfElevator + 1];
     static Floor[] floor = new Floor[numOfFloor + 1];
@@ -43,6 +47,15 @@ public class Main_Controller {
     static PriorityQueue<Elevator> closestDistance = new PriorityQueue<>();
 
     public static void main(String[] args) {
+    	
+    	PrintStream out;
+        try {
+            out = new PrintStream(new FileOutputStream("output_multiple_elevators.txt"));
+            System.setOut(out);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
         // Creating elevator objects
         for(int i=1; i <= numOfElevator; i++) {
@@ -69,8 +82,10 @@ public class Main_Controller {
         boarding();
         exit();
         nextMove();
-        time +=0.2;
-
+        for(int i=1; i <= numOfElevator; i++) 
+            if(!elevator[i].isElevatorEmpty())time +=0.2;
+        time += custArrival;
+        
     }
 
     /*
@@ -79,7 +94,7 @@ public class Main_Controller {
     public static void creatingPerson() {
 
         // formula to get customer arrival
-        double custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
+        custArrival = meanArrival * (- Math.log(1 - rand.nextDouble()));
 
         // person's current floor cannot be the same as the person destination
         do {
@@ -94,6 +109,7 @@ public class Main_Controller {
         System.out.println("*****************************************************************");
         System.out.println("[Time: " + df.format(time) +  "] PersonId: " + newPerson.personNumber + " AtFloor: " + newPerson.personAtFloor
                 + " Dest: " + newPerson.floorDestination + " ArrTime: "+ df.format(newPerson.arrivalTime));
+
 
     }
 
