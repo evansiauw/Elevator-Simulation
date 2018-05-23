@@ -83,7 +83,10 @@ public class Main_Controller {
         exit();
         nextMove();
         for(int i=1; i <= numOfElevator; i++) 
-            if(!elevator[i].isElevatorEmpty())time +=0.2;
+            if(!elevator[i].isElevatorEmpty()) {
+            	time +=0.2;
+            	break; 
+            }
         time += custArrival;
         
     }

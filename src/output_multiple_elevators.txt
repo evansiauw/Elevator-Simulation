@@ -2,7 +2,7 @@ Joshua Goldstein, Iwan Siauw, Orlando Calle
 Output for multiple elevators
 
 *****************************************************************
-[Time: 0] PersonId: 1 AtFloor: 5 Dest: 9 ArrTime: 0.32
+[Time: 0] PersonId: 1 AtFloor: 9 Dest: 5 ArrTime: 7.93
  Elevator 1 at floor 1 Direction IDLE
  Elevator 2 at floor 3 Direction IDLE
  Elevator 3 at floor 5 Direction IDLE
@@ -10,1123 +10,1140 @@ Output for multiple elevators
  Elevator 5 at floor 9 Direction IDLE
 
 *****************************************************************
-[Time: 0.32] PersonId: 2 AtFloor: 10 Dest: 5 ArrTime: 1.62
-[Request] Person: 1 ClosestElevator is:3
-[Boarding] Person: 1 to Elevator 3
+[Time: 7.93] PersonId: 2 AtFloor: 8 Dest: 2 ArrTime: 1.31
+[Request] Person: 2 ClosestElevator is:4
  Elevator 1 at floor 1 Direction IDLE
  Elevator 2 at floor 3 Direction IDLE
- Elevator 3 at floor 5 Direction UP
-    PersonId: 1 AtFloor: 5  Dest: 9  ArrivalTime: 0.32
- Elevator 4 at floor 7 Direction IDLE
+ Elevator 3 at floor 5 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
  Elevator 5 at floor 9 Direction IDLE
 
 *****************************************************************
-[Time: 2.23] PersonId: 3 AtFloor: 4 Dest: 9 ArrTime: 10.66
-[Request] Person: 2 ClosestElevator is:5
+[Time: 9.25] PersonId: 3 AtFloor: 10 Dest: 7 ArrTime: 9.12
+[Request] Person: 2 ClosestElevator is:4
+[Boarding] Person: 2 to Elevator 4
+[Request] Person: 1 ClosestElevator is:5
+[Boarding] Person: 1 to Elevator 5
+[Request] Person: 3 ClosestElevator is:3
  Elevator 1 at floor 1 Direction IDLE
  Elevator 2 at floor 3 Direction IDLE
- Elevator 3 at floor 6 Direction UP
-    PersonId: 1 AtFloor: 5  Dest: 9  ArrivalTime: 0.32
- Elevator 4 at floor 7 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 8 Direction DOWN
+    PersonId: 2 AtFloor: 8  Dest: 2  ArrivalTime: 1.31
+ Elevator 5 at floor 9 Direction DOWN
+    PersonId: 1 AtFloor: 9  Dest: 5  ArrivalTime: 7.93
 
 *****************************************************************
-[Time: 13.09] PersonId: 4 AtFloor: 1 Dest: 5 ArrTime: 4.34
-[Request] Person: 2 ClosestElevator is:5
-[Boarding] Person: 2 to Elevator 5
+[Time: 18.77] PersonId: 4 AtFloor: 1 Dest: 10 ArrTime: 1.01
 [Request] Person: 4 ClosestElevator is:1
 [Boarding] Person: 4 to Elevator 1
-[Request] Person: 3 ClosestElevator is:2
+[Request] Person: 3 ClosestElevator is:3
  Elevator 1 at floor 1 Direction UP
-    PersonId: 4 AtFloor: 1  Dest: 5  ArrivalTime: 4.34
- Elevator 2 at floor 4 Direction IDLE
- Elevator 3 at floor 7 Direction UP
-    PersonId: 1 AtFloor: 5  Dest: 9  ArrivalTime: 0.32
- Elevator 4 at floor 7 Direction IDLE
- Elevator 5 at floor 10 Direction DOWN
-    PersonId: 2 AtFloor: 10  Dest: 5  ArrivalTime: 1.62
-
-*****************************************************************
-[Time: 18.23] PersonId: 5 AtFloor: 2 Dest: 9 ArrTime: 19.79
-[Request] Person: 3 ClosestElevator is:2
-[Boarding] Person: 3 to Elevator 2
- Elevator 1 at floor 2 Direction UP
-    PersonId: 4 AtFloor: 1  Dest: 5  ArrivalTime: 4.34
- Elevator 2 at floor 4 Direction UP
-    PersonId: 3 AtFloor: 4  Dest: 9  ArrivalTime: 10.66
- Elevator 3 at floor 8 Direction UP
-    PersonId: 1 AtFloor: 5  Dest: 9  ArrivalTime: 0.32
- Elevator 4 at floor 7 Direction IDLE
- Elevator 5 at floor 9 Direction DOWN
-    PersonId: 2 AtFloor: 10  Dest: 5  ArrivalTime: 1.62
-
-*****************************************************************
-[Time: 38.92] PersonId: 6 AtFloor: 8 Dest: 5 ArrTime: 3.11
-[Request] Person: 6 ClosestElevator is:4
-[Exit] Elevator: 3 Person 1 
- Elevator 1 at floor 3 Direction UP
-    PersonId: 4 AtFloor: 1  Dest: 5  ArrivalTime: 4.34
- Elevator 2 at floor 5 Direction UP
-    PersonId: 3 AtFloor: 4  Dest: 9  ArrivalTime: 10.66
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 8 Direction IDLE
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
+ Elevator 2 at floor 3 Direction IDLE
+ Elevator 3 at floor 7 Direction IDLE
+ Elevator 4 at floor 7 Direction DOWN
+    PersonId: 2 AtFloor: 8  Dest: 2  ArrivalTime: 1.31
  Elevator 5 at floor 8 Direction DOWN
-    PersonId: 2 AtFloor: 10  Dest: 5  ArrivalTime: 1.62
+    PersonId: 1 AtFloor: 9  Dest: 5  ArrivalTime: 7.93
 
 *****************************************************************
-[Time: 42.73] PersonId: 7 AtFloor: 3 Dest: 4 ArrTime: 0.68
-[Request] Person: 7 ClosestElevator is:4
- Elevator 1 at floor 4 Direction UP
-    PersonId: 4 AtFloor: 1  Dest: 5  ArrivalTime: 4.34
- Elevator 2 at floor 6 Direction UP
-    PersonId: 3 AtFloor: 4  Dest: 9  ArrivalTime: 10.66
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 7 Direction IDLE
+[Time: 20.09] PersonId: 5 AtFloor: 1 Dest: 5 ArrTime: 0.77
+[Request] Person: 5 ClosestElevator is:2
+ Elevator 1 at floor 2 Direction UP
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
+ Elevator 2 at floor 2 Direction IDLE
+ Elevator 3 at floor 7 Direction IDLE
+ Elevator 4 at floor 6 Direction DOWN
+    PersonId: 2 AtFloor: 8  Dest: 2  ArrivalTime: 1.31
  Elevator 5 at floor 7 Direction DOWN
-    PersonId: 2 AtFloor: 10  Dest: 5  ArrivalTime: 1.62
+    PersonId: 1 AtFloor: 9  Dest: 5  ArrivalTime: 7.93
 
 *****************************************************************
-[Time: 44.01] PersonId: 8 AtFloor: 9 Dest: 4 ArrTime: 18.33
-[Request] Person: 7 ClosestElevator is:4
-[Exit] Elevator: 1 Person 4 
- Elevator 1 at floor 5 Direction IDLE
- Elevator 2 at floor 7 Direction UP
-    PersonId: 3 AtFloor: 4  Dest: 9  ArrivalTime: 10.66
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 6 Direction DOWN
-    PersonId: 2 AtFloor: 10  Dest: 5  ArrivalTime: 1.62
-
-*****************************************************************
-[Time: 62.84] PersonId: 9 AtFloor: 6 Dest: 9 ArrTime: 2.45
-[Request] Person: 7 ClosestElevator is:1
-[Exit] Elevator: 5 Person 2 
- Elevator 1 at floor 4 Direction IDLE
- Elevator 2 at floor 8 Direction UP
-    PersonId: 3 AtFloor: 4  Dest: 9  ArrivalTime: 10.66
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 5 Direction IDLE
-
-*****************************************************************
-[Time: 65.6] PersonId: 10 AtFloor: 1 Dest: 3 ArrTime: 1.71
-[Request] Person: 7 ClosestElevator is:1
-[Exit] Elevator: 2 Person 3 
- Elevator 1 at floor 3 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 5 Direction IDLE
-
-*****************************************************************
-[Time: 67.41] PersonId: 11 AtFloor: 2 Dest: 6 ArrTime: 9.05
-[Request] Person: 7 ClosestElevator is:1
-[Boarding] Person: 7 to Elevator 1
-[Request] Person: 10 ClosestElevator is:5
+[Time: 21.06] PersonId: 6 AtFloor: 1 Dest: 7 ArrTime: 3.37
+[Request] Person: 5 ClosestElevator is:2
  Elevator 1 at floor 3 Direction UP
-    PersonId: 7 AtFloor: 3  Dest: 4  ArrivalTime: 0.68
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
+ Elevator 2 at floor 1 Direction IDLE
+ Elevator 3 at floor 7 Direction IDLE
+ Elevator 4 at floor 5 Direction DOWN
+    PersonId: 2 AtFloor: 8  Dest: 2  ArrivalTime: 1.31
+ Elevator 5 at floor 6 Direction DOWN
+    PersonId: 1 AtFloor: 9  Dest: 5  ArrivalTime: 7.93
+
+*****************************************************************
+[Time: 24.63] PersonId: 7 AtFloor: 4 Dest: 6 ArrTime: 4.15
+[Request] Person: 5 ClosestElevator is:2
+[Boarding] Person: 5 to Elevator 2
+[Request] Person: 6 ClosestElevator is:3
+[Exit] Elevator: 5 Person 1 
+ Elevator 1 at floor 4 Direction UP
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
+ Elevator 2 at floor 1 Direction UP
+    PersonId: 5 AtFloor: 1  Dest: 5  ArrivalTime: 0.77
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 4 Direction DOWN
+    PersonId: 2 AtFloor: 8  Dest: 2  ArrivalTime: 1.31
+ Elevator 5 at floor 5 Direction IDLE
+
+*****************************************************************
+[Time: 29.18] PersonId: 8 AtFloor: 1 Dest: 2 ArrTime: 10.11
+[Request] Person: 6 ClosestElevator is:5
+ Elevator 1 at floor 5 Direction UP
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
+ Elevator 2 at floor 2 Direction UP
+    PersonId: 5 AtFloor: 1  Dest: 5  ArrivalTime: 0.77
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 3 Direction DOWN
+    PersonId: 2 AtFloor: 8  Dest: 2  ArrivalTime: 1.31
  Elevator 5 at floor 4 Direction IDLE
 
 *****************************************************************
-[Time: 76.75] PersonId: 12 AtFloor: 3 Dest: 5 ArrTime: 14.84
-[Request] Person: 10 ClosestElevator is:5
-[Exit] Elevator: 1 Person 7 
- Elevator 1 at floor 4 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 3 Direction IDLE
-
-*****************************************************************
-[Time: 91.7] PersonId: 13 AtFloor: 3 Dest: 1 ArrTime: 9.98
-[Request] Person: 10 ClosestElevator is:5
- Elevator 1 at floor 4 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 2 Direction IDLE
-
-*****************************************************************
-[Time: 101.68] PersonId: 14 AtFloor: 2 Dest: 3 ArrTime: 4.12
-[Request] Person: 10 ClosestElevator is:5
- Elevator 1 at floor 4 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 1 Direction IDLE
-
-*****************************************************************
-[Time: 105.8] PersonId: 15 AtFloor: 1 Dest: 2 ArrTime: 2.52
-[Request] Person: 10 ClosestElevator is:5
-[Boarding] Person: 10 to Elevator 5
-[Request] Person: 9 ClosestElevator is:4
-[Boarding] Person: 9 to Elevator 4
-[Request] Person: 15 ClosestElevator is:1
- Elevator 1 at floor 3 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 6 Direction UP
-    PersonId: 9 AtFloor: 6  Dest: 9  ArrivalTime: 2.45
- Elevator 5 at floor 1 Direction UP
-    PersonId: 10 AtFloor: 1  Dest: 3  ArrivalTime: 1.71
-
-*****************************************************************
-[Time: 108.92] PersonId: 16 AtFloor: 2 Dest: 10 ArrTime: 8.69
-[Request] Person: 15 ClosestElevator is:1
- Elevator 1 at floor 2 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 7 Direction UP
-    PersonId: 9 AtFloor: 6  Dest: 9  ArrivalTime: 2.45
- Elevator 5 at floor 2 Direction UP
-    PersonId: 10 AtFloor: 1  Dest: 3  ArrivalTime: 1.71
-
-*****************************************************************
-[Time: 118.01] PersonId: 17 AtFloor: 8 Dest: 6 ArrTime: 7.83
-[Request] Person: 15 ClosestElevator is:1
-[Exit] Elevator: 5 Person 10 
- Elevator 1 at floor 1 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 8 Direction UP
-    PersonId: 9 AtFloor: 6  Dest: 9  ArrivalTime: 2.45
- Elevator 5 at floor 3 Direction IDLE
-
-*****************************************************************
-[Time: 126.14] PersonId: 18 AtFloor: 1 Dest: 8 ArrTime: 2
-[Request] Person: 18 ClosestElevator is:1
-[Boarding] Person: 18 to Elevator 1
-[Request] Person: 15 ClosestElevator is:5
-[Exit] Elevator: 4 Person 9 
- Elevator 1 at floor 1 Direction UP
-    PersonId: 18 AtFloor: 1  Dest: 8  ArrivalTime: 2
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction IDLE
-
-*****************************************************************
-[Time: 128.55] PersonId: 19 AtFloor: 1 Dest: 10 ArrTime: 2.62
-[Request] Person: 15 ClosestElevator is:5
- Elevator 1 at floor 2 Direction UP
-    PersonId: 18 AtFloor: 1  Dest: 8  ArrivalTime: 2
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction IDLE
-
-*****************************************************************
-[Time: 131.37] PersonId: 20 AtFloor: 10 Dest: 6 ArrTime: 8.28
-[Request] Person: 15 ClosestElevator is:5
-[Boarding] Person: 15 to Elevator 5
-[Request] Person: 19 ClosestElevator is:2
- Elevator 1 at floor 3 Direction UP
-    PersonId: 18 AtFloor: 1  Dest: 8  ArrivalTime: 2
- Elevator 2 at floor 8 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction UP
-    PersonId: 15 AtFloor: 1  Dest: 2  ArrivalTime: 2.52
-
-*****************************************************************
-[Time: 140.15] PersonId: 21 AtFloor: 8 Dest: 5 ArrTime: 8.39
-[Request] Person: 19 ClosestElevator is:2
-[Exit] Elevator: 5 Person 15 
- Elevator 1 at floor 4 Direction UP
-    PersonId: 18 AtFloor: 1  Dest: 8  ArrivalTime: 2
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction IDLE
-
-*****************************************************************
-[Time: 148.84] PersonId: 22 AtFloor: 1 Dest: 3 ArrTime: 0.4
-[Request] Person: 22 ClosestElevator is:5
- Elevator 1 at floor 5 Direction UP
-    PersonId: 18 AtFloor: 1  Dest: 8  ArrivalTime: 2
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction IDLE
-
-*****************************************************************
-[Time: 149.44] PersonId: 23 AtFloor: 1 Dest: 5 ArrTime: 4.74
-[Request] Person: 22 ClosestElevator is:5
-[Boarding] Person: 22 to Elevator 5
-[Request] Person: 19 ClosestElevator is:2
+[Time: 39.48] PersonId: 9 AtFloor: 4 Dest: 6 ArrTime: 4.93
+[Request] Person: 6 ClosestElevator is:5
+[Exit] Elevator: 4 Person 2 
  Elevator 1 at floor 6 Direction UP
-    PersonId: 18 AtFloor: 1  Dest: 8  ArrivalTime: 2
- Elevator 2 at floor 6 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction UP
-    PersonId: 22 AtFloor: 1  Dest: 3  ArrivalTime: 0.4
-
-*****************************************************************
-[Time: 154.68] PersonId: 24 AtFloor: 3 Dest: 9 ArrTime: 1.27
-[Request] Person: 24 ClosestElevator is:2
- Elevator 1 at floor 7 Direction UP
-    PersonId: 18 AtFloor: 1  Dest: 8  ArrivalTime: 2
- Elevator 2 at floor 5 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction UP
-    PersonId: 22 AtFloor: 1  Dest: 3  ArrivalTime: 0.4
-
-*****************************************************************
-[Time: 156.35] PersonId: 25 AtFloor: 1 Dest: 2 ArrTime: 1.2
-[Request] Person: 25 ClosestElevator is:2
-[Exit] Elevator: 1 Person 18 
-[Exit] Elevator: 5 Person 22 
- Elevator 1 at floor 8 Direction IDLE
- Elevator 2 at floor 4 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 3 Direction IDLE
-
-*****************************************************************
-[Time: 157.75] PersonId: 26 AtFloor: 1 Dest: 5 ArrTime: 8.93
-[Request] Person: 25 ClosestElevator is:5
- Elevator 1 at floor 8 Direction IDLE
- Elevator 2 at floor 4 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction IDLE
-
-*****************************************************************
-[Time: 166.69] PersonId: 27 AtFloor: 3 Dest: 1 ArrTime: 0.73
-[Request] Person: 27 ClosestElevator is:2
- Elevator 1 at floor 8 Direction IDLE
- Elevator 2 at floor 3 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction IDLE
-
-*****************************************************************
-[Time: 167.42] PersonId: 28 AtFloor: 3 Dest: 7 ArrTime: 0.37
-[Request] Person: 28 ClosestElevator is:2
-[Boarding] Person: 28 to Elevator 2
-[Request] Person: 27 ClosestElevator is:5
- Elevator 1 at floor 8 Direction IDLE
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
  Elevator 2 at floor 3 Direction UP
-    PersonId: 28 AtFloor: 3  Dest: 7  ArrivalTime: 0.37
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
+    PersonId: 5 AtFloor: 1  Dest: 5  ArrivalTime: 0.77
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 2 Direction IDLE
  Elevator 5 at floor 3 Direction IDLE
 
 *****************************************************************
-[Time: 168.09] PersonId: 29 AtFloor: 2 Dest: 10 ArrTime: 4.94
-[Request] Person: 27 ClosestElevator is:5
-[Boarding] Person: 27 to Elevator 5
-[Request] Person: 25 ClosestElevator is:1
- Elevator 1 at floor 7 Direction IDLE
- Elevator 2 at floor 4 Direction UP
-    PersonId: 28 AtFloor: 3  Dest: 7  ArrivalTime: 0.37
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 3 Direction DOWN
-    PersonId: 27 AtFloor: 3  Dest: 1  ArrivalTime: 0.73
-
-*****************************************************************
-[Time: 173.53] PersonId: 30 AtFloor: 4 Dest: 9 ArrTime: 1.89
-[Request] Person: 25 ClosestElevator is:1
- Elevator 1 at floor 6 Direction IDLE
- Elevator 2 at floor 5 Direction UP
-    PersonId: 28 AtFloor: 3  Dest: 7  ArrivalTime: 0.37
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction DOWN
-    PersonId: 27 AtFloor: 3  Dest: 1  ArrivalTime: 0.73
-
-*****************************************************************
-[Time: 175.83] PersonId: 31 AtFloor: 6 Dest: 4 ArrTime: 5.92
-[Request] Person: 25 ClosestElevator is:1
-[Exit] Elevator: 5 Person 27 
- Elevator 1 at floor 5 Direction IDLE
- Elevator 2 at floor 6 Direction UP
-    PersonId: 28 AtFloor: 3  Dest: 7  ArrivalTime: 0.37
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction IDLE
-
-*****************************************************************
-[Time: 182.05] PersonId: 32 AtFloor: 4 Dest: 3 ArrTime: 2.18
-[Request] Person: 25 ClosestElevator is:5
-[Boarding] Person: 25 to Elevator 5
-[Request] Person: 24 ClosestElevator is:1
-[Exit] Elevator: 2 Person 28 
- Elevator 1 at floor 4 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction UP
-    PersonId: 25 AtFloor: 1  Dest: 2  ArrivalTime: 1.2
-
-*****************************************************************
-[Time: 184.63] PersonId: 33 AtFloor: 1 Dest: 9 ArrTime: 6.89
-[Request] Person: 24 ClosestElevator is:1
-[Exit] Elevator: 5 Person 25 
- Elevator 1 at floor 3 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction IDLE
-
-*****************************************************************
-[Time: 191.62] PersonId: 34 AtFloor: 1 Dest: 7 ArrTime: 0.82
-[Request] Person: 34 ClosestElevator is:5
- Elevator 1 at floor 3 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction IDLE
-
-*****************************************************************
-[Time: 192.44] PersonId: 35 AtFloor: 3 Dest: 6 ArrTime: 2.62
-[Request] Person: 34 ClosestElevator is:5
-[Boarding] Person: 34 to Elevator 5
-[Request] Person: 24 ClosestElevator is:1
-[Boarding] Person: 24 to Elevator 1
-[Request] Person: 30 ClosestElevator is:2
- Elevator 1 at floor 3 Direction UP
-    PersonId: 24 AtFloor: 3  Dest: 9  ArrivalTime: 1.27
- Elevator 2 at floor 6 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 1 Direction UP
-    PersonId: 34 AtFloor: 1  Dest: 7  ArrivalTime: 0.82
-
-*****************************************************************
-[Time: 195.66] PersonId: 36 AtFloor: 1 Dest: 8 ArrTime: 7.51
-[Request] Person: 30 ClosestElevator is:2
- Elevator 1 at floor 4 Direction UP
-    PersonId: 24 AtFloor: 3  Dest: 9  ArrivalTime: 1.27
- Elevator 2 at floor 5 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 2 Direction UP
-    PersonId: 34 AtFloor: 1  Dest: 7  ArrivalTime: 0.82
-
-*****************************************************************
-[Time: 203.57] PersonId: 37 AtFloor: 1 Dest: 7 ArrTime: 4.63
-[Request] Person: 30 ClosestElevator is:2
- Elevator 1 at floor 5 Direction UP
-    PersonId: 24 AtFloor: 3  Dest: 9  ArrivalTime: 1.27
- Elevator 2 at floor 4 Direction IDLE
- Elevator 3 at floor 9 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 3 Direction UP
-    PersonId: 34 AtFloor: 1  Dest: 7  ArrivalTime: 0.82
-
-*****************************************************************
-[Time: 208.6] PersonId: 38 AtFloor: 7 Dest: 8 ArrTime: 1.03
-[Request] Person: 38 ClosestElevator is:3
- Elevator 1 at floor 6 Direction UP
-    PersonId: 24 AtFloor: 3  Dest: 9  ArrivalTime: 1.27
- Elevator 2 at floor 4 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 4 Direction UP
-    PersonId: 34 AtFloor: 1  Dest: 7  ArrivalTime: 0.82
-
-*****************************************************************
-[Time: 210.04] PersonId: 39 AtFloor: 3 Dest: 8 ArrTime: 3.55
-[Request] Person: 38 ClosestElevator is:3
+[Time: 44.71] PersonId: 10 AtFloor: 9 Dest: 8 ArrTime: 1.51
+[Request] Person: 10 ClosestElevator is:3
  Elevator 1 at floor 7 Direction UP
-    PersonId: 24 AtFloor: 3  Dest: 9  ArrivalTime: 1.27
- Elevator 2 at floor 4 Direction IDLE
- Elevator 3 at floor 7 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 5 Direction UP
-    PersonId: 34 AtFloor: 1  Dest: 7  ArrivalTime: 0.82
-
-*****************************************************************
-[Time: 213.98] PersonId: 40 AtFloor: 6 Dest: 3 ArrTime: 9.43
-[Request] Person: 38 ClosestElevator is:3
-[Boarding] Person: 38 to Elevator 3
-[Request] Person: 30 ClosestElevator is:2
-[Boarding] Person: 30 to Elevator 2
-[Request] Person: 32 ClosestElevator is:4
- Elevator 1 at floor 8 Direction UP
-    PersonId: 24 AtFloor: 3  Dest: 9  ArrivalTime: 1.27
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
  Elevator 2 at floor 4 Direction UP
-    PersonId: 30 AtFloor: 4  Dest: 9  ArrivalTime: 1.89
- Elevator 3 at floor 7 Direction UP
-    PersonId: 38 AtFloor: 7  Dest: 8  ArrivalTime: 1.03
- Elevator 4 at floor 8 Direction IDLE
- Elevator 5 at floor 6 Direction UP
-    PersonId: 34 AtFloor: 1  Dest: 7  ArrivalTime: 0.82
-
-*****************************************************************
-[Time: 224.42] PersonId: 41 AtFloor: 1 Dest: 3 ArrTime: 2.45
-[Request] Person: 32 ClosestElevator is:4
-[Exit] Elevator: 1 Person 24 
-[Exit] Elevator: 3 Person 38 
-[Exit] Elevator: 5 Person 34 
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 5 Direction UP
-    PersonId: 30 AtFloor: 4  Dest: 9  ArrivalTime: 1.89
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 7 Direction IDLE
- Elevator 5 at floor 7 Direction IDLE
-
-*****************************************************************
-[Time: 227.37] PersonId: 42 AtFloor: 1 Dest: 5 ArrTime: 0.14
-[Request] Person: 42 ClosestElevator is:4
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 6 Direction UP
-    PersonId: 30 AtFloor: 4  Dest: 9  ArrivalTime: 1.89
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 7 Direction IDLE
-
-*****************************************************************
-[Time: 227.71] PersonId: 43 AtFloor: 1 Dest: 9 ArrTime: 0.1
-[Request] Person: 43 ClosestElevator is:4
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 7 Direction UP
-    PersonId: 30 AtFloor: 4  Dest: 9  ArrivalTime: 1.89
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 5 Direction IDLE
- Elevator 5 at floor 7 Direction IDLE
-
-*****************************************************************
-[Time: 228.01] PersonId: 44 AtFloor: 1 Dest: 10 ArrTime: 1.38
-[Request] Person: 43 ClosestElevator is:4
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 8 Direction UP
-    PersonId: 30 AtFloor: 4  Dest: 9  ArrivalTime: 1.89
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 4 Direction IDLE
- Elevator 5 at floor 7 Direction IDLE
-
-*****************************************************************
-[Time: 229.59] PersonId: 45 AtFloor: 1 Dest: 3 ArrTime: 1.86
-[Request] Person: 43 ClosestElevator is:4
-[Exit] Elevator: 2 Person 30 
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 3 Direction IDLE
- Elevator 5 at floor 7 Direction IDLE
-
-*****************************************************************
-[Time: 231.55] PersonId: 46 AtFloor: 8 Dest: 4 ArrTime: 3.34
-[Request] Person: 43 ClosestElevator is:4
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
+    PersonId: 5 AtFloor: 1  Dest: 5  ArrivalTime: 0.77
+ Elevator 3 at floor 7 Direction IDLE
  Elevator 4 at floor 2 Direction IDLE
- Elevator 5 at floor 7 Direction IDLE
+ Elevator 5 at floor 3 Direction IDLE
 
 *****************************************************************
-[Time: 234.89] PersonId: 47 AtFloor: 1 Dest: 8 ArrTime: 9.28
-[Request] Person: 43 ClosestElevator is:4
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
+[Time: 46.43] PersonId: 11 AtFloor: 1 Dest: 7 ArrTime: 0.6
+[Request] Person: 11 ClosestElevator is:4
+[Exit] Elevator: 2 Person 5 
+ Elevator 1 at floor 8 Direction UP
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 7 Direction IDLE
  Elevator 4 at floor 1 Direction IDLE
- Elevator 5 at floor 7 Direction IDLE
+ Elevator 5 at floor 3 Direction IDLE
 
 *****************************************************************
-[Time: 244.16] PersonId: 48 AtFloor: 1 Dest: 7 ArrTime: 6.38
-[Request] Person: 43 ClosestElevator is:4
-[Boarding] Person: 43 to Elevator 4
-[Request] Person: 42 ClosestElevator is:5
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
+[Time: 47.33] PersonId: 12 AtFloor: 1 Dest: 5 ArrTime: 4.33
+[Request] Person: 11 ClosestElevator is:4
+[Boarding] Person: 11 to Elevator 4
+[Request] Person: 10 ClosestElevator is:3
+ Elevator 1 at floor 9 Direction UP
+    PersonId: 4 AtFloor: 1  Dest: 10  ArrivalTime: 1.01
+ Elevator 2 at floor 5 Direction IDLE
  Elevator 3 at floor 8 Direction IDLE
  Elevator 4 at floor 1 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
+    PersonId: 11 AtFloor: 1  Dest: 7  ArrivalTime: 0.6
+ Elevator 5 at floor 3 Direction IDLE
+
+*****************************************************************
+[Time: 51.96] PersonId: 13 AtFloor: 10 Dest: 4 ArrTime: 2.79
+[Request] Person: 10 ClosestElevator is:3
+[Exit] Elevator: 1 Person 4 
+ Elevator 1 at floor 10 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 2 Direction UP
+    PersonId: 11 AtFloor: 1  Dest: 7  ArrivalTime: 0.6
+ Elevator 5 at floor 3 Direction IDLE
+
+*****************************************************************
+[Time: 55.05] PersonId: 14 AtFloor: 10 Dest: 4 ArrTime: 4.04
+[Request] Person: 10 ClosestElevator is:3
+[Boarding] Person: 10 to Elevator 3
+[Request] Person: 13 ClosestElevator is:1
+[Boarding] Person: 13 to Elevator 1
+[Request] Person: 6 ClosestElevator is:5
+ Elevator 1 at floor 10 Direction DOWN
+    PersonId: 13 AtFloor: 10  Dest: 4  ArrivalTime: 2.79
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 9 Direction DOWN
+    PersonId: 10 AtFloor: 9  Dest: 8  ArrivalTime: 1.51
+ Elevator 4 at floor 3 Direction UP
+    PersonId: 11 AtFloor: 1  Dest: 7  ArrivalTime: 0.6
+ Elevator 5 at floor 2 Direction IDLE
+
+*****************************************************************
+[Time: 59.5] PersonId: 15 AtFloor: 1 Dest: 8 ArrTime: 15.98
+[Request] Person: 6 ClosestElevator is:5
+[Exit] Elevator: 3 Person 10 
+ Elevator 1 at floor 9 Direction DOWN
+    PersonId: 13 AtFloor: 10  Dest: 4  ArrivalTime: 2.79
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 4 Direction UP
+    PersonId: 11 AtFloor: 1  Dest: 7  ArrivalTime: 0.6
+ Elevator 5 at floor 1 Direction IDLE
+
+*****************************************************************
+[Time: 75.78] PersonId: 16 AtFloor: 4 Dest: 6 ArrTime: 3.53
+[Request] Person: 6 ClosestElevator is:5
+[Boarding] Person: 6 to Elevator 5
+[Request] Person: 16 ClosestElevator is:2
+ Elevator 1 at floor 8 Direction DOWN
+    PersonId: 13 AtFloor: 10  Dest: 4  ArrivalTime: 2.79
+ Elevator 2 at floor 4 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 5 Direction UP
+    PersonId: 11 AtFloor: 1  Dest: 7  ArrivalTime: 0.6
+ Elevator 5 at floor 1 Direction UP
+    PersonId: 6 AtFloor: 1  Dest: 7  ArrivalTime: 3.37
+
+*****************************************************************
+[Time: 79.61] PersonId: 17 AtFloor: 1 Dest: 8 ArrTime: 4.08
+[Request] Person: 16 ClosestElevator is:2
+[Boarding] Person: 16 to Elevator 2
+[Request] Person: 14 ClosestElevator is:3
+ Elevator 1 at floor 7 Direction DOWN
+    PersonId: 13 AtFloor: 10  Dest: 4  ArrivalTime: 2.79
+ Elevator 2 at floor 4 Direction UP
+    PersonId: 16 AtFloor: 4  Dest: 6  ArrivalTime: 3.53
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 6 Direction UP
+    PersonId: 11 AtFloor: 1  Dest: 7  ArrivalTime: 0.6
+ Elevator 5 at floor 2 Direction UP
+    PersonId: 6 AtFloor: 1  Dest: 7  ArrivalTime: 3.37
+
+*****************************************************************
+[Time: 83.99] PersonId: 18 AtFloor: 9 Dest: 8 ArrTime: 2.55
+[Request] Person: 18 ClosestElevator is:3
+[Boarding] Person: 18 to Elevator 3
+[Request] Person: 14 is Waiting
+[Exit] Elevator: 4 Person 11 
+ Elevator 1 at floor 6 Direction DOWN
+    PersonId: 13 AtFloor: 10  Dest: 4  ArrivalTime: 2.79
+ Elevator 2 at floor 5 Direction UP
+    PersonId: 16 AtFloor: 4  Dest: 6  ArrivalTime: 3.53
+ Elevator 3 at floor 9 Direction DOWN
+    PersonId: 18 AtFloor: 9  Dest: 8  ArrivalTime: 2.55
+ Elevator 4 at floor 7 Direction IDLE
+ Elevator 5 at floor 3 Direction UP
+    PersonId: 6 AtFloor: 1  Dest: 7  ArrivalTime: 3.37
+
+*****************************************************************
+[Time: 86.94] PersonId: 19 AtFloor: 4 Dest: 9 ArrTime: 6.46
+[Request] Person: 14 ClosestElevator is:4
+[Exit] Elevator: 2 Person 16 
+[Exit] Elevator: 3 Person 18 
+ Elevator 1 at floor 5 Direction DOWN
+    PersonId: 13 AtFloor: 10  Dest: 4  ArrivalTime: 2.79
+ Elevator 2 at floor 6 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 4 Direction UP
+    PersonId: 6 AtFloor: 1  Dest: 7  ArrivalTime: 3.37
+
+*****************************************************************
+[Time: 93.8] PersonId: 20 AtFloor: 1 Dest: 6 ArrTime: 1.31
+[Request] Person: 20 ClosestElevator is:2
+[Exit] Elevator: 1 Person 13 
+ Elevator 1 at floor 4 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 5 Direction UP
+    PersonId: 6 AtFloor: 1  Dest: 7  ArrivalTime: 3.37
+
+*****************************************************************
+[Time: 95.41] PersonId: 21 AtFloor: 10 Dest: 9 ArrTime: 5.18
+[Request] Person: 20 ClosestElevator is:1
+ Elevator 1 at floor 3 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 6 Direction UP
+    PersonId: 6 AtFloor: 1  Dest: 7  ArrivalTime: 3.37
+
+*****************************************************************
+[Time: 100.8] PersonId: 22 AtFloor: 1 Dest: 8 ArrTime: 5.31
+[Request] Person: 20 ClosestElevator is:1
+[Exit] Elevator: 5 Person 6 
+ Elevator 1 at floor 2 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 7 Direction IDLE
+
+*****************************************************************
+[Time: 106.21] PersonId: 23 AtFloor: 1 Dest: 2 ArrTime: 3.03
+[Request] Person: 20 ClosestElevator is:1
+ Elevator 1 at floor 1 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 7 Direction IDLE
+
+*****************************************************************
+[Time: 109.24] PersonId: 24 AtFloor: 1 Dest: 7 ArrTime: 1.2
+[Request] Person: 24 ClosestElevator is:1
+[Boarding] Person: 24 to Elevator 1
+[Request] Person: 20 ClosestElevator is:2
+ Elevator 1 at floor 1 Direction UP
+    PersonId: 24 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 4 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 7 Direction IDLE
+
+*****************************************************************
+[Time: 110.74] PersonId: 25 AtFloor: 9 Dest: 2 ArrTime: 10.2
+[Request] Person: 20 ClosestElevator is:2
+ Elevator 1 at floor 2 Direction UP
+    PersonId: 24 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 3 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 7 Direction IDLE
+
+*****************************************************************
+[Time: 121.14] PersonId: 26 AtFloor: 7 Dest: 8 ArrTime: 1.1
+[Request] Person: 26 ClosestElevator is:5
+[Boarding] Person: 26 to Elevator 5
+[Request] Person: 20 ClosestElevator is:2
+ Elevator 1 at floor 3 Direction UP
+    PersonId: 24 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 2 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 7 Direction UP
+    PersonId: 26 AtFloor: 7  Dest: 8  ArrivalTime: 1.1
+
+*****************************************************************
+[Time: 122.54] PersonId: 27 AtFloor: 1 Dest: 9 ArrTime: 9.08
+[Request] Person: 20 ClosestElevator is:2
+[Exit] Elevator: 5 Person 26 
+ Elevator 1 at floor 4 Direction UP
+    PersonId: 24 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 1 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 131.92] PersonId: 28 AtFloor: 1 Dest: 5 ArrTime: 0.02
+[Request] Person: 28 ClosestElevator is:2
+[Boarding] Person: 28 to Elevator 2
+[Request] Person: 20 ClosestElevator is:3
+ Elevator 1 at floor 5 Direction UP
+    PersonId: 24 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 1 Direction UP
+    PersonId: 28 AtFloor: 1  Dest: 5  ArrivalTime: 0.02
+ Elevator 3 at floor 7 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 132.24] PersonId: 29 AtFloor: 1 Dest: 9 ArrTime: 0.11
+[Request] Person: 29 ClosestElevator is:3
+ Elevator 1 at floor 6 Direction UP
+    PersonId: 24 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 2 Direction UP
+    PersonId: 28 AtFloor: 1  Dest: 5  ArrivalTime: 0.02
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 132.55] PersonId: 30 AtFloor: 3 Dest: 6 ArrTime: 10.89
+[Request] Person: 29 ClosestElevator is:3
+[Exit] Elevator: 1 Person 24 
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 3 Direction UP
+    PersonId: 28 AtFloor: 1  Dest: 5  ArrivalTime: 0.02
+ Elevator 3 at floor 5 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 143.74] PersonId: 31 AtFloor: 1 Dest: 4 ArrTime: 5.76
+[Request] Person: 29 ClosestElevator is:3
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 4 Direction UP
+    PersonId: 28 AtFloor: 1  Dest: 5  ArrivalTime: 0.02
+ Elevator 3 at floor 4 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 149.7] PersonId: 32 AtFloor: 1 Dest: 7 ArrTime: 1.2
+[Request] Person: 29 ClosestElevator is:3
+[Exit] Elevator: 2 Person 28 
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 3 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 151] PersonId: 33 AtFloor: 7 Dest: 2 ArrTime: 3.62
+[Request] Person: 29 ClosestElevator is:3
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 2 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 154.62] PersonId: 34 AtFloor: 1 Dest: 6 ArrTime: 9.44
+[Request] Person: 29 ClosestElevator is:3
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 5 Direction IDLE
+ Elevator 3 at floor 1 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 164.06] PersonId: 35 AtFloor: 1 Dest: 6 ArrTime: 1.47
+[Request] Person: 29 ClosestElevator is:3
+[Boarding] Person: 29 to Elevator 3
+[Request] Person: 32 ClosestElevator is:2
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 4 Direction IDLE
+ Elevator 3 at floor 1 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 165.83] PersonId: 36 AtFloor: 1 Dest: 8 ArrTime: 8.45
+[Request] Person: 32 ClosestElevator is:2
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 3 Direction IDLE
+ Elevator 3 at floor 2 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 174.48] PersonId: 37 AtFloor: 1 Dest: 10 ArrTime: 1.93
+[Request] Person: 32 ClosestElevator is:2
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 2 Direction IDLE
+ Elevator 3 at floor 3 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 176.61] PersonId: 38 AtFloor: 1 Dest: 2 ArrTime: 2.67
+[Request] Person: 32 ClosestElevator is:2
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 1 Direction IDLE
+ Elevator 3 at floor 4 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 179.48] PersonId: 39 AtFloor: 1 Dest: 10 ArrTime: 0.41
+[Request] Person: 39 ClosestElevator is:2
+[Boarding] Person: 39 to Elevator 2
+[Request] Person: 32 ClosestElevator is:1
+ Elevator 1 at floor 6 Direction IDLE
+ Elevator 2 at floor 1 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 5 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 180.2] PersonId: 40 AtFloor: 3 Dest: 5 ArrTime: 15.54
+[Request] Person: 32 ClosestElevator is:1
+ Elevator 1 at floor 5 Direction IDLE
+ Elevator 2 at floor 2 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 6 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 195.94] PersonId: 41 AtFloor: 5 Dest: 3 ArrTime: 9.11
+[Request] Person: 32 ClosestElevator is:1
+ Elevator 1 at floor 4 Direction IDLE
+ Elevator 2 at floor 3 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 7 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 205.25] PersonId: 42 AtFloor: 5 Dest: 1 ArrTime: 4.6
+[Request] Person: 32 ClosestElevator is:1
+ Elevator 1 at floor 3 Direction IDLE
+ Elevator 2 at floor 4 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 8 Direction UP
+    PersonId: 29 AtFloor: 1  Dest: 9  ArrivalTime: 0.11
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 210.05] PersonId: 43 AtFloor: 2 Dest: 7 ArrTime: 19.64
+[Request] Person: 32 ClosestElevator is:1
+[Exit] Elevator: 3 Person 29 
+ Elevator 1 at floor 2 Direction IDLE
+ Elevator 2 at floor 5 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 229.99] PersonId: 44 AtFloor: 1 Dest: 6 ArrTime: 3.96
+[Request] Person: 32 ClosestElevator is:1
+ Elevator 1 at floor 1 Direction IDLE
+ Elevator 2 at floor 6 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 234.15] PersonId: 45 AtFloor: 2 Dest: 5 ArrTime: 1.86
+[Request] Person: 32 ClosestElevator is:1
+[Boarding] Person: 32 to Elevator 1
+[Request] Person: 20 ClosestElevator is:4
+ Elevator 1 at floor 1 Direction UP
+    PersonId: 32 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 7 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 7 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 236.31] PersonId: 46 AtFloor: 3 Dest: 4 ArrTime: 9.8
+[Request] Person: 20 ClosestElevator is:4
+ Elevator 1 at floor 2 Direction UP
+    PersonId: 32 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 8 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 6 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 246.31] PersonId: 47 AtFloor: 9 Dest: 3 ArrTime: 0.64
+[Request] Person: 47 ClosestElevator is:3
+[Boarding] Person: 47 to Elevator 3
+[Request] Person: 20 ClosestElevator is:4
+ Elevator 1 at floor 3 Direction UP
+    PersonId: 32 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 9 Direction UP
+    PersonId: 39 AtFloor: 1  Dest: 10  ArrivalTime: 0.41
+ Elevator 3 at floor 9 Direction DOWN
+    PersonId: 47 AtFloor: 9  Dest: 3  ArrivalTime: 0.64
+ Elevator 4 at floor 5 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 247.24] PersonId: 48 AtFloor: 7 Dest: 8 ArrTime: 13.01
+[Request] Person: 20 ClosestElevator is:4
+[Exit] Elevator: 2 Person 39 
+ Elevator 1 at floor 4 Direction UP
+    PersonId: 32 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction DOWN
+    PersonId: 47 AtFloor: 9  Dest: 3  ArrivalTime: 0.64
+ Elevator 4 at floor 4 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 260.56] PersonId: 49 AtFloor: 5 Dest: 3 ArrTime: 4.73
+[Request] Person: 20 ClosestElevator is:4
+ Elevator 1 at floor 5 Direction UP
+    PersonId: 32 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 7 Direction DOWN
+    PersonId: 47 AtFloor: 9  Dest: 3  ArrivalTime: 0.64
+ Elevator 4 at floor 3 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 265.48] PersonId: 50 AtFloor: 1 Dest: 2 ArrTime: 0.54
+[Request] Person: 50 ClosestElevator is:4
+ Elevator 1 at floor 6 Direction UP
+    PersonId: 32 AtFloor: 1  Dest: 7  ArrivalTime: 1.2
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 6 Direction DOWN
+    PersonId: 47 AtFloor: 9  Dest: 3  ArrivalTime: 0.64
+ Elevator 4 at floor 2 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 266.22] PersonId: 51 AtFloor: 7 Dest: 9 ArrTime: 0.66
+[Request] Person: 50 ClosestElevator is:4
+[Exit] Elevator: 1 Person 32 
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 5 Direction DOWN
+    PersonId: 47 AtFloor: 9  Dest: 3  ArrivalTime: 0.64
+ Elevator 4 at floor 1 Direction IDLE
+ Elevator 5 at floor 8 Direction IDLE
+
+*****************************************************************
+[Time: 267.18] PersonId: 52 AtFloor: 1 Dest: 9 ArrTime: 0.7
+[Request] Person: 50 ClosestElevator is:4
+[Boarding] Person: 50 to Elevator 4
+[Request] Person: 51 ClosestElevator is:1
+[Boarding] Person: 51 to Elevator 1
+[Request] Person: 52 ClosestElevator is:5
+ Elevator 1 at floor 7 Direction UP
+    PersonId: 51 AtFloor: 7  Dest: 9  ArrivalTime: 0.66
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 4 Direction DOWN
+    PersonId: 47 AtFloor: 9  Dest: 3  ArrivalTime: 0.64
+ Elevator 4 at floor 1 Direction UP
+    PersonId: 50 AtFloor: 1  Dest: 2  ArrivalTime: 0.54
+ Elevator 5 at floor 7 Direction IDLE
+
+*****************************************************************
+[Time: 268.28] PersonId: 53 AtFloor: 1 Dest: 9 ArrTime: 2.87
+[Request] Person: 52 ClosestElevator is:5
+[Exit] Elevator: 3 Person 47 
+[Exit] Elevator: 4 Person 50 
+ Elevator 1 at floor 8 Direction UP
+    PersonId: 51 AtFloor: 7  Dest: 9  ArrivalTime: 0.66
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 3 Direction IDLE
+ Elevator 4 at floor 2 Direction IDLE
  Elevator 5 at floor 6 Direction IDLE
 
 *****************************************************************
-[Time: 250.84] PersonId: 49 AtFloor: 1 Dest: 4 ArrTime: 7.76
-[Request] Person: 42 ClosestElevator is:5
+[Time: 271.55] PersonId: 54 AtFloor: 1 Dest: 10 ArrTime: 10.52
+[Request] Person: 52 ClosestElevator is:4
+[Exit] Elevator: 1 Person 51 
  Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 3 Direction IDLE
+ Elevator 4 at floor 1 Direction IDLE
+ Elevator 5 at floor 6 Direction IDLE
+
+*****************************************************************
+[Time: 282.17] PersonId: 55 AtFloor: 1 Dest: 9 ArrTime: 14.23
+[Request] Person: 52 ClosestElevator is:4
+[Boarding] Person: 52 to Elevator 4
+[Request] Person: 20 ClosestElevator is:3
+ Elevator 1 at floor 9 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 2 Direction IDLE
+ Elevator 4 at floor 1 Direction UP
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
+ Elevator 5 at floor 6 Direction IDLE
+
+*****************************************************************
+[Time: 296.7] PersonId: 56 AtFloor: 1 Dest: 8 ArrTime: 1
+[Request] Person: 56 ClosestElevator is:3
+ Elevator 1 at floor 9 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 1 Direction IDLE
  Elevator 4 at floor 2 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
+ Elevator 5 at floor 6 Direction IDLE
+
+*****************************************************************
+[Time: 297.9] PersonId: 57 AtFloor: 1 Dest: 6 ArrTime: 1.01
+[Request] Person: 56 ClosestElevator is:3
+[Boarding] Person: 56 to Elevator 3
+[Request] Person: 57 ClosestElevator is:5
+ Elevator 1 at floor 9 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 1 Direction UP
+    PersonId: 56 AtFloor: 1  Dest: 8  ArrivalTime: 1
+ Elevator 4 at floor 3 Direction UP
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
  Elevator 5 at floor 5 Direction IDLE
 
 *****************************************************************
-[Time: 258.8] PersonId: 50 AtFloor: 8 Dest: 1 ArrTime: 4.32
-[Request] Person: 42 ClosestElevator is:5
+[Time: 299.21] PersonId: 58 AtFloor: 5 Dest: 10 ArrTime: 10.17
+[Request] Person: 57 ClosestElevator is:5
  Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 3 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 2 Direction UP
+    PersonId: 56 AtFloor: 1  Dest: 8  ArrivalTime: 1
+ Elevator 4 at floor 4 Direction UP
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
  Elevator 5 at floor 4 Direction IDLE
 
 *****************************************************************
-[Time: 263.32] PersonId: 51 AtFloor: 6 Dest: 3 ArrTime: 6.37
-[Request] Person: 42 ClosestElevator is:5
+[Time: 309.58] PersonId: 59 AtFloor: 1 Dest: 7 ArrTime: 5.71
+[Request] Person: 57 ClosestElevator is:5
  Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 4 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 3 Direction UP
+    PersonId: 56 AtFloor: 1  Dest: 8  ArrivalTime: 1
+ Elevator 4 at floor 5 Direction UP
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
  Elevator 5 at floor 3 Direction IDLE
 
 *****************************************************************
-[Time: 269.9] PersonId: 52 AtFloor: 5 Dest: 8 ArrTime: 7.12
-[Request] Person: 42 ClosestElevator is:5
+[Time: 315.49] PersonId: 60 AtFloor: 1 Dest: 7 ArrTime: 1.25
+[Request] Person: 57 ClosestElevator is:5
  Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 5 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 4 Direction UP
+    PersonId: 56 AtFloor: 1  Dest: 8  ArrivalTime: 1
+ Elevator 4 at floor 6 Direction UP
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
  Elevator 5 at floor 2 Direction IDLE
 
 *****************************************************************
-[Time: 277.22] PersonId: 53 AtFloor: 1 Dest: 8 ArrTime: 0.8
-[Request] Person: 42 ClosestElevator is:5
+[Time: 316.94] PersonId: 61 AtFloor: 8 Dest: 5 ArrTime: 8.19
+[Request] Person: 57 ClosestElevator is:5
  Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 8 Direction IDLE
- Elevator 4 at floor 6 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 5 Direction UP
+    PersonId: 56 AtFloor: 1  Dest: 8  ArrivalTime: 1
+ Elevator 4 at floor 7 Direction UP
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
  Elevator 5 at floor 1 Direction IDLE
 
 *****************************************************************
-[Time: 278.22] PersonId: 54 AtFloor: 1 Dest: 10 ArrTime: 0.12
-[Request] Person: 54 ClosestElevator is:5
-[Boarding] Person: 54 to Elevator 5
-[Request] Person: 42 ClosestElevator is:3
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 7 Direction IDLE
- Elevator 4 at floor 7 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
- Elevator 5 at floor 1 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
-
-*****************************************************************
-[Time: 278.84] PersonId: 55 AtFloor: 4 Dest: 2 ArrTime: 0.24
-[Request] Person: 42 ClosestElevator is:3
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 6 Direction IDLE
+[Time: 325.32] PersonId: 62 AtFloor: 6 Dest: 4 ArrTime: 3.51
+[Request] Person: 57 ClosestElevator is:5
+[Boarding] Person: 57 to Elevator 5
+[Request] Person: 60 ClosestElevator is:1
+ Elevator 1 at floor 8 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 6 Direction UP
+    PersonId: 56 AtFloor: 1  Dest: 8  ArrivalTime: 1
  Elevator 4 at floor 8 Direction UP
-    PersonId: 43 AtFloor: 1  Dest: 9  ArrivalTime: 0.1
- Elevator 5 at floor 2 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
+    PersonId: 52 AtFloor: 1  Dest: 9  ArrivalTime: 0.7
+ Elevator 5 at floor 1 Direction UP
+    PersonId: 57 AtFloor: 1  Dest: 6  ArrivalTime: 1.01
 
 *****************************************************************
-[Time: 279.48] PersonId: 56 AtFloor: 1 Dest: 8 ArrTime: 5.88
-[Request] Person: 42 ClosestElevator is:3
-[Exit] Elevator: 4 Person 43 
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
+[Time: 329.14] PersonId: 63 AtFloor: 1 Dest: 10 ArrTime: 2.76
+[Request] Person: 60 ClosestElevator is:1
+[Exit] Elevator: 4 Person 52 
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 7 Direction UP
+    PersonId: 56 AtFloor: 1  Dest: 8  ArrivalTime: 1
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 2 Direction UP
+    PersonId: 57 AtFloor: 1  Dest: 6  ArrivalTime: 1.01
+
+*****************************************************************
+[Time: 332.19] PersonId: 64 AtFloor: 5 Dest: 9 ArrTime: 7.01
+[Request] Person: 60 ClosestElevator is:1
+[Exit] Elevator: 3 Person 56 
+ Elevator 1 at floor 6 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 3 Direction UP
+    PersonId: 57 AtFloor: 1  Dest: 6  ArrivalTime: 1.01
+
+*****************************************************************
+[Time: 339.5] PersonId: 65 AtFloor: 2 Dest: 4 ArrTime: 10.09
+[Request] Person: 60 ClosestElevator is:1
+ Elevator 1 at floor 5 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 4 Direction UP
+    PersonId: 57 AtFloor: 1  Dest: 6  ArrivalTime: 1.01
+
+*****************************************************************
+[Time: 349.79] PersonId: 66 AtFloor: 10 Dest: 9 ArrTime: 11.38
+[Request] Person: 60 ClosestElevator is:1
+ Elevator 1 at floor 4 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 5 Direction UP
+    PersonId: 57 AtFloor: 1  Dest: 6  ArrivalTime: 1.01
+
+*****************************************************************
+[Time: 361.37] PersonId: 67 AtFloor: 1 Dest: 9 ArrTime: 1.95
+[Request] Person: 60 ClosestElevator is:1
+[Exit] Elevator: 5 Person 57 
+ Elevator 1 at floor 3 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 6 Direction IDLE
+
+*****************************************************************
+[Time: 363.42] PersonId: 68 AtFloor: 1 Dest: 10 ArrTime: 0.94
+[Request] Person: 68 ClosestElevator is:1
+ Elevator 1 at floor 2 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 6 Direction IDLE
+
+*****************************************************************
+[Time: 364.36] PersonId: 69 AtFloor: 1 Dest: 9 ArrTime: 4.81
+[Request] Person: 68 ClosestElevator is:1
+ Elevator 1 at floor 1 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 6 Direction IDLE
+
+*****************************************************************
+[Time: 369.17] PersonId: 70 AtFloor: 1 Dest: 7 ArrTime: 16.18
+[Request] Person: 68 ClosestElevator is:1
+[Boarding] Person: 68 to Elevator 1
+[Request] Person: 60 ClosestElevator is:5
+ Elevator 1 at floor 1 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 5 Direction IDLE
+
+*****************************************************************
+[Time: 385.65] PersonId: 71 AtFloor: 1 Dest: 5 ArrTime: 1.92
+[Request] Person: 60 ClosestElevator is:5
+ Elevator 1 at floor 2 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 4 Direction IDLE
+
+*****************************************************************
+[Time: 387.78] PersonId: 72 AtFloor: 6 Dest: 1 ArrTime: 4.77
+[Request] Person: 60 ClosestElevator is:5
+ Elevator 1 at floor 3 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 3 Direction IDLE
+
+*****************************************************************
+[Time: 392.74] PersonId: 73 AtFloor: 1 Dest: 7 ArrTime: 1.84
+[Request] Person: 60 ClosestElevator is:5
+ Elevator 1 at floor 4 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 2 Direction IDLE
+
+*****************************************************************
+[Time: 394.78] PersonId: 74 AtFloor: 5 Dest: 4 ArrTime: 3.76
+[Request] Person: 60 ClosestElevator is:5
+ Elevator 1 at floor 5 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 1 Direction IDLE
+
+*****************************************************************
+[Time: 398.74] PersonId: 75 AtFloor: 1 Dest: 5 ArrTime: 0.29
+[Request] Person: 75 ClosestElevator is:5
+[Boarding] Person: 75 to Elevator 5
+[Request] Person: 60 ClosestElevator is:3
+ Elevator 1 at floor 6 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 7 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 1 Direction UP
+    PersonId: 75 AtFloor: 1  Dest: 5  ArrivalTime: 0.29
+
+*****************************************************************
+[Time: 399.33] PersonId: 76 AtFloor: 4 Dest: 6 ArrTime: 4.89
+[Request] Person: 60 ClosestElevator is:3
+ Elevator 1 at floor 7 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 2 Direction UP
+    PersonId: 75 AtFloor: 1  Dest: 5  ArrivalTime: 0.29
+
+*****************************************************************
+[Time: 404.43] PersonId: 77 AtFloor: 1 Dest: 2 ArrTime: 10.15
+[Request] Person: 60 ClosestElevator is:3
+ Elevator 1 at floor 8 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
  Elevator 3 at floor 5 Direction IDLE
  Elevator 4 at floor 9 Direction IDLE
  Elevator 5 at floor 3 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
+    PersonId: 75 AtFloor: 1  Dest: 5  ArrivalTime: 0.29
 
 *****************************************************************
-[Time: 285.66] PersonId: 57 AtFloor: 5 Dest: 2 ArrTime: 8.12
-[Request] Person: 42 ClosestElevator is:3
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
+[Time: 414.77] PersonId: 78 AtFloor: 1 Dest: 7 ArrTime: 8.34
+[Request] Person: 60 ClosestElevator is:3
+ Elevator 1 at floor 9 Direction UP
+    PersonId: 68 AtFloor: 1  Dest: 10  ArrivalTime: 0.94
+ Elevator 2 at floor 10 Direction IDLE
  Elevator 3 at floor 4 Direction IDLE
  Elevator 4 at floor 9 Direction IDLE
  Elevator 5 at floor 4 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
+    PersonId: 75 AtFloor: 1  Dest: 5  ArrivalTime: 0.29
 
 *****************************************************************
-[Time: 293.98] PersonId: 58 AtFloor: 10 Dest: 7 ArrTime: 8.49
-[Request] Person: 42 ClosestElevator is:3
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
+[Time: 423.31] PersonId: 79 AtFloor: 6 Dest: 9 ArrTime: 5.81
+[Request] Person: 60 ClosestElevator is:3
+[Exit] Elevator: 1 Person 68 
+[Exit] Elevator: 5 Person 75 
+ Elevator 1 at floor 10 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
  Elevator 3 at floor 3 Direction IDLE
  Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 5 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
+ Elevator 5 at floor 5 Direction IDLE
 
 *****************************************************************
-[Time: 302.67] PersonId: 59 AtFloor: 1 Dest: 7 ArrTime: 2.36
-[Request] Person: 42 ClosestElevator is:3
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
+[Time: 429.32] PersonId: 80 AtFloor: 6 Dest: 10 ArrTime: 1.21
+[Request] Person: 80 ClosestElevator is:5
+ Elevator 1 at floor 10 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 3 Direction IDLE
+ Elevator 4 at floor 9 Direction IDLE
+ Elevator 5 at floor 6 Direction IDLE
+
+*****************************************************************
+[Time: 430.52] PersonId: 81 AtFloor: 10 Dest: 2 ArrTime: 9.28
+[Request] Person: 80 ClosestElevator is:5
+[Boarding] Person: 80 to Elevator 5
+[Request] Person: 60 ClosestElevator is:3
+ Elevator 1 at floor 10 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
  Elevator 3 at floor 2 Direction IDLE
  Elevator 4 at floor 9 Direction IDLE
  Elevator 5 at floor 6 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
+    PersonId: 80 AtFloor: 6  Dest: 10  ArrivalTime: 1.21
 
 *****************************************************************
-[Time: 305.23] PersonId: 60 AtFloor: 8 Dest: 10 ArrTime: 1.39
-[Request] Person: 42 ClosestElevator is:3
- Elevator 1 at floor 9 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 1 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
+[Time: 440.1] PersonId: 82 AtFloor: 6 Dest: 2 ArrTime: 0.06
+[Request] Person: 82 ClosestElevator is:4
+ Elevator 1 at floor 10 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 2 Direction IDLE
+ Elevator 4 at floor 8 Direction IDLE
  Elevator 5 at floor 7 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
+    PersonId: 80 AtFloor: 6  Dest: 10  ArrivalTime: 1.21
 
 *****************************************************************
-[Time: 306.82] PersonId: 61 AtFloor: 7 Dest: 9 ArrTime: 1.05
-[Request] Person: 42 ClosestElevator is:3
-[Boarding] Person: 42 to Elevator 3
-[Request] Person: 55 ClosestElevator is:1
- Elevator 1 at floor 8 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 1 Direction UP
-    PersonId: 42 AtFloor: 1  Dest: 5  ArrivalTime: 0.14
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 8 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
-
-*****************************************************************
-[Time: 308.37] PersonId: 62 AtFloor: 7 Dest: 3 ArrTime: 2.12
-[Request] Person: 55 ClosestElevator is:1
- Elevator 1 at floor 7 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 2 Direction UP
-    PersonId: 42 AtFloor: 1  Dest: 5  ArrivalTime: 0.14
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 9 Direction UP
-    PersonId: 54 AtFloor: 1  Dest: 10  ArrivalTime: 0.12
-
-*****************************************************************
-[Time: 310.89] PersonId: 63 AtFloor: 10 Dest: 8 ArrTime: 8.6
-[Request] Person: 55 ClosestElevator is:1
-[Exit] Elevator: 5 Person 54 
- Elevator 1 at floor 6 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 3 Direction UP
-    PersonId: 42 AtFloor: 1  Dest: 5  ArrivalTime: 0.14
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 319.8] PersonId: 64 AtFloor: 6 Dest: 2 ArrTime: 0.53
-[Request] Person: 55 ClosestElevator is:1
- Elevator 1 at floor 5 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 4 Direction UP
-    PersonId: 42 AtFloor: 1  Dest: 5  ArrivalTime: 0.14
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 320.53] PersonId: 65 AtFloor: 3 Dest: 1 ArrTime: 0.02
-[Request] Person: 65 ClosestElevator is:1
-[Exit] Elevator: 3 Person 42 
- Elevator 1 at floor 4 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 5 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 320.65] PersonId: 66 AtFloor: 1 Dest: 2 ArrTime: 3.1
-[Request] Person: 65 ClosestElevator is:1
- Elevator 1 at floor 3 Direction IDLE
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 5 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 323.75] PersonId: 67 AtFloor: 6 Dest: 1 ArrTime: 4.9
-[Request] Person: 65 ClosestElevator is:1
-[Boarding] Person: 65 to Elevator 1
-[Request] Person: 55 ClosestElevator is:3
- Elevator 1 at floor 3 Direction DOWN
-    PersonId: 65 AtFloor: 3  Dest: 1  ArrivalTime: 0.02
- Elevator 2 at floor 9 Direction IDLE
- Elevator 3 at floor 4 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 328.94] PersonId: 68 AtFloor: 6 Dest: 7 ArrTime: 3.72
-[Request] Person: 55 ClosestElevator is:3
-[Boarding] Person: 55 to Elevator 3
-[Request] Person: 64 ClosestElevator is:2
- Elevator 1 at floor 2 Direction DOWN
-    PersonId: 65 AtFloor: 3  Dest: 1  ArrivalTime: 0.02
- Elevator 2 at floor 8 Direction IDLE
- Elevator 3 at floor 4 Direction DOWN
-    PersonId: 55 AtFloor: 4  Dest: 2  ArrivalTime: 0.24
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 333.16] PersonId: 69 AtFloor: 1 Dest: 7 ArrTime: 3.29
-[Request] Person: 64 ClosestElevator is:2
-[Exit] Elevator: 1 Person 65 
- Elevator 1 at floor 1 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 3 Direction DOWN
-    PersonId: 55 AtFloor: 4  Dest: 2  ArrivalTime: 0.24
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 336.76] PersonId: 70 AtFloor: 6 Dest: 4 ArrTime: 4.06
-[Request] Person: 64 ClosestElevator is:2
-[Exit] Elevator: 3 Person 55 
- Elevator 1 at floor 1 Direction IDLE
- Elevator 2 at floor 6 Direction IDLE
- Elevator 3 at floor 2 Direction IDLE
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 340.92] PersonId: 71 AtFloor: 1 Dest: 2 ArrTime: 1.44
-[Request] Person: 64 ClosestElevator is:2
-[Boarding] Person: 64 to Elevator 2
-[Request] Person: 53 ClosestElevator is:1
-[Boarding] Person: 53 to Elevator 1
-[Request] Person: 61 ClosestElevator is:4
- Elevator 1 at floor 1 Direction UP
-    PersonId: 53 AtFloor: 1  Dest: 8  ArrivalTime: 0.8
- Elevator 2 at floor 6 Direction DOWN
-    PersonId: 64 AtFloor: 6  Dest: 2  ArrivalTime: 0.53
- Elevator 3 at floor 2 Direction IDLE
- Elevator 4 at floor 8 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 342.97] PersonId: 72 AtFloor: 1 Dest: 5 ArrTime: 2.73
-[Request] Person: 61 ClosestElevator is:4
- Elevator 1 at floor 2 Direction UP
-    PersonId: 53 AtFloor: 1  Dest: 8  ArrivalTime: 0.8
- Elevator 2 at floor 5 Direction DOWN
-    PersonId: 64 AtFloor: 6  Dest: 2  ArrivalTime: 0.53
+[Time: 440.36] PersonId: 83 AtFloor: 1 Dest: 10 ArrTime: 7.47
+[Request] Person: 82 ClosestElevator is:4
+ Elevator 1 at floor 10 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
  Elevator 3 at floor 2 Direction IDLE
  Elevator 4 at floor 7 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 346.09] PersonId: 73 AtFloor: 4 Dest: 8 ArrTime: 9.86
-[Request] Person: 61 ClosestElevator is:4
-[Boarding] Person: 61 to Elevator 4
-[Request] Person: 44 ClosestElevator is:3
- Elevator 1 at floor 3 Direction UP
-    PersonId: 53 AtFloor: 1  Dest: 8  ArrivalTime: 0.8
- Elevator 2 at floor 4 Direction DOWN
-    PersonId: 64 AtFloor: 6  Dest: 2  ArrivalTime: 0.53
- Elevator 3 at floor 1 Direction IDLE
- Elevator 4 at floor 7 Direction UP
-    PersonId: 61 AtFloor: 7  Dest: 9  ArrivalTime: 1.05
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 356.66] PersonId: 74 AtFloor: 1 Dest: 10 ArrTime: 16.76
-[Request] Person: 44 ClosestElevator is:3
-[Boarding] Person: 44 to Elevator 3
-[Request] Person: 60 ClosestElevator is:5
- Elevator 1 at floor 4 Direction UP
-    PersonId: 53 AtFloor: 1  Dest: 8  ArrivalTime: 0.8
- Elevator 2 at floor 3 Direction DOWN
-    PersonId: 64 AtFloor: 6  Dest: 2  ArrivalTime: 0.53
- Elevator 3 at floor 1 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 8 Direction UP
-    PersonId: 61 AtFloor: 7  Dest: 9  ArrivalTime: 1.05
- Elevator 5 at floor 9 Direction IDLE
-
-*****************************************************************
-[Time: 374.32] PersonId: 75 AtFloor: 1 Dest: 6 ArrTime: 15.05
-[Request] Person: 60 ClosestElevator is:5
-[Exit] Elevator: 2 Person 64 
-[Exit] Elevator: 4 Person 61 
- Elevator 1 at floor 5 Direction UP
-    PersonId: 53 AtFloor: 1  Dest: 8  ArrivalTime: 0.8
- Elevator 2 at floor 2 Direction IDLE
- Elevator 3 at floor 2 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 8 Direction IDLE
-
-*****************************************************************
-[Time: 389.97] PersonId: 76 AtFloor: 1 Dest: 7 ArrTime: 0.55
-[Request] Person: 76 ClosestElevator is:2
- Elevator 1 at floor 6 Direction UP
-    PersonId: 53 AtFloor: 1  Dest: 8  ArrivalTime: 0.8
- Elevator 2 at floor 1 Direction IDLE
- Elevator 3 at floor 3 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 9 Direction IDLE
- Elevator 5 at floor 8 Direction IDLE
-
-*****************************************************************
-[Time: 390.92] PersonId: 77 AtFloor: 1 Dest: 4 ArrTime: 3.41
-[Request] Person: 76 ClosestElevator is:2
-[Boarding] Person: 76 to Elevator 2
-[Request] Person: 60 ClosestElevator is:5
-[Boarding] Person: 60 to Elevator 5
-[Request] Person: 71 ClosestElevator is:4
- Elevator 1 at floor 7 Direction UP
-    PersonId: 53 AtFloor: 1  Dest: 8  ArrivalTime: 0.8
- Elevator 2 at floor 1 Direction UP
-    PersonId: 76 AtFloor: 1  Dest: 7  ArrivalTime: 0.55
- Elevator 3 at floor 4 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 8 Direction IDLE
  Elevator 5 at floor 8 Direction UP
-    PersonId: 60 AtFloor: 8  Dest: 10  ArrivalTime: 1.39
+    PersonId: 80 AtFloor: 6  Dest: 10  ArrivalTime: 1.21
 
 *****************************************************************
-[Time: 395.33] PersonId: 78 AtFloor: 1 Dest: 4 ArrTime: 2.88
-[Request] Person: 71 ClosestElevator is:4
-[Exit] Elevator: 1 Person 53 
+[Time: 448.03] PersonId: 84 AtFloor: 2 Dest: 6 ArrTime: 0.55
+[Request] Person: 82 ClosestElevator is:4
+ Elevator 1 at floor 10 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 2 Direction IDLE
+ Elevator 4 at floor 6 Direction IDLE
+ Elevator 5 at floor 9 Direction UP
+    PersonId: 80 AtFloor: 6  Dest: 10  ArrivalTime: 1.21
+
+*****************************************************************
+[Time: 448.78] PersonId: 85 AtFloor: 1 Dest: 9 ArrTime: 4.05
+[Request] Person: 82 ClosestElevator is:4
+[Boarding] Person: 82 to Elevator 4
+[Request] Person: 84 ClosestElevator is:3
+[Boarding] Person: 84 to Elevator 3
+[Request] Person: 60 ClosestElevator is:1
+[Exit] Elevator: 5 Person 80 
+ Elevator 1 at floor 9 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 2 Direction UP
+    PersonId: 84 AtFloor: 2  Dest: 6  ArrivalTime: 0.55
+ Elevator 4 at floor 6 Direction DOWN
+    PersonId: 82 AtFloor: 6  Dest: 2  ArrivalTime: 0.06
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 453.33] PersonId: 86 AtFloor: 9 Dest: 4 ArrTime: 3.23
+[Request] Person: 60 ClosestElevator is:1
  Elevator 1 at floor 8 Direction IDLE
- Elevator 2 at floor 2 Direction UP
-    PersonId: 76 AtFloor: 1  Dest: 7  ArrivalTime: 0.55
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 3 Direction UP
+    PersonId: 84 AtFloor: 2  Dest: 6  ArrivalTime: 0.55
+ Elevator 4 at floor 5 Direction DOWN
+    PersonId: 82 AtFloor: 6  Dest: 2  ArrivalTime: 0.06
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 456.76] PersonId: 87 AtFloor: 1 Dest: 2 ArrTime: 1.47
+[Request] Person: 60 ClosestElevator is:1
+ Elevator 1 at floor 7 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 4 Direction UP
+    PersonId: 84 AtFloor: 2  Dest: 6  ArrivalTime: 0.55
+ Elevator 4 at floor 4 Direction DOWN
+    PersonId: 82 AtFloor: 6  Dest: 2  ArrivalTime: 0.06
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 458.43] PersonId: 88 AtFloor: 1 Dest: 2 ArrTime: 3.52
+[Request] Person: 60 ClosestElevator is:1
+ Elevator 1 at floor 6 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
  Elevator 3 at floor 5 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 7 Direction IDLE
- Elevator 5 at floor 9 Direction UP
-    PersonId: 60 AtFloor: 8  Dest: 10  ArrivalTime: 1.39
-
-*****************************************************************
-[Time: 398.91] PersonId: 79 AtFloor: 8 Dest: 7 ArrTime: 0.2
-[Request] Person: 79 ClosestElevator is:1
-[Boarding] Person: 79 to Elevator 1
-[Request] Person: 71 ClosestElevator is:4
-[Exit] Elevator: 5 Person 60 
- Elevator 1 at floor 8 Direction DOWN
-    PersonId: 79 AtFloor: 8  Dest: 7  ArrivalTime: 0.2
- Elevator 2 at floor 3 Direction UP
-    PersonId: 76 AtFloor: 1  Dest: 7  ArrivalTime: 0.55
- Elevator 3 at floor 6 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 6 Direction IDLE
+    PersonId: 84 AtFloor: 2  Dest: 6  ArrivalTime: 0.55
+ Elevator 4 at floor 3 Direction DOWN
+    PersonId: 82 AtFloor: 6  Dest: 2  ArrivalTime: 0.06
  Elevator 5 at floor 10 Direction IDLE
 
 *****************************************************************
-[Time: 399.91] PersonId: 80 AtFloor: 1 Dest: 6 ArrTime: 0.18
-[Request] Person: 80 ClosestElevator is:4
-[Exit] Elevator: 1 Person 79 
- Elevator 1 at floor 7 Direction IDLE
- Elevator 2 at floor 4 Direction UP
-    PersonId: 76 AtFloor: 1  Dest: 7  ArrivalTime: 0.55
- Elevator 3 at floor 7 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 5 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 400.58] PersonId: 81 AtFloor: 1 Dest: 5 ArrTime: 3.61
-[Request] Person: 80 ClosestElevator is:4
- Elevator 1 at floor 7 Direction IDLE
- Elevator 2 at floor 5 Direction UP
-    PersonId: 76 AtFloor: 1  Dest: 7  ArrivalTime: 0.55
- Elevator 3 at floor 8 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 4 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 404.59] PersonId: 82 AtFloor: 3 Dest: 8 ArrTime: 8.99
-[Request] Person: 80 ClosestElevator is:4
- Elevator 1 at floor 7 Direction IDLE
- Elevator 2 at floor 6 Direction UP
-    PersonId: 76 AtFloor: 1  Dest: 7  ArrivalTime: 0.55
- Elevator 3 at floor 9 Direction UP
-    PersonId: 44 AtFloor: 1  Dest: 10  ArrivalTime: 1.38
- Elevator 4 at floor 3 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 413.98] PersonId: 83 AtFloor: 1 Dest: 3 ArrTime: 7.74
-[Request] Person: 80 ClosestElevator is:4
-[Exit] Elevator: 2 Person 76 
-[Exit] Elevator: 3 Person 44 
- Elevator 1 at floor 7 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 2 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 421.92] PersonId: 84 AtFloor: 1 Dest: 8 ArrTime: 0.75
-[Request] Person: 80 ClosestElevator is:4
- Elevator 1 at floor 7 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 1 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 422.67] PersonId: 85 AtFloor: 3 Dest: 5 ArrTime: 4.22
-[Request] Person: 80 ClosestElevator is:4
-[Boarding] Person: 80 to Elevator 4
-[Request] Person: 84 ClosestElevator is:1
- Elevator 1 at floor 6 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 1 Direction UP
-    PersonId: 80 AtFloor: 1  Dest: 6  ArrivalTime: 0.18
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 427.19] PersonId: 86 AtFloor: 1 Dest: 5 ArrTime: 0.79
-[Request] Person: 84 ClosestElevator is:1
+[Time: 462.16] PersonId: 89 AtFloor: 1 Dest: 9 ArrTime: 1.64
+[Request] Person: 60 ClosestElevator is:1
+[Exit] Elevator: 3 Person 84 
+[Exit] Elevator: 4 Person 82 
  Elevator 1 at floor 5 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 2 Direction UP
-    PersonId: 80 AtFloor: 1  Dest: 6  ArrivalTime: 0.18
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 428.18] PersonId: 87 AtFloor: 1 Dest: 10 ArrTime: 10.21
-[Request] Person: 84 ClosestElevator is:1
- Elevator 1 at floor 4 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 3 Direction UP
-    PersonId: 80 AtFloor: 1  Dest: 6  ArrivalTime: 0.18
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 438.59] PersonId: 88 AtFloor: 1 Dest: 6 ArrTime: 4.23
-[Request] Person: 84 ClosestElevator is:1
- Elevator 1 at floor 3 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 4 Direction UP
-    PersonId: 80 AtFloor: 1  Dest: 6  ArrivalTime: 0.18
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 443.02] PersonId: 89 AtFloor: 1 Dest: 7 ArrTime: 1.26
-[Request] Person: 84 ClosestElevator is:1
- Elevator 1 at floor 2 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 5 Direction UP
-    PersonId: 80 AtFloor: 1  Dest: 6  ArrivalTime: 0.18
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 444.49] PersonId: 90 AtFloor: 1 Dest: 9 ArrTime: 1.51
-[Request] Person: 84 ClosestElevator is:1
-[Exit] Elevator: 4 Person 80 
- Elevator 1 at floor 1 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 6 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 446.09] PersonId: 91 AtFloor: 1 Dest: 2 ArrTime: 0.47
-[Request] Person: 91 ClosestElevator is:1
-[Boarding] Person: 91 to Elevator 1
-[Request] Person: 84 ClosestElevator is:4
- Elevator 1 at floor 1 Direction UP
-    PersonId: 91 AtFloor: 1  Dest: 2  ArrivalTime: 0.47
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 5 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 446.86] PersonId: 92 AtFloor: 9 Dest: 6 ArrTime: 1.63
-[Request] Person: 84 ClosestElevator is:4
-[Exit] Elevator: 1 Person 91 
- Elevator 1 at floor 2 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 4 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 448.58] PersonId: 93 AtFloor: 1 Dest: 2 ArrTime: 8.33
-[Request] Person: 84 ClosestElevator is:1
- Elevator 1 at floor 1 Direction IDLE
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 4 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 456.91] PersonId: 94 AtFloor: 5 Dest: 3 ArrTime: 10.05
-[Request] Person: 84 ClosestElevator is:1
-[Boarding] Person: 84 to Elevator 1
-[Request] Person: 86 ClosestElevator is:4
- Elevator 1 at floor 1 Direction UP
-    PersonId: 84 AtFloor: 1  Dest: 8  ArrivalTime: 0.75
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
- Elevator 4 at floor 3 Direction IDLE
- Elevator 5 at floor 10 Direction IDLE
-
-*****************************************************************
-[Time: 467.27] PersonId: 95 AtFloor: 7 Dest: 10 ArrTime: 6.56
-[Request] Person: 86 ClosestElevator is:4
- Elevator 1 at floor 2 Direction UP
-    PersonId: 84 AtFloor: 1  Dest: 8  ArrivalTime: 0.75
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
+ Elevator 2 at floor 10 Direction IDLE
+ Elevator 3 at floor 6 Direction IDLE
  Elevator 4 at floor 2 Direction IDLE
  Elevator 5 at floor 10 Direction IDLE
 
 *****************************************************************
-[Time: 474.03] PersonId: 96 AtFloor: 1 Dest: 5 ArrTime: 2.83
-[Request] Person: 86 ClosestElevator is:4
- Elevator 1 at floor 3 Direction UP
-    PersonId: 84 AtFloor: 1  Dest: 8  ArrivalTime: 0.75
- Elevator 2 at floor 7 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
+[Time: 463.99] PersonId: 90 AtFloor: 8 Dest: 4 ArrTime: 0.01
+[Request] Person: 90 ClosestElevator is:2
+ Elevator 1 at floor 5 Direction IDLE
+ Elevator 2 at floor 9 Direction IDLE
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 2 Direction IDLE
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 464.01] PersonId: 91 AtFloor: 1 Dest: 7 ArrTime: 8.82
+[Request] Person: 90 ClosestElevator is:2
+ Elevator 1 at floor 5 Direction IDLE
+ Elevator 2 at floor 8 Direction IDLE
+ Elevator 3 at floor 6 Direction IDLE
+ Elevator 4 at floor 2 Direction IDLE
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 472.82] PersonId: 92 AtFloor: 7 Dest: 9 ArrTime: 0.37
+[Request] Person: 90 ClosestElevator is:2
+[Boarding] Person: 90 to Elevator 2
+[Request] Person: 92 ClosestElevator is:3
+ Elevator 1 at floor 5 Direction IDLE
+ Elevator 2 at floor 8 Direction DOWN
+    PersonId: 90 AtFloor: 8  Dest: 4  ArrivalTime: 0.01
+ Elevator 3 at floor 7 Direction IDLE
+ Elevator 4 at floor 2 Direction IDLE
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 473.49] PersonId: 93 AtFloor: 1 Dest: 7 ArrTime: 1.37
+[Request] Person: 92 ClosestElevator is:3
+[Boarding] Person: 92 to Elevator 3
+[Request] Person: 60 ClosestElevator is:4
+ Elevator 1 at floor 5 Direction IDLE
+ Elevator 2 at floor 7 Direction DOWN
+    PersonId: 90 AtFloor: 8  Dest: 4  ArrivalTime: 0.01
+ Elevator 3 at floor 7 Direction UP
+    PersonId: 92 AtFloor: 7  Dest: 9  ArrivalTime: 0.37
  Elevator 4 at floor 1 Direction IDLE
  Elevator 5 at floor 10 Direction IDLE
 
 *****************************************************************
-[Time: 477.06] PersonId: 97 AtFloor: 1 Dest: 9 ArrTime: 2.41
-[Request] Person: 86 ClosestElevator is:4
-[Boarding] Person: 86 to Elevator 4
-[Request] Person: 89 ClosestElevator is:2
- Elevator 1 at floor 4 Direction UP
-    PersonId: 84 AtFloor: 1  Dest: 8  ArrivalTime: 0.75
- Elevator 2 at floor 6 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
+[Time: 475.17] PersonId: 94 AtFloor: 1 Dest: 7 ArrTime: 6.25
+[Request] Person: 60 ClosestElevator is:4
+[Boarding] Person: 60 to Elevator 4
+[Request] Person: 20 ClosestElevator is:1
+ Elevator 1 at floor 4 Direction IDLE
+ Elevator 2 at floor 6 Direction DOWN
+    PersonId: 90 AtFloor: 8  Dest: 4  ArrivalTime: 0.01
+ Elevator 3 at floor 8 Direction UP
+    PersonId: 92 AtFloor: 7  Dest: 9  ArrivalTime: 0.37
  Elevator 4 at floor 1 Direction UP
-    PersonId: 86 AtFloor: 1  Dest: 5  ArrivalTime: 0.79
+    PersonId: 60 AtFloor: 1  Dest: 7  ArrivalTime: 1.25
  Elevator 5 at floor 10 Direction IDLE
 
 *****************************************************************
-[Time: 479.96] PersonId: 98 AtFloor: 8 Dest: 6 ArrTime: 1.45
-[Request] Person: 89 ClosestElevator is:2
- Elevator 1 at floor 5 Direction UP
-    PersonId: 84 AtFloor: 1  Dest: 8  ArrivalTime: 0.75
- Elevator 2 at floor 5 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
+[Time: 481.72] PersonId: 95 AtFloor: 2 Dest: 9 ArrTime: 0.58
+[Request] Person: 95 ClosestElevator is:1
+[Exit] Elevator: 3 Person 92 
+ Elevator 1 at floor 3 Direction IDLE
+ Elevator 2 at floor 5 Direction DOWN
+    PersonId: 90 AtFloor: 8  Dest: 4  ArrivalTime: 0.01
+ Elevator 3 at floor 9 Direction IDLE
  Elevator 4 at floor 2 Direction UP
-    PersonId: 86 AtFloor: 1  Dest: 5  ArrivalTime: 0.79
+    PersonId: 60 AtFloor: 1  Dest: 7  ArrivalTime: 1.25
  Elevator 5 at floor 10 Direction IDLE
 
 *****************************************************************
-[Time: 481.82] PersonId: 99 AtFloor: 8 Dest: 4 ArrTime: 7.56
-[Request] Person: 89 ClosestElevator is:2
- Elevator 1 at floor 6 Direction UP
-    PersonId: 84 AtFloor: 1  Dest: 8  ArrivalTime: 0.75
+[Time: 482.6] PersonId: 96 AtFloor: 9 Dest: 7 ArrTime: 5.74
+[Request] Person: 95 ClosestElevator is:1
+[Exit] Elevator: 2 Person 90 
+ Elevator 1 at floor 2 Direction IDLE
  Elevator 2 at floor 4 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
+ Elevator 3 at floor 9 Direction IDLE
  Elevator 4 at floor 3 Direction UP
-    PersonId: 86 AtFloor: 1  Dest: 5  ArrivalTime: 0.79
+    PersonId: 60 AtFloor: 1  Dest: 7  ArrivalTime: 1.25
  Elevator 5 at floor 10 Direction IDLE
 
 *****************************************************************
-[Time: 489.77] PersonId: 100 AtFloor: 9 Dest: 5 ArrTime: 7.36
-[Request] Person: 89 ClosestElevator is:2
- Elevator 1 at floor 7 Direction UP
-    PersonId: 84 AtFloor: 1  Dest: 8  ArrivalTime: 0.75
+[Time: 488.64] PersonId: 97 AtFloor: 1 Dest: 10 ArrTime: 7.37
+[Request] Person: 95 ClosestElevator is:1
+[Boarding] Person: 95 to Elevator 1
+[Request] Person: 20 ClosestElevator is:2
+ Elevator 1 at floor 2 Direction UP
+    PersonId: 95 AtFloor: 2  Dest: 9  ArrivalTime: 0.58
  Elevator 2 at floor 3 Direction IDLE
- Elevator 3 at floor 10 Direction IDLE
+ Elevator 3 at floor 9 Direction IDLE
  Elevator 4 at floor 4 Direction UP
-    PersonId: 86 AtFloor: 1  Dest: 5  ArrivalTime: 0.79
+    PersonId: 60 AtFloor: 1  Dest: 7  ArrivalTime: 1.25
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 496.32] PersonId: 98 AtFloor: 6 Dest: 2 ArrTime: 13.96
+[Request] Person: 20 ClosestElevator is:2
+ Elevator 1 at floor 3 Direction UP
+    PersonId: 95 AtFloor: 2  Dest: 9  ArrivalTime: 0.58
+ Elevator 2 at floor 2 Direction IDLE
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 5 Direction UP
+    PersonId: 60 AtFloor: 1  Dest: 7  ArrivalTime: 1.25
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 510.48] PersonId: 99 AtFloor: 6 Dest: 4 ArrTime: 6.14
+[Request] Person: 20 ClosestElevator is:2
+ Elevator 1 at floor 4 Direction UP
+    PersonId: 95 AtFloor: 2  Dest: 9  ArrivalTime: 0.58
+ Elevator 2 at floor 1 Direction IDLE
+ Elevator 3 at floor 9 Direction IDLE
+ Elevator 4 at floor 6 Direction UP
+    PersonId: 60 AtFloor: 1  Dest: 7  ArrivalTime: 1.25
+ Elevator 5 at floor 10 Direction IDLE
+
+*****************************************************************
+[Time: 516.82] PersonId: 100 AtFloor: 1 Dest: 9 ArrTime: 1.77
+[Request] Person: 20 ClosestElevator is:2
+[Boarding] Person: 20 to Elevator 2
+[Request] Person: 93 ClosestElevator is:3
+[Exit] Elevator: 4 Person 60 
+ Elevator 1 at floor 5 Direction UP
+    PersonId: 95 AtFloor: 2  Dest: 9  ArrivalTime: 0.58
+ Elevator 2 at floor 1 Direction UP
+    PersonId: 20 AtFloor: 1  Dest: 6  ArrivalTime: 1.31
+ Elevator 3 at floor 8 Direction IDLE
+ Elevator 4 at floor 7 Direction IDLE
  Elevator 5 at floor 10 Direction IDLE
 
 Total number of persons created: 100
-Average time it takes to go from floor i to j: 76.36, Standard deviation: 119.11
-Average waiting time from floor i to j: 78.69, Standard deviation: 122.25
+Average time it takes to go from floor i to j: 73, Standard deviation: 128.58
+Average waiting time from floor i to j: 75.68, Standard deviation: 132.4
